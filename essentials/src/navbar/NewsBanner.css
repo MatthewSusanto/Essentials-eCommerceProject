@@ -1,0 +1,29 @@
+.banner{
+    text-align:center;
+    padding: 0.5em;
+    
+}
+
+.xButton{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    right: 0;
+    top:0;
+    z-index: 1;
+    background: none;
+    border: none;
+}
+
+.xButton:active{
+   border-style: outset;
+   border:none;
+   outline: none;
+}
+
+
+.carouselDiv{
+    position: relative;
+    background-color: lightgray;
+    font-weight: bold;
+}
