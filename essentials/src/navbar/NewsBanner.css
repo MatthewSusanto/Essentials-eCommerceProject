@@ -23,7 +23,10 @@
 
 
 .carouselDiv{
-    position: relative;
+    position: fixed;
     background-color: lightgray;
-    font-weight: bold;
+    font-weight: bold;  
+    bottom: 0;
+    width: 100%
+    
 }
