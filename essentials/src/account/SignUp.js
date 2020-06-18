@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Button, Modal, Form, Container, Row, Col } from 'react-bootstrap'
 import './SignIn.css'
+import { Link, BrowserRouter } from 'react-router-dom'
+
 
 
 class SignUp extends Component {
@@ -19,6 +21,10 @@ class SignUp extends Component {
         this.setState({
             show: true
         })
+    }
+
+    handleSignUp = () => {
+        this.props.history.push('/signup')
     }
 
 
@@ -62,9 +68,9 @@ class SignUp extends Component {
                     </Modal.Header>
 
                     <div className="title">
-                        <h1>Login</h1>
+                        <h1>Register</h1>
                         <br />
-                        <p>Please enter your e-mail and password:</p>
+                        <p>Please fill in the information below:</p>
 
                     </div>
 
@@ -80,12 +86,25 @@ class SignUp extends Component {
                                     <Form className="form">
 
 
+                                        <Form.Group controlId="formBasicFirstName">
+
+
+                                            <Form.Control placeholder="First name" />
+
+                                        </Form.Group>
+
+                                        <Form.Group controlId="formBasicLastName">
+
+
+                                            <Form.Control placeholder="Last name" />
+
+                                        </Form.Group>
+
                                         <Form.Group controlId="formBasicEmail">
 
-                                            <Form.Control type="email" placeholder="Email" />
-                                            <Form.Text className="text-muted">
 
-                                            </Form.Text>
+                                            <Form.Control type="email" placeholder="Email" />
+
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
@@ -93,14 +112,19 @@ class SignUp extends Component {
                                             <Form.Control type="password" placeholder="Password" />
                                         </Form.Group>
 
-                                        <Button variant="primary" type="submit" block>
-                                            Sign In
-                            </Button>
+                                        <br />
+
+                                        <Button variant="primary" type="submit" block size="lg" variant="success" onClick={this.handleSignUp}>
+                                            Create My Account
+                                          </Button>
+
+
+                                        <BrowserRouter>
+                                            <Link to="/signup"> GO TO</Link>
+                                        </BrowserRouter>
 
                                     </Form>
-                                    <Button variant="primary" type="submit" block>Create My Account</Button>
-                                    <br />
-                                    <a href="#"> Forgot your password? </a>
+
 
 
 

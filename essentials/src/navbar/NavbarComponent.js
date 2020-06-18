@@ -5,6 +5,10 @@ import bag from './images/bag.png'
 import account from './images/account.png'
 import search from './images/search.png'
 import SignIn from '../account/SignIn'
+import SignUp from '../account/SignUp'
+import { Link } from 'react-router-dom'
+
+
 
 class NavbarComponent extends Component {
 
@@ -78,7 +82,8 @@ class NavbarComponent extends Component {
 
                             <Nav.Link href="#pricing">UNDERWEAR</Nav.Link>
                             <Nav.Link href="#pricing">SALE</Nav.Link>
-                            <SignIn />
+
+                            <SignUp />
 
                         </Nav>
 
@@ -89,7 +94,7 @@ class NavbarComponent extends Component {
 
                             <Nav.Link onClick={this.searchButton} variant="link" > <img src={search} className="searchImg" /></Nav.Link>
 
-                            <Nav.Link href="#pricing" ><img src={account} className="accountImg" /></Nav.Link>
+                            <SignIn />
 
 
 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { Button, Modal, Form, Container, Row, Col } from 'react-bootstrap'
+import { Button, Modal, Form, Container, Row, Col, Nav } from 'react-bootstrap'
 import './SignIn.css'
+import account from '../navbar/images/account.png'
+import { Link, BrowserRouter } from 'react-router-dom'
 
 
 class SignIn extends Component {
@@ -30,9 +32,9 @@ class SignIn extends Component {
         return (
             <div>
 
-                <Button variant="primary" onClick={this.handleShow}>
-                    Launch demo modal
-      </Button>
+                <Nav.Link href="#signin" onClick={this.handleShow}>
+                    <img src={account} className="accountImg" />
+                </Nav.Link>
 
 
 
@@ -83,9 +85,7 @@ class SignIn extends Component {
                                         <Form.Group controlId="formBasicEmail">
 
                                             <Form.Control type="email" placeholder="Email" />
-                                            <Form.Text className="text-muted">
 
-                                            </Form.Text>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
@@ -93,12 +93,15 @@ class SignIn extends Component {
                                             <Form.Control type="password" placeholder="Password" />
                                         </Form.Group>
 
-                                        <Button variant="primary" type="submit" block>
+                                        <Button variant="primary" type="submit" block size="lg">
                                             Sign In
                             </Button>
 
                                     </Form>
-                                    <Button variant="primary" type="submit" block>Create My Account</Button>
+
+                                    <BrowserRouter>
+                                        <Link to="/signup"><Button variant="primary" type="submit" block variant="success" size="lg">Create My Account</Button></Link>
+                                    </BrowserRouter>
                                     <br />
                                     <a href="#"> Forgot your password? </a>
 
