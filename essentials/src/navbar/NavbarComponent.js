@@ -4,6 +4,7 @@ import './NavbarComponent.css'
 import bag from './images/bag.png'
 import account from './images/account.png'
 import search from './images/search.png'
+import SignIn from '../account/SignIn'
 
 class NavbarComponent extends Component {
 
@@ -20,12 +21,13 @@ class NavbarComponent extends Component {
         })
     }
 
-    Results = () => {
+    searchBar = () => {
         return (
             <Form inline>
                 <FormControl type="text" placeholder="Search" />
             </Form>)
     }
+
 
 
 
@@ -76,12 +78,13 @@ class NavbarComponent extends Component {
 
                             <Nav.Link href="#pricing">UNDERWEAR</Nav.Link>
                             <Nav.Link href="#pricing">SALE</Nav.Link>
+                            <SignIn />
 
                         </Nav>
 
                         <Nav className="ml-auto"  >
 
-                            {this.state.searchShowing ? this.Results() : null}
+                            {this.state.searchShowing ? this.searchBar() : null}
 
 
                             <Nav.Link onClick={this.searchButton} variant="link" > <img src={search} className="searchImg" /></Nav.Link>
