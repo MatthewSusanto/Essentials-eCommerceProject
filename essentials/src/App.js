@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import NavbarComponent from './navbar/NavbarComponent'
 import NewsBanner from './navbar/NewsBanner'
-import NavbarComponent2 from './navbar/NavbarComponent2'
+
 //import './App.css';
 
 

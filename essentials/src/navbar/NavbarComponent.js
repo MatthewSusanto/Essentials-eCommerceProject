@@ -1,27 +1,54 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, FormControl, Button, Form, NavDropdown } from 'react-bootstrap'
 import './NavbarComponent.css'
+import bag from './images/bag.png'
+import account from './images/account.png'
+import search from './images/search.png'
 
 class NavbarComponent extends Component {
 
     state = {
         showBottoms: false,
-        showTops: false
+        showTops: false,
+        searchShowing: false
+    }
+
+    searchButton = () => {
+
+        this.setState({
+            searchShowing: !this.state.searchShowing
+        })
+    }
+
+    Results = () => {
+        return (
+            <Form inline>
+                <FormControl type="text" placeholder="Search" />
+            </Form>)
     }
 
 
 
 
+
     render() {
+
+
         return (
             <div>
 
-                <Navbar collapseOnSelect bg="dark" variant="dark" expand="md" fixed="top" >
+                <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" fixed="top" >
+
                     <Navbar.Brand href="#home">ESSENTIALS</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+
+
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto" />
+
+
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mr-auto">
-                            <Nav.Link href="#home">BEST SELLERS</Nav.Link>
+                        <Nav className="mr-auto"  >
+                            <Nav.Link href="#home" >BEST SELLERS</Nav.Link>
 
                             <NavDropdown title="TOPS" id="collasible-nav-dropdown" show={this.state.showTops}
                                 onMouseEnter={() => this.setState({ showTops: true })}
@@ -51,11 +78,55 @@ class NavbarComponent extends Component {
                             <Nav.Link href="#pricing">SALE</Nav.Link>
 
                         </Nav>
-                        <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                            <Button variant="outline-success">Search</Button>
-                        </Form>
+
+                        <Nav className="ml-auto"  >
+
+                            {this.state.searchShowing ? this.Results() : null}
+
+
+                            <Nav.Link onClick={this.searchButton} variant="link" > <img src={search} className="searchImg" /></Nav.Link>
+
+                            <Nav.Link href="#pricing" ><img src={account} className="accountImg" /></Nav.Link>
+
+
+
+
+
+
+
+
+
+
+                            <Nav.Link href="#pricing" >
+                                <div className="bagDiv">
+                                    <img src={bag} className="bagImg" />
+                                    <p className="bagItems">63</p>
+                                </div>
+                            </Nav.Link>
+
+                        </Nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </Navbar.Collapse>
+
+
+
+
+
+
+
                 </Navbar>
 
 

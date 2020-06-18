@@ -1,0 +1,44 @@
+.bagImg{
+    margin:none;
+    padding: 2px;
+    height: 33px;
+    width: 33px;
+}
+
+.accountImg{
+
+    margin:none;
+    height: 33px;
+    width: 33px;
+}
+
+.searchImg{
+    margin:none;
+    height: 33px;
+    width: 33px;
+
+}
+
+.bagItems{
+    position: relative;
+    text-align: center;
+    bottom: 70%;
+    font-weight: bolder;
+    z-index: 2;
+    color: black;
+}
+
+.bagDiv{
+    position: relative;
+    height: 33px;
+    width: 33px;
+}
+
+.bagImg{
+    position: relative;
+    margin:none;
+    z-index: 1;
+    padding: 2px;
+    height: 100%;
+    width: 100%;
+}
