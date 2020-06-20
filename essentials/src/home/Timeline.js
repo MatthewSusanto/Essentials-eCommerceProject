@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import timeline1 from './images/timeline1.PNG'
 import timeline2 from './images/timeline2.jpeg'
 import timeline3 from './images/timeline3.png'
@@ -11,7 +11,8 @@ import timeline3 from './images/timeline3.png'
 class Timeline extends Component {
 
     state = {
-        radio: 1
+        radio: 1,
+
     }
 
     textRadio = () => {
@@ -60,6 +61,9 @@ class Timeline extends Component {
 
     }
 
+
+
+
     radioActive = (number) => {
         if (number == 1) {
 
@@ -76,6 +80,22 @@ class Timeline extends Component {
             this.setState({ radio: 3 })
         }
     }
+
+    cssActive = () => {
+        if (this.state.radio == 1) {
+            return ('radioActive')
+        }
+
+        else if (this.state.radio == 2) {
+            return ('radioActive')
+        }
+
+        else if (this.state.radio == 3) {
+            return ('radioActive')
+        }
+    }
+
+
 
     render() {
 
@@ -109,9 +129,10 @@ class Timeline extends Component {
 
                     <Row >
 
-                        <Col><div className="radio1" onClick={() => this.radioActive(1)}>2018</div></Col>
-                        <Col><div className="radio2" onClick={() => this.radioActive(2)}>2019</div></Col>
-                        <Col> <div className="radio3" onClick={() => this.radioActive(3)}>2020</div></Col>
+
+                        <Col><div className={(this.state.radio == 1) ? (this.cssActive()) : 'radio1'} onClick={() => this.radioActive(1)}>2018</div></Col>
+                        <Col><div className={(this.state.radio == 2) ? (this.cssActive()) : 'radio2'} onClick={() => this.radioActive(2)}>2019</div></Col>
+                        <Col> <div className={(this.state.radio == 3) ? (this.cssActive()) : 'radio3'} onClick={() => this.radioActive(3)}>2020</div></Col>
 
 
 

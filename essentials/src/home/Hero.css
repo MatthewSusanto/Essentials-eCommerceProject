@@ -122,12 +122,20 @@
 
 .radio1{
     padding: 1rem 0 1rem 0;
-    background-color: lightgoldenrodyellow;
+ 
 }
 
  .radio2{
     padding: 1rem 0 1rem 0;
 }
+
+.radioActive{
+    padding: 1rem 0 1rem 0;
+    background-color: lightgoldenrodyellow;
+}
+
+
+
 .radio3{
     padding: 1rem 0 1rem 0;
 }
