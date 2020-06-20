@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import './ProductShowcase.css'
 import tees from './images/tees.png'
+import tees2 from './images/tees2.PNG'
 
 
 
@@ -10,6 +11,13 @@ import tees from './images/tees.png'
 class ProductShowcase extends Component {
 
     state = {
+        onHover: false
+    }
+
+    onHoverImg = () => {
+        if (this.state.onHover == true) {
+
+        }
 
     }
 
@@ -26,8 +34,12 @@ class ProductShowcase extends Component {
 
                 <Container className="show-case">
                     <Row>
-                        <Col >
-                            <img src={tees} className="tees" />
+                        <Col
+                            onMouseEnter={() => this.setState({ onHover: true })}
+                            onMouseLeave={() => this.setState({ onHover: false })}
+                        >
+                            <div className="testy"> SOLD OUT </div>
+                            <img src={this.state.onHover ? tees2 : tees} className="tees" />
                         </Col>
                     </Row>
 
