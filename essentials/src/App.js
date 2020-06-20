@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import SignIn from './account/SignIn';
 import SignUp from './account/SignUp';
 
+import Home from './home/Home';
+
 //import './App.css';
 
 
@@ -17,6 +19,9 @@ function App() {
 
       <NewsBanner />
       <NavbarComponent />
+      <Home />
+
+
 
 
 

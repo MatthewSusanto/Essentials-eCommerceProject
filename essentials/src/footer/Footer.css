@@ -1,0 +1,39 @@
+.footer-1{
+    background-color: #1c1c1c;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    
+   
+}
+.footer-1 a{
+    color: white;
+}
+
+.footer-2{
+    background-color: black;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+
+.footer-3
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+
+.footerImg{
+    height: 50px;
+    width: auto;
+    padding: 0 1rem 0 1rem;
+    
+}
+
+
+
+
