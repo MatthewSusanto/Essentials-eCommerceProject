@@ -6,6 +6,7 @@ import NewsBanner from './navbar/NewsBanner'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import SignIn from './account/SignIn';
 import SignUp from './account/SignUp';
+import ProductShowcase from './products/ProductShowcase'
 
 import Home from './home/Home';
 
@@ -29,6 +30,7 @@ function App() {
         <Switch>
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
+          <Route path="/showcase" component={ProductShowcase} />
 
 
         </Switch>

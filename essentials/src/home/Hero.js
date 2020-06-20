@@ -30,7 +30,7 @@ class Hero extends Component {
 
                             <h1>Must Have Basics</h1>
                             <p>Starting from $39.99</p>
-                            <Button size="lg" block variant="light">SHOP NOW</Button>
+                            <Button size="lg" block variant="outline-light">SHOP NOW</Button>
 
 
                         </Col>

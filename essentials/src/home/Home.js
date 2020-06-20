@@ -5,6 +5,7 @@ import Ourstory from './Ourstory'
 import Newsletter from './Newsletter'
 import Footer from '../footer/Footer'
 import Timeline from './Timeline'
+import BestsellerHome from './BestsellerHome'
 
 
 
@@ -26,6 +27,7 @@ class Home extends Component {
 
 
                 <Hero />
+                <BestsellerHome />
                 <Ourstory />
                 <Timeline />
                 <Newsletter />
