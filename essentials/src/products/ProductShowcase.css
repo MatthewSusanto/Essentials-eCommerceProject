@@ -1,5 +1,5 @@
 .showcase-details{
-    padding-top: 3rem;
+    padding: 3rem 0 2rem 0;
 }
 
 .rowy{
@@ -12,6 +12,7 @@
     width: 100%;
     height: auto;
     padding: 0;
+    margin-top: 3rem;
 
 
 }

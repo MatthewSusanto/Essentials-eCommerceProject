@@ -6,7 +6,7 @@ import ProductShowcase from '../products/ProductShowcase'
 
 
 
-class BestsellerHome extends Component {
+class SalerHome extends Component {
 
     state = {
 
@@ -28,7 +28,7 @@ class BestsellerHome extends Component {
                 <Container fluid className="product-home-row">
                     <Row >
                         <Col lg={12}>
-                            <p className="display-4">Most Popular Items</p>
+                            <p className="display-4">On Sale Items</p>
                         </Col>
                         <Col lg={4}>
                             <ProductShowcase />
@@ -64,5 +64,5 @@ class BestsellerHome extends Component {
     }
 }
 
-export default BestsellerHome
+export default SalerHome
 
