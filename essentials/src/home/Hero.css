@@ -166,7 +166,36 @@
  }
 
  .product-home-row{
-     padding: 5rem 6rem 5rem 6rem;
+     padding: 5rem 3rem 5rem 3rem;
     text-align: center;
  }
 
+
+.sizingbtn{
+    background-color: green;
+    width: 3rem;
+    height: 3rem;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+.sizingRow button:hover{
+    border-width: medium;
+    background-color: red;
+    
+
+}
+
+.active{
+    border-width: medium;
+    background-color:magenta;
+    
+
+}
+
+
+.productList li{
+    margin-top: 1em;
+    font-weight: bolder;
+}

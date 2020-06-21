@@ -8,6 +8,7 @@ import SignIn from './account/SignIn';
 import SignUp from './account/SignUp';
 import ProductShowcase from './products/ProductShowcase'
 import Collections from './collections/Collections'
+import ProductDetail from './products/ProductDetail'
 
 import Home from './home/Home';
 
@@ -20,8 +21,8 @@ function App() {
     <div className="App">
       {/* 
       <NewsBanner />
-      <NavbarComponent />
-      <Home /> */}
+      <NavbarComponent /> */}
+      {/* <Home /> */}
 
 
 
@@ -33,6 +34,8 @@ function App() {
           <Route path="/signup" component={SignUp} />
           <Route path="/showcase" component={ProductShowcase} />
           <Route path="/collections" component={Collections} />
+          <Route path="/product" component={ProductDetail} />
+
 
 
         </Switch>

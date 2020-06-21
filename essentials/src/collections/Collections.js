@@ -26,7 +26,7 @@ class Collections extends Component {
 
 
 
-                <Container fluid className="product-home-row">
+                <Container fluid className="product-home-row mt-5" >
 
                     <Row>
                         <Col lg={12}>
