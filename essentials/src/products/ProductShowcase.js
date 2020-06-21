@@ -21,6 +21,30 @@ class ProductShowcase extends Component {
 
     }
 
+    itemSizing = () => {
+        return (<Container fluid className="testy1">
+            <Row>
+
+                <Col lg>
+                    <a href="" >XS</a>
+                </Col>
+                <Col lg>
+                    <a href="" >S</a>
+                </Col>
+                <Col lg>
+                    <a href="" >M</a>
+                </Col>
+                <Col lg>
+                    <a href="" >L</a>
+                </Col>
+                <Col lg>
+                    <a href="" >XL</a>
+                </Col>
+
+            </Row>
+        </Container>)
+    }
+
 
 
 
@@ -33,13 +57,22 @@ class ProductShowcase extends Component {
 
 
                 <Container className="show-case">
-                    <Row>
+                    <Row >
                         <Col
                             onMouseEnter={() => this.setState({ onHover: true })}
                             onMouseLeave={() => this.setState({ onHover: false })}
+                            className='columntest'
+
                         >
                             <div className="testy"> SOLD OUT </div>
-                            <img src={this.state.onHover ? tees2 : tees} className="tees" />
+
+
+                            {this.state.onHover ? this.itemSizing() : null}
+
+
+
+                            <a href=""><img src={this.state.onHover ? tees2 : tees} className="tees" /></a>
+
                         </Col>
                     </Row>
 

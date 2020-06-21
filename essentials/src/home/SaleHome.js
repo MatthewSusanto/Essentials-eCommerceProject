@@ -30,15 +30,15 @@ class SalerHome extends Component {
                         <Col lg={12}>
                             <p className="display-4">On Sale Items</p>
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="showcasePadding">
                             <ProductShowcase />
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="showcasePadding">
 
                             <ProductShowcase />
 
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="showcasePadding">
 
                             <ProductShowcase />
 

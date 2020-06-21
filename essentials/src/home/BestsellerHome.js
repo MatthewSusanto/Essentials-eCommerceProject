@@ -28,17 +28,17 @@ class BestsellerHome extends Component {
                 <Container fluid className="product-home-row">
                     <Row >
                         <Col lg={12}>
-                            <p className="display-4">Most Popular Items</p>
+                            <p className="display-4">Best Sellers</p>
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="showcasePadding">
                             <ProductShowcase />
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="showcasePadding">
 
                             <ProductShowcase />
 
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="showcasePadding">
 
                             <ProductShowcase />
 

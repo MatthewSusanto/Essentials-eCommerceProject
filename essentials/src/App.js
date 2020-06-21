@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import SignIn from './account/SignIn';
 import SignUp from './account/SignUp';
 import ProductShowcase from './products/ProductShowcase'
+import Collections from './collections/Collections'
 
 import Home from './home/Home';
 
@@ -17,10 +18,10 @@ import Home from './home/Home';
 function App() {
   return (
     <div className="App">
-
+      {/* 
       <NewsBanner />
       <NavbarComponent />
-      <Home />
+      <Home /> */}
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/showcase" component={ProductShowcase} />
+          <Route path="/collections" component={Collections} />
 
 
         </Switch>

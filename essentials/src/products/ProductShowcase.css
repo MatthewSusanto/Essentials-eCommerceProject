@@ -17,22 +17,59 @@
 
 }
 
+.showcasePadding{
+    padding:0 3rem 0 3rem;
+}
+
 .tees{
-    padding: 0px;
+    
     width: 100%;
     height: 60vh;
     object-fit: cover;
+    
 }
 
 .testy{
-    background-image: linear-gradient(to bottom right, #ff0000, #000000);
+
+    border-style: solid;
+    border-width: thin;
+    background-color: #de0f00;
     position: absolute;
     top: 1rem;
-    left: 2rem;
-    padding: 0.5em;
+    left: 1rem;
+    padding: 0.1em;
     width: 6em;
     color: white;
     text-align: center;
     
 }
 
+.testy1{
+    
+    background-color: #d0b9a7;
+    position: absolute;
+    bottom:0;
+    padding: 1em;
+    width: 100%;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.testy1 a{
+    
+    color: black;
+    font-size: larger;
+    
+}
+
+
+
+.columntest{
+
+  
+    
+    padding: 0;
+}
