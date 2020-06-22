@@ -3,7 +3,6 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
-import './DetailDescription.css'
 
 
 
@@ -43,29 +42,19 @@ class DetailDescription extends Component {
 
                     <Row className="sizingButtons">
 
-                        <Col>
-                            <Button> XS </Button>
-                        </Col>
-                        <Col>
-                            <Button> XS </Button>
-                        </Col>
-                        <Col>
-                            <Button> XS </Button>
-                        </Col>
-                        <Col>
-                            <Button> XS </Button>
-                        </Col>
-                        <Col>
-                            <Button> XS </Button>
-                        </Col>
+                        <Button variant="outline-dark"> XS </Button>
+                        <Button variant="outline-dark"> S </Button>
+                        <Button variant="outline-dark"> M </Button>
+                        <Button variant="outline-dark"> L </Button>
+                        <Button variant="outline-dark"> XL </Button>
+
 
                     </Row>
 
                     <Row>
-                        <Col x={3}>
+                        <Col>
                             <h4>Quantity: </h4>
-                        </Col>
-                        <Col x={9}>
+
                             <Form>
                                 <Form.Group controlId="exampleForm.SelectCustom">
                                     <Form.Control as="select" custom>
@@ -83,6 +72,9 @@ class DetailDescription extends Component {
                                 </Form.Group>
                             </Form>
                         </Col>
+
+
+
                     </Row>
 
                     <Row>

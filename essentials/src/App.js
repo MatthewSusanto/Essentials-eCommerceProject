@@ -11,6 +11,7 @@ import Collections from './collections/Collections'
 import ProductDetail from './products/ProductDetail'
 import DetailImg from './products/DetailImg'
 import DetailDescription from './products/DetailDescription'
+import ProductRecommendation from './products/ProductRecommendation'
 
 import Home from './home/Home';
 
@@ -21,10 +22,10 @@ import Home from './home/Home';
 function App() {
   return (
     <div className="App">
-      {/* 
+
       <NewsBanner />
-      <NavbarComponent /> */}
-      {/* <Home /> */}
+      <NavbarComponent />
+      <Home />
 
 
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/product" component={ProductDetail} />
           <Route path="/detailimg" component={DetailImg} />
           <Route path="/detaildesc" component={DetailDescription} />
+          <Route path="/productrecommendation" component={ProductRecommendation} />
 
 
 

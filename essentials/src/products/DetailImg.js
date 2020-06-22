@@ -51,11 +51,11 @@ class DetailImg extends Component {
                         </Col>
 
                     </Row>
-                </Container >
+                </Container>
 
 
 
-            </div >
+            </div>
         )
     }
 }

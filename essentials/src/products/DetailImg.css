@@ -1,6 +1,7 @@
 
 .row{
-    background-color: grey;
+
+    margin-bottom: 2rem;
 }
 
 .imgtest{
@@ -10,6 +11,14 @@
    
 }
 
-.sizingButtons{
-    text-align: center;
+
+.sizingButtons .btn{
+    width: 3rem;
+margin: 0 1rem 0 1rem;
 }
+
+.marginy{   
+    margin-top: 7rem;
+    padding: 2rem;
+}
+
