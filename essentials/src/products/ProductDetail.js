@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
+import boomer from '../products/images/tees2.PNG'
+import DetailImg from './DetailImg'
+import DetailDescription from './DetailDescription'
 
 
 
@@ -27,15 +30,92 @@ class ProductDetail extends Component {
                     <Row>
                         <Col lg={8} className="bg-primary">
 
+                            <DetailImg />
+
+                            {/* <Row>
+
+                              
+                                <Col xl={6}>
+                                    <img src={boomer} />
+
+                                </Col>
+                                <Col xl={6}>
+                                    <img src={boomer} />
+
+                                </Col>
+                                <Col xl={6}>
+                                    <img src={boomer} />
+
+
+
+                                </Col>
+
+                            </Row> */}
+
                         </Col>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <Col lg={4} >
+                            <DetailDescription />
 
 
 
 
 
-                            <Container fluid >
+                            {/* <Container fluid >
                                 <Row >
 
                                     <Col className="bg-primary">
@@ -121,7 +201,7 @@ class ProductDetail extends Component {
                                     </Col>
                                 </Row>
 
-                            </Container>
+                            </Container> */}
 
 
 
@@ -139,8 +219,8 @@ class ProductDetail extends Component {
 
 
                         </Col>
-                    </Row >
-                </Container >
+                    </Row>
+                </Container>
 
 
 

@@ -9,6 +9,8 @@ import SignUp from './account/SignUp';
 import ProductShowcase from './products/ProductShowcase'
 import Collections from './collections/Collections'
 import ProductDetail from './products/ProductDetail'
+import DetailImg from './products/DetailImg'
+import DetailDescription from './products/DetailDescription'
 
 import Home from './home/Home';
 
@@ -35,6 +37,8 @@ function App() {
           <Route path="/showcase" component={ProductShowcase} />
           <Route path="/collections" component={Collections} />
           <Route path="/product" component={ProductDetail} />
+          <Route path="/detailimg" component={DetailImg} />
+          <Route path="/detaildesc" component={DetailDescription} />
 
 
 
