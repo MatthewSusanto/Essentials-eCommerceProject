@@ -7,7 +7,7 @@ import Pagination from '../pagination/PaginationComp'
 
 
 
-class Collections extends Component {
+class Returns extends Component {
 
     state = {
 
@@ -119,10 +119,10 @@ class Collections extends Component {
 
 
 
-            </div >
+            </div>
         )
     }
 }
 
-export default Collections
+export default Returns
 
