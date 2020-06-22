@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Button, Container, Row, Col } from 'react-bootstrap'
+import { Form, Button, Container, Row, Col, Card, Accordion } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
@@ -24,7 +24,7 @@ class DetailDescription extends Component {
         return (
             <div>
 
-                <Container fluid >
+                <Container fluid className="detail-description-container">
 
                     <Row>
                         <Col>
@@ -97,6 +97,33 @@ class DetailDescription extends Component {
                                 <li> 7% Spandex </li>
                                 <li> 320 grams </li>
                             </ul>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col>
+                            <Accordion>
+                                <Card>
+
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        DELIVERY <span>&#x25BC;</span>
+                                    </Accordion.Toggle>
+
+                                    <Accordion.Collapse eventKey="0">
+                                        <Card.Body>We offer free shipping in the US and Canada. </Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                                <Card>
+
+                                    <Accordion.Toggle as={Card.Header} eventKey="1">
+                                        FIT <span>&#x25BC;</span>
+                                    </Accordion.Toggle>
+
+                                    <Accordion.Collapse eventKey="1">
+                                        <Card.Body>We've fixed all the headaches of finding the right fitting essentials. Our essentials fit so well that you will replace your entire wardrobe with our products!</Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
                         </Col>
                     </Row>
 

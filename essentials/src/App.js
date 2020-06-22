@@ -12,6 +12,7 @@ import ProductDetail from './products/ProductDetail'
 import DetailImg from './products/DetailImg'
 import DetailDescription from './products/DetailDescription'
 import ProductRecommendation from './products/ProductRecommendation'
+import Footer from './footer/Footer'
 
 import Home from './home/Home';
 
@@ -25,7 +26,8 @@ function App() {
 
       <NewsBanner />
       <NavbarComponent />
-      <Home />
+
+
 
 
 
@@ -33,6 +35,7 @@ function App() {
 
       <BrowserRouter>
         <Switch>
+          <Route exact path='/' component={Home} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/showcase" component={ProductShowcase} />
@@ -47,6 +50,8 @@ function App() {
         </Switch>
 
       </BrowserRouter>
+
+      <Footer />
 
     </div>
   );

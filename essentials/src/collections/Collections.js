@@ -98,13 +98,16 @@ class Collections extends Component {
                         </Col>
                     </Row>
 
+                    <Container>
+                        <Row >
+                            <Col className="d-flex justify-content-center">
+                                <Pagination />
+                            </Col>
 
-                    <Row>
-                        <Col lg={12}>
-                            <Pagination />
-                        </Col>
+                        </Row>
 
-                    </Row>
+                    </Container>
+
 
 
 
@@ -116,7 +119,7 @@ class Collections extends Component {
 
 
 
-            </div>
+            </div >
         )
     }
 }

@@ -28,6 +28,13 @@ class ProductRecommendation extends Component {
                 <Container fluid >
 
                     <Row>
+                        <Col lg={12} >
+                            <hr />
+                            <p className="display-4">You May Also Like</p>
+                        </Col>
+                    </Row>
+
+                    <Row>
                         <Col lg={4} className="px-5">
                             <ProductShowcase />
                         </Col>

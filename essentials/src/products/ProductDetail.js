@@ -46,6 +46,9 @@ class ProductDetail extends Component {
 
                         </Col>
                     </Row>
+
+
+
                 </Container>
 
 

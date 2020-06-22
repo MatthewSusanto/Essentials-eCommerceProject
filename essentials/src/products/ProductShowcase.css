@@ -1,5 +1,5 @@
 .showcase-details{
-    padding: 0rem 0 2rem 0;
+    padding: 1rem 0 2rem 0;
 }
 
 .rowy{
@@ -73,3 +73,9 @@
     
     padding: 0;
 }
+
+.row .col-lg-12{
+    text-align: center;
+}
+
+

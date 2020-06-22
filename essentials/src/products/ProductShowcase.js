@@ -78,8 +78,8 @@ class ProductShowcase extends Component {
 
                     <Row className="showcase-details">
                         <Col>
-                            <p> THE ESNTL NAVY TEE </p>
-                            <p> $30 </p>
+                            <p className="h3"> THE ESNTL NAVY TEE </p>
+                            <p className="h5 text-secondary"> $30 </p>
                         </Col>
                     </Row>
                 </Container>
