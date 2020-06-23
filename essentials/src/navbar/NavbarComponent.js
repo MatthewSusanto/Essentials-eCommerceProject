@@ -44,7 +44,7 @@ class NavbarComponent extends Component {
         return (
             <div>
 
-                <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" >
+                <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" fixed="top" >
 
                     <Navbar.Brand href="#home">ESSENTIALS</Navbar.Brand>
 

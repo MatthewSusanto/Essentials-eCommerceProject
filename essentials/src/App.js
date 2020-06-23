@@ -23,6 +23,7 @@ import Returns from './help/Returns'
 import Home from './home/Home';
 import Account from './account/Account'
 import Cart from './cart/Cart'
+import ScrollIntoView from './ScrollIntoView';
 
 //import './App.css';
 
@@ -41,37 +42,48 @@ function App() {
 
       <BrowserRouter>
 
-
-        <NavbarComponent />
-        <NewsBanner />
-
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
-          <Route path="/showcase" component={ProductShowcase} />
-          <Route path="/collections" component={Collections} />
-          <Route path="/product" component={ProductDetail} />
-          <Route path="/detailimg" component={DetailImg} />
-          <Route path="/detaildesc" component={DetailDescription} />
-          <Route path="/productrecommendation" component={ProductRecommendation} />
-
-          <Route path="/faq" component={FAQ} />
-          <Route path="/contact-us" component={ContactUs} />
-          <Route path="/change-order" component={ChangeOrder} />
-          <Route path="/care" component={CareInstructions} />
-          <Route path="/returns" component={Returns} />
-
-          <Route path="/account" component={Account} />
-          <Route path="/cart" component={Cart} />
+        <ScrollIntoView>
 
 
 
-        </Switch>
 
-        <Footer />
+          <NavbarComponent />
+          <NewsBanner />
 
 
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/showcase" component={ProductShowcase} />
+            <Route path="/collections" component={Collections} />
+            <Route path="/product" component={ProductDetail} />
+            <Route path="/detailimg" component={DetailImg} />
+            <Route path="/detaildesc" component={DetailDescription} />
+            <Route path="/productrecommendation" component={ProductRecommendation} />
+
+
+
+
+
+            <Route path="/faq" component={FAQ} />
+
+
+            <Route path="/contact-us" component={ContactUs} />
+            <Route path="/change-order" component={ChangeOrder} />
+            <Route path="/care" component={CareInstructions} />
+            <Route path="/returns" component={Returns} />
+
+            <Route path="/account" component={Account} />
+            <Route path="/cart" component={Cart} />
+
+
+
+          </Switch>
+
+          <Footer />
+
+        </ScrollIntoView>
       </BrowserRouter>
 
 
