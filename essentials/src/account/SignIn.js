@@ -71,7 +71,7 @@ class SignIn extends Component {
                     </div>
 
 
-                    <Modal.Body>
+                    <Modal.Body closeButton>
 
                         <Container className="container">
 

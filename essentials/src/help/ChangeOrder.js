@@ -22,12 +22,12 @@ class ChangeOrder extends Component {
 
 
         return (
-            <div >
+            <div className="help-div">
 
 
 
 
-                <Container className="changeOrder">
+                <Container className=" d-flex align-items-center">
                     <Row>
                         <h5>
                             CHANGING/MODIFYING AN ORDER

@@ -21,14 +21,14 @@ class ContactUs extends Component {
 
 
         return (
-            <div>
+            <div className="help-div">
 
 
 
-                <Container className="changeOrder">
-                    <Row >
-                        <Col >
-                            <h2 className="mb-5 display-2">Contact Us</h2>
+                <Container className="d-flex align-items-center justify-content-center" >
+                    <Row className="">
+                        <Col>
+                            <Row> <h2 className="mb-5 display-2">Contact Us</h2></Row>
                             <Form >
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
                                     <Form.Row>
@@ -49,7 +49,7 @@ class ContactUs extends Component {
 
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
 
-                                    <Form.Control as="textarea" rows="3" placeholder="Your message" />
+                                    <Form.Control as="textarea" rows="3" placeholder="Your message" className="contact-us-message" />
                                 </Form.Group>
 
 

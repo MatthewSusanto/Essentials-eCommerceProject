@@ -21,7 +21,7 @@ class Returns extends Component {
 
 
         return (
-            <div >
+            <div className="help-div">
 
 
 
@@ -88,7 +88,7 @@ If you’ve done all of this and you still have not received your refund yet, pl
 
 
 
-            </div >
+            </div>
         )
     }
 }

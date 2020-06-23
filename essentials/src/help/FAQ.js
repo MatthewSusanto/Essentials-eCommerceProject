@@ -21,7 +21,7 @@ class FAQ extends Component {
 
 
         return (
-            <div >
+            <div className="help-div d-flex align-items-center">
 
                 <Container>
                     <Row>

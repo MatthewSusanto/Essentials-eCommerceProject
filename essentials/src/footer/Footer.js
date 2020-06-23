@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Container, Row, Col, Form, Image } from 'react-bootstrap'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 
 
@@ -28,21 +29,31 @@ class Footer extends Component {
 
 
                         <Col md>
-                            <a href="">Contact Us</a>
-                        </Col>
-                        <Col md>
-                            <a href="">FAQ</a>
-                        </Col>
-                        <Col md>
-                            <a href="">Returns</a>
-                        </Col>
-                        <Col md>
-                            <a href="">Care Instructions</a>
+                            <Link to="/contact-us">
+                                Contact Us</Link>
                         </Col>
 
                         <Col md>
-                            <a href="">Changing or Modifying Order</a>
+                            <Link to="/faq">
+                                FAQ</Link>
                         </Col>
+
+                        <Col md>
+                            <Link to="/returns">
+                                Returns</Link>
+                        </Col>
+
+                        <Col md>
+                            <Link to="/care">
+                                Care Instructions</Link>
+                        </Col>
+
+                        <Col md>
+                            <Link to="/change-order">
+                                Changing Order</Link>
+                        </Col>
+
+
 
 
                     </Row>

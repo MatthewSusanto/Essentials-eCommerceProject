@@ -22,11 +22,11 @@ class CareInstructions extends Component {
 
 
         return (
-            <div >
+            <div className="help-div">
 
 
 
-                <Container>
+                <Container >
                     <Row>
                         <h5>Cleaning</h5>
                         <h5>When your clothes need a wash, don’t simply stick them in the washer as you might do usually; follow these guidelines. Use a gentle cleaning cycle, and opt for an eco-friendly detergent; not only is that better for the environment, it is more gentle for the bamboo fabric too and keeps everything as fresh and clean as possible. If you have any excessive stains, pre-soak the clothing in cold water before you put them in the washing machine( cold water only). Wash shirts separate from other clothes. As with usual washing routines, separate light and dark colors and wash them separately.</h5>

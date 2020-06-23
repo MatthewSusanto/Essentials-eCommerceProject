@@ -33,9 +33,6 @@ function App() {
     <div className="App">
 
 
-      <NavbarComponent />
-      <NewsBanner />
-
 
 
 
@@ -43,6 +40,11 @@ function App() {
 
 
       <BrowserRouter>
+
+
+        <NavbarComponent />
+        <NewsBanner />
+
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path="/signin" component={SignIn} />
@@ -67,9 +69,11 @@ function App() {
 
         </Switch>
 
+        <Footer />
+
+
       </BrowserRouter>
 
-      <Footer />
 
     </div>
   );
