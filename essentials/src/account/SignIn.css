@@ -1,3 +1,7 @@
+*{
+    word-wrap: break-word;
+}
+
 .title{
     text-align: center;
     margin-top: 2em;
@@ -16,4 +20,31 @@
     text-align: center;
     padding-bottom: 1em;
    
+}
+
+.account-comp{
+    min-height: 80vh;
+}
+
+.productpic{
+    width: 100px;
+    height: 100px;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+.order-history-item:hover{
+
+    background-color: cornsilk;
+}
+
+.order-history-item{
+    padding: 1rem;
+    
 }

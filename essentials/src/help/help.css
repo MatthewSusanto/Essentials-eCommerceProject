@@ -1,0 +1,19 @@
+
+.container .row{
+    margin: 5rem 0 5rem 0;
+}
+
+.container .row h5{
+    display:flex;
+    justify-content: left;
+    text-align: left;
+}
+
+.changeOrder{
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+}
+
+.changeOrder textarea{
+    height: 15vh;
+}

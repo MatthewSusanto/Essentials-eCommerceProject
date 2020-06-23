@@ -21,6 +21,7 @@ import CareInstructions from './help/CareInstructions'
 import Returns from './help/Returns'
 
 import Home from './home/Home';
+import Account from './account/Account'
 
 //import './App.css';
 
@@ -57,6 +58,8 @@ function App() {
           <Route path="/change-order" component={ChangeOrder} />
           <Route path="/care" component={CareInstructions} />
           <Route path="/returns" component={Returns} />
+
+          <Route path="/account" component={Account} />
 
 
 

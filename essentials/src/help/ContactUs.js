@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Button, Container, Row, Col } from 'react-bootstrap'
+import { Button, Container, Row, Col, Form } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
-
+import './help.css'
 
 
 
@@ -21,96 +21,45 @@ class ContactUs extends Component {
 
 
         return (
-            <div >
+            <div>
 
 
 
-
-                <Container fluid className="product-home-row mt-5" >
-
-                    <Row>
-                        <Col lg={12}>
-                            <p className="display-2">Best Sellers</p>
-                        </Col>
-                    </Row>
+                <Container className="changeOrder">
                     <Row >
+                        <Col >
+                            <h2 className="mb-5 display-2">Contact Us</h2>
+                            <Form >
+                                <Form.Group controlId="exampleForm.ControlTextarea1">
+                                    <Form.Row>
+                                        <Col>
+                                            <Form.Control placeholder="Your Name" />
+                                        </Col>
+                                        <Col>
+                                            <Form.Control type="email" placeholder="Your Email" />
+                                        </Col>
+                                    </Form.Row>
+                                </Form.Group>
 
-                        <Col lg={4} className="showcasePadding">
-                            <ProductShowcase />
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
+                                <Form.Group controlId="exampleForm.ControlTextarea1">
 
-                            <ProductShowcase />
+                                    <Form.Control placeholder="Your phone (optional)" type="telephone" />
+                                </Form.Group>
 
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
 
-                            <ProductShowcase />
+                                <Form.Group controlId="exampleForm.ControlTextarea1">
 
-                        </Col>
-                    </Row>
-                    <Row >
+                                    <Form.Control as="textarea" rows="3" placeholder="Your message" />
+                                </Form.Group>
 
-                        <Col lg={4} className="showcasePadding">
-                            <ProductShowcase />
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
 
-                            <ProductShowcase />
-
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
-
-                            <ProductShowcase />
-
-                        </Col>
-                    </Row>
-                    <Row >
-
-                        <Col lg={4} className="showcasePadding">
-                            <ProductShowcase />
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
-
-                            <ProductShowcase />
-
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
-
-                            <ProductShowcase />
+                                <Button variant="success" type="submit" block size="lg">
+                                    SEND MESSAGE
+                                    </Button>
+                            </Form>
 
                         </Col>
                     </Row>
-                    <Row >
-
-                        <Col lg={4} className="showcasePadding">
-                            <ProductShowcase />
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
-
-                            <ProductShowcase />
-
-                        </Col>
-                        <Col lg={4} className="showcasePadding">
-
-                            <ProductShowcase />
-
-                        </Col>
-                    </Row>
-
-                    <Container>
-                        <Row >
-                            <Col className="d-flex justify-content-center">
-                                <Pagination />
-                            </Col>
-
-                        </Row>
-
-                    </Container>
-
-
-
-
                 </Container>
 
 
@@ -119,7 +68,9 @@ class ContactUs extends Component {
 
 
 
-            </div>
+
+
+            </div >
         )
     }
 }
