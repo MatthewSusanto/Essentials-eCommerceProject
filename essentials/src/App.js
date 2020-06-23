@@ -22,6 +22,7 @@ import Returns from './help/Returns'
 
 import Home from './home/Home';
 import Account from './account/Account'
+import Cart from './cart/Cart'
 
 //import './App.css';
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/returns" component={Returns} />
 
           <Route path="/account" component={Account} />
+          <Route path="/cart" component={Cart} />
 
 
 

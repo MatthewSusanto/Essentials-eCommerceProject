@@ -25,16 +25,17 @@ class Account extends Component {
         return (
             <div>
 
-                <Container className="account-comp bg-light">
+                <Container className="account-comp mt-5">
 
 
                     <Row>
                         <Col>
-                            <h2 className="text-left display-4">Welcome back Jason,</h2>
+                            <h2 className="display-4">Welcome back Jason,</h2>
+
                         </Col>
-                        <Col lg={2} className="text-left">
-                            <Button variant="outline-dark" block> View My Account Details </Button>
-                        </Col>
+
+
+
 
                     </Row>
 
@@ -42,11 +43,11 @@ class Account extends Component {
 
 
 
-                    <Container fluid className="p-1 ">
+                    <Container fluid className="p-1 mt-5 ">
 
                         <Row>
                             <Col>
-                                <h4 className="display-4">My Orders</h4>
+                                <h4 className="text-left">My Orders</h4>
                             </Col>
                         </Row>
 
@@ -57,20 +58,14 @@ class Account extends Component {
                         <OrderHistory />
                         <OrderHistory />
 
-                        <Container fluid className="bg-dark text-light">
-                            <Row className="justify-content-center p-1">
-                                <Col>
-                                </Col>
-                                <Col lg={2}>
-                                    Total:
-                            </Col>
-                                <Col lg={2}>
-                                    $6000
-                            </Col>
-                            </Row>
+                        <Row className="justify-content-center align-items-center p-1">
 
+                            <Col className="text-right">
+                                <h3>Total: $6000</h3>
 
-                        </Container>
+                            </Col>
+
+                        </Row>
 
 
 

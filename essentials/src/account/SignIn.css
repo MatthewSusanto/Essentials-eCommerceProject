@@ -27,24 +27,45 @@
 }
 
 .productpic{
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
+    
 }
 
-a{
-    color: black;
-}
 
-a:hover{
-    color: black;
-}
 
-.order-history-item:hover{
-
-    background-color: cornsilk;
-}
 
 .order-history-item{
     padding: 1rem;
+    background-color: #f2f2f2;
     
 }
+
+.xButton{
+    position: absolute;
+    font-size: 1.5rem;
+    margin: 0rem 0.5rem 0 0;
+    right: 0;
+    top:0;
+    z-index: 1;
+    background: none;
+    border: none;
+}
+
+.xButton:active{
+   border-style: outset;
+   border:none;
+   outline: none;
+}
+
+.itemlist{
+    position: relative;
+}
+
+.qtyBtn{
+    background-color: black;
+    color: white;
+    margin: 0 1rem 0 1rem;
+    padding: 0px 9px 0px 9px;
+}
+

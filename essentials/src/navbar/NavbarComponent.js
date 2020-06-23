@@ -7,6 +7,7 @@ import search from './images/search.png'
 import SignIn from '../account/SignIn'
 import SignUp from '../account/SignUp'
 import { Link } from 'react-router-dom'
+import CartModal from '../cart/CartModal'
 
 
 
@@ -106,10 +107,11 @@ class NavbarComponent extends Component {
 
 
                             <Nav.Link href="#pricing" >
-                                <div className="bagDiv">
+                                <CartModal />
+                                {/* <div className="bagDiv">
                                     <img src={bag} className="bagImg" />
                                     <p className="bagItems">63</p>
-                                </div>
+                                </div> */}
                             </Nav.Link>
 
                         </Nav>
