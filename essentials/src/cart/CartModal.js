@@ -107,11 +107,15 @@ class CartModal extends Component {
                                     Continue Shopping
                             </Button>
                             </Row>
-                            <Row>
-                                <Button className="m-2" variant="success" block size="lg">
-                                    View Shopping Bag
-                            </Button>
-                            </Row>
+
+                            <Link to="/cart" onClick={this.handleClose}>
+                                <Row>
+                                    <Button className="m-2" variant="success" block size="lg">
+                                        Check Out
+                                    </Button>
+                                </Row>
+                            </Link>
+
                         </Container>
 
                     </Modal.Footer>

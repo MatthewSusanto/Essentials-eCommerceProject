@@ -30,7 +30,7 @@ class Account extends Component {
 
                     <Row>
                         <Col>
-                            <h2 className="display-4">Welcome back Jason,</h2>
+                            <h2 className="display-4 mt-5">Welcome back Jason,</h2>
 
                         </Col>
 

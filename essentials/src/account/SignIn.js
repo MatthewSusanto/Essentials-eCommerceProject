@@ -3,6 +3,7 @@ import { Button, Modal, Form, Container, Row, Col, Nav } from 'react-bootstrap'
 import './SignIn.css'
 import account from '../navbar/images/account.png'
 import { Link, BrowserRouter } from 'react-router-dom'
+import SignUp from './SignUp'
 
 
 class SignIn extends Component {
@@ -32,7 +33,7 @@ class SignIn extends Component {
         return (
             <div>
 
-                <Nav.Link href="#signin" onClick={this.handleShow}>
+                <Nav.Link onClick={this.handleShow}>
                     <img src={account} className="accountImg" />
                 </Nav.Link>
 
@@ -94,15 +95,20 @@ class SignIn extends Component {
                                             <Form.Control type="password" placeholder="Password" />
                                         </Form.Group>
 
-                                        <Button variant="primary" type="submit" block size="lg">
-                                            Sign In
+
+
+
+                                        <Link to="/account">
+                                            <Button variant="primary" type="submit" block size="lg" onClick={this.handleClose}>
+                                                Sign In
                             </Button>
+                                        </Link>
 
                                     </Form>
 
-                                    <BrowserRouter>
-                                        <Link to="/signup"><Button variant="primary" type="submit" block variant="success" size="lg">Create My Account</Button></Link>
-                                    </BrowserRouter>
+                                    <Link to="/signup">
+                                        <Button block size="lg" variant="success" onClick={this.handleClose} > Create My Account </Button>
+                                    </Link>
                                     <br />
                                     <a href="#"> Forgot your password? </a>
 

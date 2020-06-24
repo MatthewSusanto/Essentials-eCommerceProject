@@ -5,7 +5,7 @@ import bag from './images/bag.png'
 import account from './images/account.png'
 import search from './images/search.png'
 import SignIn from '../account/SignIn'
-import SignUp from '../account/SignUp'
+
 import { Link } from 'react-router-dom'
 import CartModal from '../cart/CartModal'
 
@@ -46,7 +46,7 @@ class NavbarComponent extends Component {
 
                 <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" fixed="top" >
 
-                    <Navbar.Brand href="#home">ESSENTIALS</Navbar.Brand>
+                    <Link to='/'><Navbar.Brand>ESSENTIALS</Navbar.Brand> </Link>
 
 
 
@@ -55,7 +55,7 @@ class NavbarComponent extends Component {
 
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto"  >
-                            <Nav.Link href="#home" >BEST SELLERS</Nav.Link>
+                            <Nav.Link href="#pricing" >BEST SELLERS</Nav.Link>
 
                             <NavDropdown title="TOPS" id="collasible-nav-dropdown" show={this.state.showTops}
                                 onMouseEnter={() => this.setState({ showTops: true })}
@@ -84,7 +84,6 @@ class NavbarComponent extends Component {
                             <Nav.Link href="#pricing">UNDERWEAR</Nav.Link>
                             <Nav.Link href="#pricing">SALE</Nav.Link>
 
-                            <SignUp />
 
                         </Nav>
 
@@ -106,12 +105,9 @@ class NavbarComponent extends Component {
 
 
 
-                            <Nav.Link href="#pricing" >
+                            <Nav.Link >
                                 <CartModal />
-                                {/* <div className="bagDiv">
-                                    <img src={bag} className="bagImg" />
-                                    <p className="bagItems">63</p>
-                                </div> */}
+
                             </Nav.Link>
 
                         </Nav>
