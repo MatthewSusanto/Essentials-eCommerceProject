@@ -1,0 +1,105 @@
+{
+  "collections": {
+    "tops": {
+      "tees": {
+        "colour": {
+          "red": {
+            "size": {
+              "xs": {
+                "quantity": 1
+              },
+              "s": {
+                "quantity": 1
+              },
+              "m": {
+                "quantity": 1
+              },
+              "l": {
+                "quantity": 1
+              },
+              "xl": {
+                "quantity": 1
+              }
+            }
+          },
+          "navy": {
+            "size": {
+              "xs": {
+                "quantity": 1
+              },
+              "s": {
+                "quantity": 1
+              },
+              "m": {
+                "quantity": 1
+              },
+              "l": {
+                "quantity": 1
+              },
+              "xl": {
+                "quantity": 1
+              }
+            }
+          },
+          "black": {
+            "size": {
+              "xs": {
+                "quantity": 1
+              },
+              "s": {
+                "quantity": 1
+              },
+              "m": {
+                "quantity": 1
+              },
+              "l": {
+                "quantity": 1
+              },
+              "xl": {
+                "quantity": 1
+              }
+            }
+          },
+          "white": {
+            "size": {
+              "xs": {
+                "quantity": 1
+              },
+              "s": {
+                "quantity": 1
+              },
+              "m": {
+                "quantity": 1
+              },
+              "l": {
+                "quantity": 1
+              },
+              "xl": {
+                "quantity": 1
+              }
+            }
+          }
+        },
+        "name": "Bamboo Tees",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+        "price": 30,
+        "primary-img": "",
+        "secondary-img": "",
+        "extra-img": "",
+        "color-img": {
+          "navy": "",
+          "black": "",
+          "red": "",
+          "white": ""
+        }
+      },
+      "v-necks": "",
+      "henleys": "",
+      "crew-neck-sweater": "",
+      "jackets": "",
+      "hoodies": ""
+    },
+    "bottoms": "",
+    "underwear": ""
+  }
+}

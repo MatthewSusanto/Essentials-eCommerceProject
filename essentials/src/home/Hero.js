@@ -19,14 +19,14 @@ class Hero extends Component {
 
 
         return (
-            <div >
+            <div className="hero-img" >
 
 
 
 
-                <Container fluid className="hero-img">
+                <Container fluid >
                     <Row >
-                        <Col className="hero-content">
+                        <Col lg={{ span: 5, offset: 0 }} className="hero-content">
 
                             <h1>Must Have Basics</h1>
                             <p>Starting from $39.99</p>

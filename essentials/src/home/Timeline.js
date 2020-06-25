@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import timeline1 from './images/timeline1.PNG'
-import timeline2 from './images/timeline2.jpeg'
-import timeline3 from './images/timeline3.png'
+import timeline2 from './images/timeline2.PNG'
+import timeline3 from './images/timeline3.PNG'
 
 
 
@@ -20,21 +20,21 @@ class Timeline extends Component {
         if (this.state.radio == 1) {
 
             return (<p>
-                After being frustrated with the what's on the market, we set out to create the perfect basic tee.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, eaque? Culpa omnis voluptatum eligendi quas nisi mollitia corporis! Earum tenetur animi autem aspernatur aut sequi tempora nihil dolorem itaque molestiae?
             </p>)
         }
 
         else if (this.state.radio == 2) {
 
             return (<p>
-                After releasing the basic tee and seeing the amazing response, we decided to take our talents to a lot of the other essentials everyone needs. We created the perfect V-Necks, Long Sleeve tees, Hoodies, Track Pants, Underwear and Socks.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, necessitatibus explicabo tenetur fugiat animi rem.
             </p>)
         }
 
         else if (this.state.radio == 3) {
 
             return (<p>
-                After solidifying the base essentials, we started working towards developing items that offer the look of formal wear but the versatility and the comfort of an Essentials. The Essentials Cargo showcases our effort to push the boundaries and bridge the gap between comfort and formal wear.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dolorem quae quasi consequatur soluta cumque excepturi numquam vero quidem!
             </p>)
         }
 
@@ -105,6 +105,7 @@ class Timeline extends Component {
 
         return (
             <div >
+                <hr />
 
 
 
