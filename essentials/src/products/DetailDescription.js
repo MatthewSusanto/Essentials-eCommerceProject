@@ -11,7 +11,7 @@ import boomer from '../products/images/tees2.PNG'
 class DetailDescription extends Component {
 
     state = {
-        active: null,
+        activeColor: null,
         colours: Object.keys(this.props.colours),
         quantity: null,
         xs: 0,
@@ -20,16 +20,23 @@ class DetailDescription extends Component {
         l: 0,
         xl: 0,
         sizeActive: null,
+        discount: this.props.item.discount
+
+    }
+
+    afterDiscountPrice = () => {
 
 
 
+        let price = this.props.item.price
+        let discount = (this.state.discount / 100) * price
+        return ((price - discount).toFixed(2))
     }
 
     selectColor = (color) => {
 
         this.setState({
-            active: color,
-
+            activeColor: color,
             xs: this.props.item.colour[color].size.xs.quantity,
             s: this.props.item.colour[color].size.s.quantity,
             m: this.props.item.colour[color].size.m.quantity,
@@ -42,34 +49,29 @@ class DetailDescription extends Component {
     }
 
     activeColor = (colour) => {
-        if (this.state.active === colour) {
+        if (this.state.activeColor === colour) {
             return (`colourBox colourBox${colour} activecolor`)
         } else if (colour == "white") { return "colourBox colourBoxwhite" }
         else if (colour == "black") { return "colourBox colourBoxblack" }
         else if (colour == "red") { return "colourBox colourBoxred" }
         else if (colour == "navy") { return "colourBox colourBoxnavy" }
+        else if (colour == "olive") { return "colourBox colourBoxolive" }
+        else if (colour == "tan") { return "colourBox colourBoxtan" }
+        else if (colour == "grey") { return "colourBox colourBoxgrey" }
+        else if (colour == "khaki") { return "colourBox colourBoxkhaki" }
     }
 
     rowColor = () => {
 
-        const jason = this.state.colours.map((e) =>
-
-
+        const colorList = this.state.colours.map((e) =>
             <div className={this.activeColor(e)} onClick={() => this.selectColor(e)}>  </div>
-
-
         )
         return (
             <Row className="colourSelection">
-
-                {jason}
-
+                {colorList}
             </Row>
 
         )
-
-
-
 
     }
 
@@ -77,7 +79,7 @@ class DetailDescription extends Component {
         let chosenSize = size
         this.setState({
             sizeActive: chosenSize,
-            quantity: this.props.item.colour[this.state.active].size[chosenSize].quantity
+            quantity: this.props.item.colour[this.state.activeColor].size[chosenSize].quantity
         })
     }
 
@@ -115,9 +117,6 @@ class DetailDescription extends Component {
 
             }
 
-
-
-
             var list = number.map((e) =>
                 <option key={e}>{e}</option>
             )
@@ -125,9 +124,45 @@ class DetailDescription extends Component {
             return (list)
         }
 
-
-
     }
+
+    toUppercase = () => {
+
+        if (this.state.activeColor !== null) {
+
+            return this.state.activeColor.charAt(0).toUpperCase() + this.state.activeColor.slice(1);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     render() {
@@ -141,21 +176,6 @@ class DetailDescription extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             return (
                 <div>
 
@@ -163,14 +183,14 @@ class DetailDescription extends Component {
 
                         <Row>
                             <Col>
-                                <h2> {this.props.name} </h2>
+                                <h2 className="display-3 h1"> {this.props.name} {this.toUppercase()} </h2>
                             </Col>
                         </Row>
 
 
                         <Row>
                             <Col>
-                                <h2 className="text-danger"> ${this.props.price} <span className="text-muted"> was $60nigg</span> </h2>
+                                <h4><span className="h1">Price: </span>  <span className="text-danger h1"> ${this.afterDiscountPrice()}</span> <strike className="text-muted text-decoration-"> {this.state.discount ? `$${(this.props.price).toFixed(2)}` : ""}</strike><span className="text-success"> {this.state.discount ? `(${this.state.discount} %off)` : ""}</span> </h4>
                             </Col>
                         </Row>
 
@@ -201,18 +221,7 @@ class DetailDescription extends Component {
                                     <Form.Group controlId="exampleForm.SelectCustom">
                                         <Form.Control as="select" custom>
                                             {this.quantitySelect()}
-                                            {/* 
-                                           
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option> */}
+
                                         </Form.Control>
                                     </Form.Group>
                                 </Form>
@@ -237,10 +246,10 @@ class DetailDescription extends Component {
                         <Row>
                             <Col>
                                 <ul className="productList">
-                                    <li> 65% Bamboo </li>
-                                    <li> 28% Cotton </li>
-                                    <li> 7% Spandex </li>
-                                    <li> 320 grams </li>
+                                    <li> 62% lorems </li>
+                                    <li> 13% lorema </li>
+                                    <li> 89% lorem </li>
+                                    <li> 520 grams </li>
                                 </ul>
                             </Col>
                         </Row>
