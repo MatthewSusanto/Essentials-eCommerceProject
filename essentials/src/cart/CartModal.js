@@ -6,6 +6,7 @@ import { Link, BrowserRouter } from 'react-router-dom'
 import './CartModal.css'
 import CartModalItem from './CartModalItem'
 import bag from '../navbar/images/bag.png'
+import { connect } from 'react-redux'
 
 
 class CartModal extends Component {
@@ -31,6 +32,8 @@ class CartModal extends Component {
 
     render() {
 
+        const { totalAmount } = this.props;
+
 
         return (
             <div>
@@ -38,7 +41,7 @@ class CartModal extends Component {
 
                 <div className="bagDiv" onClick={this.handleShow}>
                     <img src={bag} className="bagImg" />
-                    <p className="bagItems">63</p>
+                    <p className="bagItems">{totalAmount}</p>
                 </div>
 
 
@@ -65,7 +68,7 @@ class CartModal extends Component {
 
                 <Modal show={this.state.show} onHide={this.handleClose} size="lg" className="right">
                     <Modal.Header closeButton className="h2">
-                        Shopping Bag (12)
+                        Shopping Bag ({totalAmount})
                     </Modal.Header>
 
 
@@ -130,35 +133,16 @@ class CartModal extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div >
+            </div>
         )
     }
 }
 
-export default CartModal
+const mapStateToProps = (state) => {
+    return {
+        totalAmount: state.cart.totalAmount
+    }
+}
+
+export default connect(mapStateToProps)(CartModal)
 

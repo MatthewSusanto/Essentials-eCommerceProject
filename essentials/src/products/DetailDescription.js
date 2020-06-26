@@ -3,6 +3,8 @@ import { Form, Button, Container, Row, Col, Card, Accordion } from 'react-bootst
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
+import { connect } from 'react-redux'
+import { addToCart } from '../redux/cartActions'
 
 
 
@@ -11,7 +13,8 @@ import boomer from '../products/images/tees2.PNG'
 class DetailDescription extends Component {
 
     state = {
-        activeColor: null,
+
+        id: this.props.item.id,
         colours: Object.keys(this.props.colours),
         quantity: null,
         xs: 0,
@@ -19,19 +22,25 @@ class DetailDescription extends Component {
         m: 0,
         l: 0,
         xl: 0,
+
+        discount: this.props.item.discount,
+
+        afterDiscountPrice: ((this.props.item.price) - ((this.props.item.discount / 100) * (this.props.item.price))).toFixed(2),
+        productName: this.props.name,
+        activeColor: null,
         sizeActive: null,
-        discount: this.props.item.discount
+        selectedQuantity: 1
+
 
     }
 
-    afterDiscountPrice = () => {
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.addToCart(this.state.id, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, this.state.selectedQuantity)
 
-
-        let price = this.props.item.price
-        let discount = (this.state.discount / 100) * price
-        return ((price - discount).toFixed(2))
     }
+
 
     selectColor = (color) => {
 
@@ -105,6 +114,13 @@ class DetailDescription extends Component {
         console.log(this.state.quantity)
     }
 
+    handleQuantitySelect = (e) => {
+
+        this.setState({
+            selectedQuantity: e.target.value
+        })
+    }
+
     quantitySelect = () => {
 
         if (this.state.quantity == null) {
@@ -118,7 +134,9 @@ class DetailDescription extends Component {
             }
 
             var list = number.map((e) =>
-                <option key={e}>{e}</option>
+                <option value={e}>
+                    {e}
+                </option>
             )
 
             return (list)
@@ -174,8 +192,6 @@ class DetailDescription extends Component {
         }
         else {
 
-
-
             return (
                 <div>
 
@@ -183,14 +199,14 @@ class DetailDescription extends Component {
 
                         <Row>
                             <Col>
-                                <h2 className="display-3 h1"> {this.props.name} {this.toUppercase()} </h2>
+                                <h2 className="display-3 h1"> {this.state.productName} {this.toUppercase()} </h2>
                             </Col>
                         </Row>
 
 
                         <Row>
                             <Col>
-                                <h4><span className="h1">Price: </span>  <span className="text-danger h1"> ${this.afterDiscountPrice()}</span> <strike className="text-muted text-decoration-"> {this.state.discount ? `$${(this.props.price).toFixed(2)}` : ""}</strike><span className="text-success"> {this.state.discount ? `(${this.state.discount} %off)` : ""}</span> </h4>
+                                <h4><span className="h1">Price: </span>  <span className="text-danger h1"> ${this.state.afterDiscountPrice}</span> <strike className="text-muted text-decoration-"> {this.state.discount ? `$${(this.props.price).toFixed(2)}` : ""}</strike><span className="text-success"> {this.state.discount ? `(${this.state.discount}% off)` : ""}</span> </h4>
                             </Col>
                         </Row>
 
@@ -219,7 +235,7 @@ class DetailDescription extends Component {
 
                                 <Form>
                                     <Form.Group controlId="exampleForm.SelectCustom">
-                                        <Form.Control as="select" custom>
+                                        <Form.Control as="select" onChange={this.handleQuantitySelect}>
                                             {this.quantitySelect()}
 
                                         </Form.Control>
@@ -233,7 +249,7 @@ class DetailDescription extends Component {
 
                         <Row>
                             <Col>
-                                <Button variant="success" block size="lg"> ADD TO CART</Button>
+                                <Button variant="success" disabled={this.state.sizeActive ? false : true} block size="lg" onClick={this.handleSubmit}> ADD TO CART</Button>
                             </Col>
                         </Row>
 
@@ -294,5 +310,16 @@ class DetailDescription extends Component {
     }
 }
 
-export default DetailDescription
+// const mapStateToProps = (state) =>{
+//     return{
+//         cart: state.cart.
+//     }
+// }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addToCart: (itemId, finalPrice, chosenColour, chosenSize, chosenQuantity) => dispatch(addToCart(itemId, finalPrice, chosenColour, chosenSize, chosenQuantity))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(DetailDescription)
