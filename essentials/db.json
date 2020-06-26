@@ -1,105 +1,1358 @@
 {
-  "collections": {
-    "tops": {
-      "tees": {
-        "colour": {
-          "red": {
-            "size": {
-              "xs": {
-                "quantity": 1
-              },
-              "s": {
-                "quantity": 1
-              },
-              "m": {
-                "quantity": 1
-              },
-              "l": {
-                "quantity": 1
-              },
-              "xl": {
-                "quantity": 1
-              }
-            }
-          },
-          "navy": {
-            "size": {
-              "xs": {
-                "quantity": 1
-              },
-              "s": {
-                "quantity": 1
-              },
-              "m": {
-                "quantity": 1
-              },
-              "l": {
-                "quantity": 1
-              },
-              "xl": {
-                "quantity": 1
-              }
-            }
-          },
-          "black": {
-            "size": {
-              "xs": {
-                "quantity": 1
-              },
-              "s": {
-                "quantity": 1
-              },
-              "m": {
-                "quantity": 1
-              },
-              "l": {
-                "quantity": 1
-              },
-              "xl": {
-                "quantity": 1
-              }
-            }
-          },
-          "white": {
-            "size": {
-              "xs": {
-                "quantity": 1
-              },
-              "s": {
-                "quantity": 1
-              },
-              "m": {
-                "quantity": 1
-              },
-              "l": {
-                "quantity": 1
-              },
-              "xl": {
-                "quantity": 1
-              }
+  "tops": [
+    {
+      "id": 1,
+      "name": "Bamboo Tee",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 30,
+      "discount": 20,
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/Capture1.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/Capture2.PNG",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
             }
           }
         },
-        "name": "Bamboo Tees",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
-        "price": 30,
-        "primary-img": "",
-        "secondary-img": "",
-        "extra-img": "",
-        "color-img": {
-          "navy": "",
-          "black": "",
-          "red": "",
-          "white": ""
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 1
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 1
+            }
+          }
         }
-      },
-      "v-necks": "",
-      "henleys": "",
-      "crew-neck-sweater": "",
-      "jackets": "",
-      "hoodies": ""
+      }
     },
-    "bottoms": "",
-    "underwear": ""
-  }
+    {
+      "id": 2,
+      "name": "V-Neck Tee",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 30,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 41
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 1
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 4
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Henley",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 50,
+      "discount": 15,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 9
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 12
+            },
+            "s": {
+              "quantity": 1
+            },
+            "m": {
+              "quantity": 3
+            },
+            "l": {
+              "quantity": 4
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Hoodie",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 100,
+      "discount": 15,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 9
+            },
+            "xl": {
+              "quantity": 11
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "bottoms": [
+    {
+      "id": 5,
+      "name": "Cargo Pants",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 60,
+      "discount": 50,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "olive": "",
+        "black": "",
+        "tan": ""
+      },
+      "colour": {
+        "olive": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "tan": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "Sweat Pants",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 60,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "grey": ""
+      },
+      "colour": {
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 2
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 7
+            },
+            "l": {
+              "quantity": 7
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "grey": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 8
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 7,
+      "name": "Chinos",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 60,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "khaki": "",
+        "black": "",
+        "navy": ""
+      },
+      "colour": {
+        "khaki": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    }
+  ],
+  "underwear": [
+    {
+      "id": 8,
+      "name": "Boxer Brief",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 25,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "olive": "",
+        "black": "",
+        "navy": ""
+      },
+      "colour": {
+        "olive": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 23
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 18
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+
+
+{
+  "collection": [
+    {
+      "id": "tees",
+      "name": "Bamboo Tee",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 30,
+      "discount": 20,
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/Capture1.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/Capture2.PNG",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 1
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "vnecks",
+      "name": "V-Neck Tee",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 30,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 41
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 1
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 4
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": henleys,
+      "name": "Henley",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 50,
+      "discount": 15,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 9
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 12
+            },
+            "s": {
+              "quantity": 1
+            },
+            "m": {
+              "quantity": 3
+            },
+            "l": {
+              "quantity": 4
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "hoodies",
+      "name": "Hoodie",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 100,
+      "discount": 15,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "red": "",
+        "white": ""
+      },
+      "colour": {
+        "red": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 9
+            },
+            "xl": {
+              "quantity": 11
+            }
+          }
+        },
+        "white": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "cargopants",
+      "name": "Cargo Pants",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 60,
+      "discount": 50,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "olive": "",
+        "black": "",
+        "tan": ""
+      },
+      "colour": {
+        "olive": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "tan": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "sweatpants",
+      "name": "Sweat Pants",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 60,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "navy": "",
+        "black": "",
+        "grey": ""
+      },
+      "colour": {
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 2
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 7
+            },
+            "l": {
+              "quantity": 7
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "grey": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 8
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "chinos",
+      "name": "Chinos",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 60,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "khaki": "",
+        "black": "",
+        "navy": ""
+      },
+      "colour": {
+        "khaki": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 9
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 1
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "boxerbriefs",
+      "name": "Boxer Brief",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
+      "price": 25,
+      "discount": 0,
+      "primary_img": "",
+      "secondary_img": "",
+      "extra_img": "",
+      "color_img": {
+        "olive": "",
+        "black": "",
+        "navy": ""
+      },
+      "colour": {
+        "olive": {
+          "size": {
+            "xs": {
+              "quantity": 1
+            },
+            "s": {
+              "quantity": 4
+            },
+            "m": {
+              "quantity": 15
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 23
+            }
+          }
+        },
+        "navy": {
+          "size": {
+            "xs": {
+              "quantity": 2
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 5
+            },
+            "xl": {
+              "quantity": 4
+            }
+          }
+        },
+        "black": {
+          "size": {
+            "xs": {
+              "quantity": 18
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 1
+            },
+            "l": {
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 12
+            }
+          }
+        }
+      }
+    }
+  ]
 }

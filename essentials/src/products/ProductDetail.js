@@ -13,43 +13,101 @@ import ProductRecommendation from './ProductRecommendation'
 
 class ProductDetail extends Component {
 
+
     state = {
+        items: null,
+        islLoaded: false,
+        productName: null,
 
     }
 
+    componentDidMount() {
 
+        let productName = this.props.match.params.product_name;
+        this.setState({
+            productName: productName
+        })
+
+        fetch('http://my-json-server.typicode.com/MatthewSusanto/dbJson8/collection')
+            .then(res => res.json())
+            .then(json => {
+                this.setState({
+                    islLoaded: true,
+                    items: json
+                })
+            })
+    }
+
+
+
+
+    // test = () => {
+    //     const items = this.state.items
+    //     let item = {}
+    //     for (let i = 0; i < items.length; i++) {
+    //         if (items[i].id == this.state.productName) {
+    //             item = items[i]
+    //         }
+
+    //     }
+
+    //     console.log(item)
+
+    // }
 
 
 
     render() {
 
 
-        return (
-            <div>
+        if (this.state.islLoaded != true) {
 
-                <Container fluid >
-                    <Row className="marginy">
-                        <Col lg={8}>
-                            <DetailImg />
-                        </Col>
+            return (<div>Loading...</div>)
 
-                        <Col lg={4} >
-                            <DetailDescription />
-                        </Col>
-                    </Row>
+        }
+
+        else {
+
+            const items = this.state.items
+            let item = {}
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].id == this.state.productName) {
+                    item = items[i]
+                }
 
 
-
-                    <Row>
-                        <Col>
-                            <ProductRecommendation />
-
-                        </Col>
-                    </Row>
+            }
+            console.log(item)
 
 
 
-                </Container>
+            return (
+                <div>
+
+                    <Container fluid >
+                        <Row className="marginy">
+                            <Col lg={8}>
+                                <DetailImg />
+
+                            </Col>
+
+                            <Col lg={4} >
+                                <DetailDescription name={item.name} price={item.price} description={item.description} colours={item.colour} item={item} />
+                            </Col>
+                        </Row>
+
+
+
+                        <Row>
+                            <Col>
+                                <ProductRecommendation />
+
+                            </Col>
+                        </Row>
+
+
+
+                    </Container>
 
 
 
@@ -58,9 +116,13 @@ class ProductDetail extends Component {
 
 
 
-            </div>
-        )
+                </div>
+
+            )
+        }
+
     }
+
 }
 
 export default ProductDetail

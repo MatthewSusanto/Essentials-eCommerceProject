@@ -32,3 +32,54 @@
    display: flex;
    justify-content: space-between
 }
+
+
+.colourBox{
+    border-style: solid;
+    border-width: 1.5px;
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    margin: 2rem 2rem 2rem 1rem;
+    padding: 1rem;
+}
+
+.colourBox:hover{
+    cursor: pointer;
+   
+}
+
+.activecolor.colourBox{
+   
+    border-width: 5px;
+    cursor: pointer;
+    
+}
+
+.colourBoxred.colourBox{
+    
+    
+    background-color: red;
+   
+
+}
+
+
+.colourBoxnavy{
+  
+    background-color: navy;
+    
+}
+
+
+.colourBoxblack{
+
+    background-color:#242424;
+ 
+}
+
+
+.colourBoxwhite{
+   background-color: white;
+
+}

@@ -71,15 +71,15 @@ class ProductShowcase extends Component {
 
 
 
-                            <a href=""><img src={this.state.onHover ? tees2 : tees} className="tees" /></a>
+                            <a href=""><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} className="tees" /></a>
 
                         </Col>
                     </Row>
 
                     <Row className="showcase-details">
                         <Col>
-                            <p className="h3"> THE ESNTL NAVY TEE </p>
-                            <p className="h5 text-secondary"> $30 </p>
+                            <p className="h3"> {this.props.name} </p>
+                            <p className="h5 text-secondary"> ${this.props.price} </p>
                         </Col>
                     </Row>
                 </Container>
