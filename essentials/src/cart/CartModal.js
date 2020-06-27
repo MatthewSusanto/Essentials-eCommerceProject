@@ -12,7 +12,9 @@ import { connect } from 'react-redux'
 class CartModal extends Component {
 
     state = {
-        show: false
+        show: false,
+        subTotal: 0
+
     }
 
     handleClose = () => {
@@ -24,6 +26,13 @@ class CartModal extends Component {
     handleShow = () => {
         this.setState({
             show: true
+        })
+    }
+
+    handleSubtotal = (total) => {
+
+        this.setState({
+            subTotal1: total
         })
     }
 
@@ -39,7 +48,9 @@ class CartModal extends Component {
 
     render() {
 
-        const { totalAmount, items } = this.props;
+        const { totalAmount, items, subTotal } = this.props;
+        console.log(this.state)
+
 
 
         return (
@@ -93,7 +104,7 @@ class CartModal extends Component {
                             <CartModalItem />
                             <CartModalItem /> */}
                             {items.map((e) =>
-                                <CartModalItem itemDetails={e} />
+                                <CartModalItem itemDetails={e} subTotal={this.handleSubtotal} modalSubtotal={this.state.subTotal} />
                             )}
 
 
@@ -112,7 +123,7 @@ class CartModal extends Component {
 
                         <Container fluid>
                             <Row className="h2 d-flex justify-content-end mr-2">
-                                Total: $25
+                                Total:${subTotal}
                             </Row>
 
                             <Row>
@@ -152,7 +163,8 @@ class CartModal extends Component {
 const mapStateToProps = (state) => {
     return {
         totalAmount: state.cart.totalAmount,
-        items: state.cart.items
+        items: state.cart.items,
+        subTotal: state.cart.subTotal
     }
 }
 

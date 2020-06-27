@@ -26,10 +26,11 @@ class DetailDescription extends Component {
         discount: this.props.item.discount,
 
         afterDiscountPrice: ((this.props.item.price) - ((this.props.item.discount / 100) * (this.props.item.price))).toFixed(2),
-        productName: this.props.name,
+        productName: this.props.item.name,
         activeColor: null,
         sizeActive: null,
-        selectedQuantity: 1
+        selectedQuantity: 1,
+        previousPrice: this.props.item.price
 
 
     }
@@ -37,7 +38,7 @@ class DetailDescription extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addToCart(this.state.id, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, this.state.selectedQuantity)
+        this.props.addToCart(this.state.id, this.state.productName, this.state.previousPrice, this.state.discount, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, this.state.selectedQuantity)
 
     }
 
@@ -208,7 +209,7 @@ class DetailDescription extends Component {
 
                         <Row>
                             <Col>
-                                <h4><span className="h1">Price: </span>  <span className="text-danger h1"> ${this.state.afterDiscountPrice}</span> <strike className="text-muted text-decoration-"> {this.state.discount ? `$${(this.props.price).toFixed(2)}` : ""}</strike><span className="text-success"> {this.state.discount ? `(${this.state.discount}% off)` : ""}</span> </h4>
+                                <h4><span className="h1">Price: </span>  <span className="text-danger h1"> ${this.state.afterDiscountPrice}</span> <strike className="text-muted"> {this.state.discount ? `$${(this.props.price).toFixed(2)}` : ""}</strike><span className="text-success"> {this.state.discount ? `(${this.state.discount}% off)` : ""}</span> </h4>
                             </Col>
                         </Row>
 
@@ -325,7 +326,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToCart: (itemId, finalPrice, chosenColour, chosenSize, chosenQuantity) => dispatch(addToCart(itemId, finalPrice, chosenColour, chosenSize, chosenQuantity))
+        addToCart: (itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity) => dispatch(addToCart(itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity))
     }
 }
 

@@ -16,8 +16,10 @@ class CartModalItem extends Component {
 
     state = {
 
-        show: true
-
+        show: true,
+        totalPrice: ((this.props.itemDetails.chosenQuantity * this.props.itemDetails.finalPrice).toFixed(2)),
+        previousPrice: ((this.props.itemDetails.previousPrice).toFixed(2)),
+        modalSubtotal: parseInt(this.props.modalSubtotal)
     }
 
 
@@ -30,9 +32,13 @@ class CartModalItem extends Component {
     }
 
 
+
+
+
     render() {
 
         if (this.state.show == true) {
+
 
 
             return (
@@ -47,11 +53,14 @@ class CartModalItem extends Component {
                             <img src={boomer} className="productpic" />
                         </Col>
                         <Col className="text-left">
-                            <Row className='h4' >Talisman Necklace - Quartz Crystal</Row>
-                            <Row className='h5'> $68.13 CAD </Row>
-                            <Row> was $199.12 CAD </Row>
-                            <Row>Size: L</Row>
-                            <Row>Quantity: 5</Row>
+                            <Row className='h4' >{this.props.itemDetails.itemName}</Row>
+                            <Row className='h4 text-danger'> ${this.props.itemDetails.finalPrice} </Row>
+                            <Row><strike className="text-muted">{(this.props.itemDetails.discount == 0) ? ' ' : `$${this.state.previousPrice} `} </strike> &nbsp; <span className="text-success"> {(this.props.itemDetails.discount == 0) ? ' ' : `(${this.props.itemDetails.discount} % Off)`}</span> </Row>
+                            <hr />
+                            <Row><strong>Colour: </strong> &nbsp; {this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}</Row>
+                            <Row><strong>Size: </strong> &nbsp; {this.props.itemDetails.chosenSize.toUpperCase()}</Row>
+                            <Row><strong>Quantity: </strong> &nbsp; {this.props.itemDetails.chosenQuantity}</Row>
+                            <Row><strong>Total: </strong> &nbsp; {`$${this.state.totalPrice}`}</Row>
 
 
                         </Col>
@@ -74,9 +83,9 @@ class CartModalItem extends Component {
 const mapStateToProps = (state) => {
     return {
         totalAmount: state.cart.totalAmount,
-        // itemId: state.cart.item
     }
 }
+
 
 
 export default connect(mapStateToProps)(CartModalItem)

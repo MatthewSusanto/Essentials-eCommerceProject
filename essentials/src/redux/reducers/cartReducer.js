@@ -1,31 +1,11 @@
 const initialState = {
     items: [
-        {
-            itemId: 'tees',
-            finalPrice: 50,
-            chosenColour: 'red',
-            chosenSize: 's',
-            chosenQuantity: 2
-        },
-        {
-            itemId: 'vnecks',
-            finalPrice: 30,
-            chosenColour: 'red',
-            chosenSize: 'xs',
-            chosenQuantity: 1
-        },
 
-        {
-            itemId: 'vnecks',
-            finalPrice: 30,
-            chosenColour: 'navy',
-            chosenSize: 'l',
-            chosenQuantity: 12
-        }
     ],
 
 
-    totalAmount: 0
+    totalAmount: 0,
+    subTotal: 0
 };
 
 
@@ -34,10 +14,14 @@ const cartReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_ITEM':
 
+            let total = (parseFloat(action.finalPrice) * action.chosenQuantity) + state.subTotal
             let newTotalAmount = state.totalAmount + parseInt(action.chosenQuantity)
             let newItems = [...state.items,
             {
                 itemId: action.itemId,
+                itemName: action.itemName,
+                previousPrice: action.previousPrice,
+                discount: action.discount,
                 finalPrice: action.finalPrice,
                 chosenColour: action.chosenColour,
                 chosenSize: action.chosenSize,
@@ -46,7 +30,7 @@ const cartReducer = (state = initialState, action) => {
             }]
 
             return {
-                ...state, totalAmount: newTotalAmount, items: newItems
+                ...state, totalAmount: newTotalAmount, items: newItems, subTotal: total
 
             }
 
