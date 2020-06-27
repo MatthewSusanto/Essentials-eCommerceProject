@@ -34,23 +34,50 @@ const cartReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_ITEM':
 
-            console.log('added item');
-            state.totalAmount += parseInt(action.chosenQuantity)
-            state.items = [...state.items,
+            let newTotalAmount = state.totalAmount + parseInt(action.chosenQuantity)
+            let newItems = [...state.items,
             {
                 itemId: action.itemId,
                 finalPrice: action.finalPrice,
                 chosenColour: action.chosenColour,
                 chosenSize: action.chosenSize,
                 chosenQuantity: action.chosenQuantity
+
             }]
-            console.log(state)
+
+            return {
+                ...state, totalAmount: newTotalAmount, items: newItems
+
+            }
+
+
+        // case 'ADD_ITEM':
+
+
+        //     console.log('added item');
+        //     state.totalAmount += parseInt(action.chosenQuantity)
+        //     state.items = [...state.items,
+        //     {
+        //         itemId: action.itemId,
+        //         finalPrice: action.finalPrice,
+        //         chosenColour: action.chosenColour,
+        //         chosenSize: action.chosenSize,
+        //         chosenQuantity: action.chosenQuantity
+        //     }]
+        //     console.log(state)
+        //     return state;
+        default:
+            return state
+
+
 
 
 
     }
 
-    return state
+
+
+
 
 }
 

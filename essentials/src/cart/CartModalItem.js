@@ -4,6 +4,8 @@ import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
 import './CartModal.css'
+import { connect } from 'react-redux'
+
 
 
 
@@ -13,25 +15,13 @@ import './CartModal.css'
 class CartModalItem extends Component {
 
     state = {
-        quantity: 1,
+
         show: true
 
     }
 
 
-    addButton = () => {
-        this.setState({
-            quantity: this.state.quantity + 1
-        })
-    }
 
-    removeButton = () => {
-        if (this.state.quantity > 1) {
-            this.setState({
-                quantity: this.state.quantity - 1
-            })
-        }
-    }
 
     xButton = () => {
         this.setState({
@@ -80,5 +70,14 @@ class CartModalItem extends Component {
 
 }
 
-export default CartModalItem
+
+const mapStateToProps = (state) => {
+    return {
+        totalAmount: state.cart.totalAmount,
+        // itemId: state.cart.item
+    }
+}
+
+
+export default connect(mapStateToProps)(CartModalItem)
 

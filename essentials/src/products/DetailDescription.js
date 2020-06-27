@@ -192,6 +192,8 @@ class DetailDescription extends Component {
         }
         else {
 
+            console.log(this.props.theCart)
+
             return (
                 <div>
 
@@ -315,6 +317,11 @@ class DetailDescription extends Component {
 //         cart: state.cart.
 //     }
 // }
+const mapStateToProps = (state) => {
+    return {
+        theCart: state.cart
+    }
+}
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -322,4 +329,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(DetailDescription)
+export default connect(mapStateToProps, mapDispatchToProps)(DetailDescription)

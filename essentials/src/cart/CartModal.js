@@ -27,12 +27,19 @@ class CartModal extends Component {
         })
     }
 
+    // cartList = () => {
+    //     let cartList = this.props.items
+    //     cartList.map((list) =>
+    //         <CartModalItem aseng={list} />
+    //     )
+    // }
+
 
 
 
     render() {
 
-        const { totalAmount } = this.props;
+        const { totalAmount, items } = this.props;
 
 
         return (
@@ -77,14 +84,18 @@ class CartModal extends Component {
                     <Modal.Body>
 
                         <Container className="modal-container">
+                            {/* 
+                            <CartModalItem />
+                            <CartModalItem />
+                            <CartModalItem />
+                            <CartModalItem />
+                            <CartModalItem />
+                            <CartModalItem />
+                            <CartModalItem /> */}
+                            {items.map((e) =>
+                                <CartModalItem itemDetails={e} />
+                            )}
 
-                            <CartModalItem />
-                            <CartModalItem />
-                            <CartModalItem />
-                            <CartModalItem />
-                            <CartModalItem />
-                            <CartModalItem />
-                            <CartModalItem />
 
 
                         </Container>
@@ -140,7 +151,8 @@ class CartModal extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        totalAmount: state.cart.totalAmount
+        totalAmount: state.cart.totalAmount,
+        items: state.cart.items
     }
 }
 

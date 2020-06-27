@@ -8,6 +8,7 @@ import SignIn from '../account/SignIn'
 
 import { Link } from 'react-router-dom'
 import CartModal from '../cart/CartModal'
+import { persistor } from '../redux/store'
 
 
 
@@ -33,6 +34,10 @@ class NavbarComponent extends Component {
             </Form>)
     }
 
+    purge = () => {
+        persistor.purge()
+        console.log("Factory reset performed.")
+    }
 
 
 
@@ -83,6 +88,7 @@ class NavbarComponent extends Component {
 
                             <Nav.Link href="#pricing">UNDERWEAR</Nav.Link>
                             <Nav.Link href="#pricing">SALE</Nav.Link>
+                            <Nav.Link href="#pricing" onClick={() => this.purge()}>Purge</Nav.Link>
 
 
                         </Nav>
