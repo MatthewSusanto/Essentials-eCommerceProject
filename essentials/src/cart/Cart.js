@@ -14,7 +14,12 @@ class Cart extends Component {
 
     state = {
         promoCode: 'SUMMER10',
-        promoCodeInput: null
+        promoCodeInput: null,
+        promoCodeActivated: false,
+        promoCodeDiscount: 10,
+        promoCodeDiscountPrice: 0,
+        subTotal: this.props.subTotal,
+        afterDiscountPrice: 0
 
     }
 
@@ -24,11 +29,32 @@ class Cart extends Component {
         })
     }
 
-    handlePromoCodeSubmit = () => {
+    handlePromoCodeSubmit = (e) => {
+        e.preventDefault();
         if (this.state.promoCodeInput == this.state.promoCode) {
-            return ()
+
+            let promoCodeDiscountPrice = (this.state.promoCodeDiscount / 100) * this.state.subTotal
+            let afterDiscountPrice = this.state.subTotal - promoCodeDiscountPrice
+
+            this.setState({
+                promoCodeActivated: true,
+                promoCodeDiscountPrice: promoCodeDiscountPrice,
+                afterDiscountPrice: afterDiscountPrice
+            })
         }
     }
+
+
+
+    // applyDiscount = () => {
+    //     if(this.state.promoCodeActivated == true){
+
+    //         this.setState({
+
+    //         })
+    //     }
+    // }   
+
 
 
 
@@ -84,9 +110,9 @@ class Cart extends Component {
                                         />
 
 
-                                        <Button type="submit" className="mb-2">
-                                            Apply
-                                      </Button>
+                                        <Button type="submit" className="mb-2" variant={this.state.promoCodeActivated ? 'secondary' : 'primary'} disabled={(this.state.promoCodeActivated) ? true : false} onClick={this.handlePromoCodeSubmit}>
+                                            {this.state.promoCodeActivated ? 'Applied' : 'Apply'}
+                                        </Button>
                                     </Form>
 
                                 </Col>
@@ -95,7 +121,7 @@ class Cart extends Component {
                             <Row className="justify-content-center align-items-center p-1">
 
                                 <Col lg={6} className="text-left">
-                                    <h3>Total: <span className="text-success h1">{`$${(this.props.subTotal).toFixed(2)}`}</span> <del className="text-danger h5"> $5555</del></h3>
+                                    <h3>Total: <span className="text-success h1">{`$${(this.state.promoCodeActivated) ? (this.state.afterDiscountPrice).toFixed(2) : (this.state.subTotal).toFixed(2)}`}</span> <del className="text-danger h5"> {`${(this.state.promoCodeActivated) ? '$' + (this.state.subTotal).toFixed(2) : ''}`}</del> {`${(this.state.promoCodeActivated) ? '(' + (this.state.promoCodeDiscount) + '% Off)' : ''}`}</h3>
 
                                 </Col>
                                 <Col lg={6} className="text-right">
