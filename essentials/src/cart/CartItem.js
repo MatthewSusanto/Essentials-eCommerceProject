@@ -21,36 +21,58 @@ class CartItem extends Component {
     }
 
 
-    // addButton = () => {
+    addButton = () => {
 
-    //     // let quantity = parseInt(this.state.quantity) + 1
-    //     let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
+        let quantity = parseInt(this.state.quantity) + 1
+        let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
 
-    //     this.setState({
+        // let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
 
-    //         subTotal: subTotal
-    //     })
+        this.setState({
+            quantity: quantity,
+            subTotal: subTotal
+            // subTotal: subTotal
+        })
 
-    //     this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
-    //     console.log(this.props.theCart)
+        // this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+        console.log(this.props.theCart)
 
-    // }
+    }
 
-    // removeButton = () => {
+    removeButton = () => {
 
-    //     // let quantity = parseInt(this.state.quantity) - 1
-    //     let subTotal = (this.state.subTotal) - parseFloat(this.props.itemDetails.finalPrice)
+        if (this.state.quantity > 1) {
+            let quantity = parseInt(this.state.quantity) - 1
+            let subTotal = (this.state.subTotal) - parseFloat(this.props.itemDetails.finalPrice)
+            // let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
 
-    //     if (this.state.quantity > 1) {
-    //         this.setState({
+            this.setState({
+                quantity: quantity,
+                subTotal: subTotal
+                // subTotal: subTotal
+            })
 
-    //             subTotal: subTotal
-    //         })
-    //     }
+            // this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+            console.log(this.props.theCart)
+        }
 
-    //     this.props.removeQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
-    //     console.log(this.props.theCart)
-    // }
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        let prevstateplus1 = (prevState.quantity + 1)
+        if (this.state.quantity == prevstateplus1) {
+            this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+        }
+
+        let prevstateremove1 = (prevState.quantity - 1)
+        if (this.state.quantity == prevstateremove1) {
+            this.props.removeQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+        }
+
+        console.log(this.props.theCart)
+    }
+
+
 
     xButton = () => {
         this.props.removeFromCart(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
@@ -83,7 +105,7 @@ class CartItem extends Component {
                         </Col>
 
                         <Col lg={1}>
-                            {` ${this.state.quantity}X`}
+                            <div onClick={this.addButton}>+</div> {` ${this.state.quantity}X`} <div onClick={this.removeButton}>+</div>
                         </Col>
 
                         <Col lg={2} className='h4'>
@@ -111,7 +133,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeFromCart: (orderNumber, chosenQuantity, finalPrice) => dispatch(removeFromCart(orderNumber, chosenQuantity, finalPrice))
+        removeFromCart: (orderNumber, chosenQuantity, finalPrice) => dispatch(removeFromCart(orderNumber, chosenQuantity, finalPrice)),
+        addQuantity: (orderNumber, chosenQuantity, finalPrice) => dispatch(addQuantity(orderNumber, chosenQuantity, finalPrice)),
+        removeQuantity: (orderNumber, chosenQuantity, finalPrice) => dispatch(removeQuantity(orderNumber, chosenQuantity, finalPrice))
 
     }
 }

@@ -48,24 +48,31 @@ const cartReducer = (state = initialState, action) => {
 
         case 'ADD_QUANTITY':
 
-
-
-        case 'REMOVE_QUANTITY':
-
-            let addedItem1 = state.items.filter((e) => e.orderNumber == action.orderNumber)
-            addedItem1[0].chosenQuantity = parseInt(addedItem1[0].chosenQuantity) - 1;
-            let filteredItems12 = state.items.filter((e) => e.orderNumber !== action.orderNumber)
-            let newFilteredItems1 = [...filteredItems12, addedItem1[0]]
-
-            // let totalAmountReduced = state.totalAmount - action.chosenQuantity
-            // let totalReduced = state.subTotal - (parseFloat(action.finalPrice) * action.chosenQuantity)
-
-
-            return {
-                ...state, items: newFilteredItems1
+            let newItems2 = [...state.items]
+            for (let index = 0; index < newItems2.length; index++) {
+                if (newItems2[index].orderNumber == action.orderNumber) {
+                    newItems2[index].chosenQuantity = (newItems2[index].chosenQuantity + 1)
+                }
 
             }
 
+            return {
+                ...state, items: newItems2
+            }
+
+        case 'REMOVE_QUANTITY':
+
+            let newItems3 = [...state.items]
+            for (let index = 0; index < newItems3.length; index++) {
+                if (newItems3[index].orderNumber == action.orderNumber) {
+                    newItems3[index].chosenQuantity = (newItems3[index].chosenQuantity - 1)
+                }
+
+            }
+
+            return {
+                ...state, items: newItems3
+            }
 
         // case 'ADD_ITEM':
 
