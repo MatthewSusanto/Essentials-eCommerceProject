@@ -42,6 +42,17 @@ class DetailDescription extends Component {
         let parsefloat = parseFloat(this.state.selectedQuantity)
         this.props.addToCart(randomizer, this.state.id, this.state.productName, this.state.previousPrice, this.state.discount, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, parsefloat)
 
+        let blaha = this.state.quantity - this.state.selectedQuantity
+        let blaha1 = 0
+        if (blaha <= 0) {
+            blaha1 = 0
+        } else {
+            blaha1 = blaha
+        }
+
+        this.setState({
+            quantity: blaha1
+        })
     }
 
 
@@ -55,7 +66,8 @@ class DetailDescription extends Component {
             l: this.props.item.colour[color].size.l.quantity,
             xl: this.props.item.colour[color].size.xl.quantity,
             sizeActive: null,
-            quantity: null
+            quantity: null,
+            selectedQuantity: 1
 
         })
     }
@@ -112,7 +124,7 @@ class DetailDescription extends Component {
         } else if (this.state.quantity > 10) {
             return (<p className="text-success">More than 10 available</p>)
         } else if (this.state.quantity < 10) {
-            return (<p className="text-danger">Only {this.state.quantity} left</p>)
+            return (<p className="text-danger">{this.state.quantity == 0 ? 'Out of Stock' : 'Only ' + this.state.quantity + ' left'}</p>)
         }
         console.log(this.state.quantity)
     }

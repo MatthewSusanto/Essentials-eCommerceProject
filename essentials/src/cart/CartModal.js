@@ -122,8 +122,8 @@ class CartModal extends Component {
                     <Modal.Footer>
 
                         <Container fluid>
-                            <Row className="h2 d-flex justify-content-end mr-2">
-                                Total:${subTotal}
+                            <Row className="h1 d-flex justify-content-end mr-2">
+                                Total: ${subTotal.toFixed(2)}
                             </Row>
 
                             <Row>
