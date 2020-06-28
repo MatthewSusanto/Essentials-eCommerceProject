@@ -133,7 +133,7 @@ class Cart extends Component {
                                 </Col>
                                 <Col lg={6} className="text-right">
 
-                                    <Button variant="success" size="lg" block>Proceed to checkout</Button>
+                                    <Button variant="success" size="lg" block >Proceed to checkout</Button>
                                 </Col>
                             </Row>
 

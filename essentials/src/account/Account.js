@@ -10,6 +10,7 @@ import { connect } from 'react-redux'
 
 
 
+
 class Account extends Component {
 
     state = {
@@ -48,7 +49,7 @@ class Account extends Component {
 
                         <Row>
                             <Col>
-                                <h4 className="text-left">My Orders</h4>
+                                <h4 className="text-left">My Order History</h4>
                             </Col>
                         </Row>
 
@@ -61,10 +62,10 @@ class Account extends Component {
                         <OrderHistory />
                         <OrderHistory /> */}
 
-                        <Row className="justify-content-center align-items-center p-1">
+                        <Row className="justify-content-center align-items-center p-1 mt-5">
 
-                            <Col className="text-right">
-                                <h3>Total: $6000</h3>
+                            <Col className="text-center bg-dark text-warning p-4">
+                                <h3>Thank You For Shopping With Us!</h3>
 
                             </Col>
 
