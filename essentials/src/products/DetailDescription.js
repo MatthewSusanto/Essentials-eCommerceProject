@@ -38,7 +38,9 @@ class DetailDescription extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addToCart(this.state.id, this.state.productName, this.state.previousPrice, this.state.discount, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, this.state.selectedQuantity)
+        let randomizer = (Math.floor((Math.random() * 9999999) + 1))
+        let parsefloat = parseFloat(this.state.selectedQuantity)
+        this.props.addToCart(randomizer, this.state.id, this.state.productName, this.state.previousPrice, this.state.discount, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, parsefloat)
 
     }
 
@@ -326,7 +328,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToCart: (itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity) => dispatch(addToCart(itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity))
+        addToCart: (orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity) => dispatch(addToCart(orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity))
     }
 }
 

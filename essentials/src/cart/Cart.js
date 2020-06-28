@@ -6,15 +6,29 @@ import boomer from '../products/images/tees2.PNG'
 import OrderHistory from '../account/OrderHistory'
 import CartItem from './CartItem'
 import CartModal from './CartModal'
+import { connect } from 'react-redux'
 
 
 
 class Cart extends Component {
 
     state = {
+        promoCode: 'SUMMER10',
+        promoCodeInput: null
 
     }
 
+    handlePromoCode = (e) => {
+        this.setState({
+            promoCodeInput: e.target.value
+        })
+    }
+
+    handlePromoCodeSubmit = () => {
+        if (this.state.promoCodeInput == this.state.promoCode) {
+            return ()
+        }
+    }
 
 
 
@@ -41,12 +55,12 @@ class Cart extends Component {
                             </Col>
                         </Row>
 
+                        {this.props.items.map((e) =>
+                            <CartItem itemDetails={e} subTotal={(e.chosenQuantity * parseFloat(e.finalPrice))} modalSubtotal={this.state.subTotal} />
+                        )}
 
+                        {/* <CartItem /> */}
 
-                        <CartItem />
-                        <CartItem />
-                        <CartItem />
-                        <CartItem />
 
                         <Container fluid className="bg-dark text-light p-1">
 
@@ -66,8 +80,8 @@ class Cart extends Component {
                                             className="mb-2 mr-sm-2"
                                             id="inlineFormInputName2"
                                             placeholder="Enter Promo Code"
+                                            onChange={this.handlePromoCode}
                                         />
-
 
 
                                         <Button type="submit" className="mb-2">
@@ -81,7 +95,7 @@ class Cart extends Component {
                             <Row className="justify-content-center align-items-center p-1">
 
                                 <Col lg={6} className="text-left">
-                                    <h3>Total: <span className="text-success h1">$600</span> <del className="text-danger h5"> $5555</del></h3>
+                                    <h3>Total: <span className="text-success h1">{`$${(this.props.subTotal).toFixed(2)}`}</span> <del className="text-danger h5"> $5555</del></h3>
 
                                 </Col>
                                 <Col lg={6} className="text-right">
@@ -105,10 +119,17 @@ class Cart extends Component {
 
                 </Container>
 
-            </div >
+            </div>
         )
     }
 }
 
-export default Cart
+const mapStateToProps = (state) => {
+    return {
+        items: state.cart.items,
+        subTotal: state.cart.subTotal
+    }
+}
+
+export default connect(mapStateToProps)(Cart)
 

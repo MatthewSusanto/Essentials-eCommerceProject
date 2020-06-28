@@ -5,6 +5,7 @@ import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
 import './CartModal.css'
 import { connect } from 'react-redux'
+import { removeFromCart, addQuantity } from '../redux/cartActions'
 
 
 
@@ -26,9 +27,8 @@ class CartModalItem extends Component {
 
 
     xButton = () => {
-        this.setState({
-            show: false
-        })
+
+        this.props.removeFromCart(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
     }
 
 
@@ -82,11 +82,16 @@ class CartModalItem extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        totalAmount: state.cart.totalAmount,
+        totalAmount: state.cart.totalAmount
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        removeFromCart: (orderNumber, chosenQuantity, finalPrice) => dispatch(removeFromCart(orderNumber, chosenQuantity, finalPrice))
     }
 }
 
 
-
-export default connect(mapStateToProps)(CartModalItem)
+export default connect(mapStateToProps, mapDispatchToProps)(CartModalItem)
 
