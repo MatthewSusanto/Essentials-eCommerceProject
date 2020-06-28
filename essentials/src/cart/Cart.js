@@ -44,9 +44,16 @@ class Cart extends Component {
         }
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.state.subTotal !== this.props.subTotal)
+            this.setState({
+                subTotal: this.props.subTotal
+            })
+    }
 
 
-    // applyDiscount = () => {
+
+    // // applyDiscount = () => {
     //     if(this.state.promoCodeActivated == true){
 
     //         this.setState({

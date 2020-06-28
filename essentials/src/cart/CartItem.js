@@ -70,7 +70,7 @@ class CartItem extends Component {
                         <Col lg={2}>
                             <img src={boomer} className="productpic" />
                         </Col>
-                        <Col lg={5} className='h3'>
+                        <Col lg={4} className='h3'>
                             {`${this.props.itemDetails.itemName} ${this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}`}
                         </Col>
                         <Col lg={1} className='h5'>
@@ -81,6 +81,11 @@ class CartItem extends Component {
                             {`$${this.props.itemDetails.finalPrice}`}
 
                         </Col>
+
+                        <Col lg={1}>
+                            {` ${this.state.quantity}X`}
+                        </Col>
+
                         <Col lg={2} className='h4'>
                             {`Total: $${this.state.subTotal}`}
 

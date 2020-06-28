@@ -8,9 +8,15 @@ import { Link, BrowserRouter } from 'react-router-dom'
 class SignUp extends Component {
 
     state = {
-        showSignup: false
+        showSignup: false,
+        signedUp: false
     }
 
+    handleSignup = () => {
+        this.setState({
+            signedUp: true
+        })
+    }
 
 
 
@@ -66,7 +72,7 @@ class SignUp extends Component {
                                 <br />
 
                                 <Link to="/account">
-                                    <Button variant="primary" type="submit" block size="lg" variant="success">
+                                    <Button variant="primary" type="submit" block size="lg" variant="success" onClick={this.handleSignup}>
 
 
                                         Create My Account

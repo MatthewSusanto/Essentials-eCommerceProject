@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import { Button, Modal, Form, Container, Row, Col, Nav } from 'react-bootstrap'
 import './SignIn.css'
 import account from '../navbar/images/account.png'
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link, BrowserRouter, withRouter, Route } from 'react-router-dom'
 import SignUp from './SignUp'
 
 
 class SignIn extends Component {
 
     state = {
-        show: false
+        show: false,
+        signedUp: false
     }
 
     handleClose = () => {
@@ -24,12 +25,32 @@ class SignIn extends Component {
         })
     }
 
+    handleSignup = () => {
+        this.setState({
+            show: false,
+            signedUp: true
+        })
+    }
+
+    handleSignin = () => {
+
+
+
+        if (this.state.signedUp == true) {
+            this.props.history.push('/account')
+        }
+        this.setState({
+            show: false,
+
+        })
+    }
+
 
 
 
     render() {
 
-
+        console.log(this.state)
         return (
             <div>
 
@@ -98,16 +119,16 @@ class SignIn extends Component {
 
 
 
-                                        <Link to="/account">
-                                            <Button variant="primary" type="submit" block size="lg" onClick={this.handleClose}>
-                                                Sign In
+                                        {/* <Link to="/account"> */}
+                                        <Button variant="primary" type="submit" block size="lg" onClick={this.handleSignin}>
+                                            Sign In
                             </Button>
-                                        </Link>
+                                        {/* </Link> */}
 
                                     </Form>
 
                                     <Link to="/signup">
-                                        <Button block size="lg" variant="success" onClick={this.handleClose} > Create My Account </Button>
+                                        <Button block size="lg" variant="success" onClick={this.handleSignup} > Create My Account </Button>
                                     </Link>
                                     <br />
                                     <a href="#"> Forgot your password? </a>
@@ -156,10 +177,10 @@ class SignIn extends Component {
 
 
 
-            </div >
+            </div>
         )
     }
 }
 
-export default SignIn
+export default withRouter(SignIn)
 

@@ -5,6 +5,7 @@ import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
 import './SignIn.css'
 import OrderHistory from './OrderHistory'
+import { connect } from 'react-redux'
 
 
 
@@ -30,7 +31,7 @@ class Account extends Component {
 
                     <Row>
                         <Col>
-                            <h2 className="display-4 mt-5">Welcome back Jason,</h2>
+                            <h2 className="display-4 mt-5">Welcome Back</h2>
 
                         </Col>
 
@@ -51,12 +52,14 @@ class Account extends Component {
                             </Col>
                         </Row>
 
+                        {this.props.items.map((e) =>
+                            <OrderHistory itemDetails={e} />
+                        )}
 
-
+                        {/* <OrderHistory />
                         <OrderHistory />
                         <OrderHistory />
-                        <OrderHistory />
-                        <OrderHistory />
+                        <OrderHistory /> */}
 
                         <Row className="justify-content-center align-items-center p-1">
 
@@ -82,5 +85,12 @@ class Account extends Component {
     }
 }
 
-export default Account
+const mapStateToProps = (state) => {
+    return {
+        items: state.cart.items,
+        subTotal: state.cart.subTotal
+    }
+}
 
+export default connect(mapStateToProps)(Account
+)
