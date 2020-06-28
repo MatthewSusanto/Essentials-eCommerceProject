@@ -48,30 +48,42 @@ const cartReducer = (state = initialState, action) => {
 
         case 'ADD_QUANTITY':
 
+            let newTotalAmountadd = state.totalAmount + 1
+            let itemprice1 = 0
             let newItems2 = [...state.items]
             for (let index = 0; index < newItems2.length; index++) {
                 if (newItems2[index].orderNumber == action.orderNumber) {
                     newItems2[index].chosenQuantity = (newItems2[index].chosenQuantity + 1)
+                    itemprice1 = parseFloat(newItems2[index].finalPrice)
                 }
 
             }
 
+            let newSubtotaladd = itemprice1 + state.subTotal
+
             return {
-                ...state, items: newItems2
+                ...state, items: newItems2, totalAmount: newTotalAmountadd, subTotal: newSubtotaladd
             }
 
         case 'REMOVE_QUANTITY':
 
+            let newTotalAmountremove = state.totalAmount - 1
+            let itemprice2 = 0
             let newItems3 = [...state.items]
             for (let index = 0; index < newItems3.length; index++) {
                 if (newItems3[index].orderNumber == action.orderNumber) {
                     newItems3[index].chosenQuantity = (newItems3[index].chosenQuantity - 1)
+                    itemprice2 = parseFloat(newItems3[index].finalPrice)
                 }
 
             }
 
+            console.log(itemprice2)
+
+            let newSubtotalremove = parseFloat(state.subTotal) - itemprice2
+
             return {
-                ...state, items: newItems3
+                ...state, items: newItems3, totalAmount: newTotalAmountremove, subTotal: newSubtotalremove
             }
 
         // case 'ADD_ITEM':

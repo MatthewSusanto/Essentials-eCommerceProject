@@ -100,12 +100,12 @@ class Cart extends Component {
                             <Row className="justify-content-center align-items-center p-1">
 
                                 <Col lg={6} className="text-left">
-                                    <h3>Promotional Code</h3>
+                                    <h3>Promotional Code:</h3>
 
                                 </Col>
 
                                 <Col lg={6} className="d-flex justify-content-end">
-                                    <Form inline>
+                                    <Form className="d-flex justify-content-end">
                                         <Form.Label htmlFor="inlineFormInputName2" srOnly>
                                             Name
                                          </Form.Label>

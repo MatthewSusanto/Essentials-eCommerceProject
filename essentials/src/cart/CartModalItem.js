@@ -5,7 +5,7 @@ import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
 import './CartModal.css'
 import { connect } from 'react-redux'
-import { removeFromCart, addQuantity } from '../redux/cartActions'
+import { removeFromCart, addQuantity, removeQuantity } from '../redux/cartActions'
 
 
 
@@ -20,9 +20,62 @@ class CartModalItem extends Component {
         show: true,
         totalPrice: ((this.props.itemDetails.chosenQuantity * this.props.itemDetails.finalPrice).toFixed(2)),
         previousPrice: ((this.props.itemDetails.previousPrice).toFixed(2)),
-        modalSubtotal: parseInt(this.props.modalSubtotal)
+        modalSubtotal: parseInt(this.props.modalSubtotal),
+        quantity: this.props.itemDetails.chosenQuantity,
+        subTotal: this.props.itemDetails.chosenQuantity * parseFloat(this.props.itemDetails.finalPrice)
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        let prevstateplus1 = (prevState.quantity + 1)
+        if (this.state.quantity == prevstateplus1) {
+            this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+        }
+
+        let prevstateremove1 = (prevState.quantity - 1)
+        if (this.state.quantity == prevstateremove1) {
+            this.props.removeQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+        }
+
+        console.log(this.props.theCart)
+    }
+
+
+    addButton = () => {
+
+        let quantity = parseInt(this.state.quantity) + 1
+        let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
+
+        // let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
+
+        this.setState({
+            quantity: quantity,
+            subTotal: subTotal
+            // subTotal: subTotal
+        })
+
+        // this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+        console.log(this.props.theCart)
+
+    }
+
+    removeButton = () => {
+
+        if (this.state.quantity > 1) {
+            let quantity = parseInt(this.state.quantity) - 1
+            let subTotal = (this.state.subTotal) - parseFloat(this.props.itemDetails.finalPrice)
+            // let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
+
+            this.setState({
+                quantity: quantity,
+                subTotal: subTotal
+                // subTotal: subTotal
+            })
+
+            // this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
+            console.log(this.props.theCart)
+        }
+
+    }
 
 
 
@@ -59,8 +112,8 @@ class CartModalItem extends Component {
                             <hr />
                             <Row><strong>Colour: </strong> &nbsp; {this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}</Row>
                             <Row><strong>Size: </strong> &nbsp; {this.props.itemDetails.chosenSize.toUpperCase()}</Row>
-                            <Row><strong>Quantity: </strong> &nbsp; {this.props.itemDetails.chosenQuantity}</Row>
-                            <Row><strong>Total: </strong> &nbsp; {`$${this.state.totalPrice}`}</Row>
+                            <Row className='d-flex align-items-center'><strong>Quantity: </strong> &nbsp;  <Button size="sm" disabled={(this.state.quantity == 1) ? true : false} variant="dark" className="mx-1" onClick={this.removeButton}>-</Button> {`${this.props.itemDetails.chosenQuantity}X `} <Button className="mx-1" variant='dark' size="sm" onClick={this.addButton}>+</Button></Row>
+                            <Row><strong>Total: </strong> &nbsp; {`$${this.state.subTotal.toFixed(2)}`}</Row>
 
 
                         </Col>
@@ -88,7 +141,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeFromCart: (orderNumber, chosenQuantity, finalPrice) => dispatch(removeFromCart(orderNumber, chosenQuantity, finalPrice))
+        removeFromCart: (orderNumber, chosenQuantity, finalPrice) => dispatch(removeFromCart(orderNumber, chosenQuantity, finalPrice)),
+        addQuantity: (orderNumber, chosenQuantity, finalPrice) => dispatch(addQuantity(orderNumber, chosenQuantity, finalPrice)),
+        removeQuantity: (orderNumber, chosenQuantity, finalPrice) => dispatch(removeQuantity(orderNumber, chosenQuantity, finalPrice))
+
     }
 }
 

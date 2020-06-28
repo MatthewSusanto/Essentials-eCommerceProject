@@ -92,7 +92,7 @@ class CartItem extends Component {
                         <Col lg={2}>
                             <img src={boomer} className="productpic" />
                         </Col>
-                        <Col lg={4} className='h3'>
+                        <Col lg={3} className='h3'>
                             {`${this.props.itemDetails.itemName} ${this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}`}
                         </Col>
                         <Col lg={1} className='h5'>
@@ -104,12 +104,12 @@ class CartItem extends Component {
 
                         </Col>
 
-                        <Col lg={1}>
-                            <div onClick={this.addButton}>+</div> {` ${this.state.quantity}X`} <div onClick={this.removeButton}>+</div>
+                        <Col lg={2} className="d-flex justify-content-center align-items-center h5">
+                            <Button size="sm" disabled={(this.state.quantity == 1) ? true : false} variant="dark" className="mx-3" onClick={this.removeButton}>-</Button> {` ${this.state.quantity}x`} <Button className="mx-3" variant='dark' size="sm" onClick={this.addButton}>+</Button>
                         </Col>
 
                         <Col lg={2} className='h4'>
-                            {`Total: $${this.state.subTotal}`}
+                            {`Total: $${this.state.subTotal.toFixed(2)}`}
 
                         </Col>
                     </Row>
