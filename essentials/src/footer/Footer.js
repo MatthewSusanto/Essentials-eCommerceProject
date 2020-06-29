@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
-import { Button, Container, Row, Col, Form, Image } from 'react-bootstrap'
+import { Button, Container, Row, Col, Form } from 'react-bootstrap'
 import './Footer.css'
 import { Link } from 'react-router-dom'
+import facebook from './images/facebook.png'
+import instagram from './images/instagram.png'
+import twitter from './images/twitter.png'
+import youtube from './images/youtube.png'
+
 
 
 
@@ -65,10 +70,10 @@ class Footer extends Component {
 
                     <Row className="footer-2">
                         <Col xs>
-                            <a href="/"><Image src='assets/images/twitter.png' className="footerImg" /></a>
-                            <a href="/"><Image src='assets/images/facebook.png' className="footerImg" /></a>
-                            <a href="/"><Image src='assets/images/youtube.png' className="footerImg" /></a>
-                            <a href="/"> <Image src='assets/images/instagram.png' className="footerImg" /></a>
+                            <a href="/"><img src={twitter} className="footerImg" /></a>
+                            <a href="/"><img src={facebook} className="footerImg" /></a>
+                            <a href="/"><img src={youtube} className="footerImg" /></a>
+                            <a href="/"><img src={instagram} className="footerImg" /></a>
                         </Col>
                     </Row>
 
