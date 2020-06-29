@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 import './Hero.css'
 
@@ -30,7 +31,8 @@ class Hero extends Component {
 
                             <h1>Must Have Basics</h1>
                             <p>Starting from $39.99</p>
-                            <Button size="lg" block variant="outline-light">SHOP NOW</Button>
+                            <Link to='/collections'> <Button size="lg" block variant="outline-light">SHOP NOW</Button></Link>
+
 
 
                         </Col>

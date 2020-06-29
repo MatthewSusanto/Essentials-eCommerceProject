@@ -12,12 +12,55 @@ import './ProductRecommendation'
 class ProductRecommendation extends Component {
 
     state = {
+        items: [],
+        islLoaded: false,
+
+    }
+
+    componentDidMount() {
+        fetch('http://my-json-server.typicode.com/MatthewSusanto/dbJson8/collection')
+            .then(res => res.json())
+            .then(json => {
+                this.setState({
+                    islLoaded: true,
+                    items: json
+                })
+            })
+
 
     }
 
 
+    showItemsRandom = () => {
+
+        const items = this.state.items
+        let item = []
+        for (let i = 0; i < items.length; i++) {
+
+            item.push(items[i])
+
+        }
+
+        let counter = item.length
+        while (counter > 0) {
+
+            let index = Math.floor(Math.random() * counter);
+            counter--;
+            let temp = item[counter];
+            item[counter] = item[index];
+            item[index] = temp;
+        }
 
 
+        return (
+            item.slice(0, 3).map(item => (
+                <Col lg={4} className="px-5">
+                    <ProductShowcase type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                </Col>))
+        )
+
+
+    }
 
     render() {
 
@@ -35,15 +78,9 @@ class ProductRecommendation extends Component {
                     </Row>
 
                     <Row>
-                        <Col lg={4} className="px-5">
-                            <ProductShowcase />
-                        </Col>
-                        <Col lg={4} className="px-5">
-                            <ProductShowcase />
-                        </Col>
-                        <Col lg={4} className="px-5">
-                            <ProductShowcase />
-                        </Col>
+
+                        {this.showItemsRandom()}
+
 
                     </Row>
 

@@ -30,7 +30,7 @@ class Cart extends Component {
     }
 
     handlePromoCodeSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         if (this.state.promoCodeInput == this.state.promoCode) {
 
             let promoCodeDiscountPrice = (this.state.promoCodeDiscount / 100) * this.state.subTotal
@@ -45,6 +45,11 @@ class Cart extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
+
+        if (this.state.subTotal !== prevState.subTotal) {
+            this.handlePromoCodeSubmit()
+        }
+
         if (this.state.subTotal !== this.props.subTotal)
             this.setState({
                 subTotal: this.props.subTotal

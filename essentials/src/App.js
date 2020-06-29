@@ -56,7 +56,7 @@ function App() {
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
             <Route path="/showcase" component={ProductShowcase} />
-            <Route path="/collections" component={Collections} />
+
             {/* <Route path="/product" component={ProductDetail} /> */}
             <Route path="/detailimg" component={DetailImg} />
             <Route path="/detaildesc" component={DetailDescription} />
@@ -77,10 +77,15 @@ function App() {
             <Route path="/account" component={Account} />
             <Route path="/cart" component={Cart} />
 
-            <Route path="/:product_name" component={ProductDetail} />
+
 
 
           </Switch>
+
+          <Route exact path="/collections/:product_type" component={Collections} />
+          <Route exact path="/collections" component={Collections} />
+
+          <Route exact path="/collections/:product_type/:product_name" component={ProductDetail} />
 
           <Footer />
 

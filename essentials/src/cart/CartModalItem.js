@@ -112,7 +112,7 @@ class CartModalItem extends Component {
                             <hr />
                             <Row><strong>Colour: </strong> &nbsp; {this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}</Row>
                             <Row><strong>Size: </strong> &nbsp; {this.props.itemDetails.chosenSize.toUpperCase()}</Row>
-                            <Row className='d-flex align-items-center'><strong>Quantity: </strong> &nbsp;  <Button size="sm" disabled={(this.state.quantity == 1) ? true : false} variant="dark" className="mx-1" onClick={this.removeButton}>-</Button> {`${this.props.itemDetails.chosenQuantity}X `} <Button className="mx-1" variant='dark' size="sm" onClick={this.addButton}>+</Button></Row>
+                            <Row className='d-flex align-items-center'><strong>Quantity: </strong> &nbsp;  <Button size="sm" disabled={(this.state.quantity == 1) ? true : false} variant="dark" className="mx-1" onClick={this.removeButton}>-</Button> <strong>{`${this.props.itemDetails.chosenQuantity}X `}</strong> <Button className="mx-1" variant='dark' size="sm" onClick={this.addButton}>+</Button></Row>
                             <Row><strong>Total: </strong> &nbsp; {`$${this.state.subTotal.toFixed(2)}`}</Row>
 
 

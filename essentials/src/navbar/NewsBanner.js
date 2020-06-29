@@ -36,7 +36,7 @@ class NewsBanner extends Component {
                             <div className="banner"> FREE SHIPPING ON ORDERS OVER $100 CAD </div>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <div className="banner"> USE PROMO CODE "SUMMER10" FOR 10% OFF YOUR PURCHASE </div>
+                            <div className="banner"> USE PROMO CODE "<strong className='text-danger'>SUMMER10</strong>" FOR 10% OFF YOUR PURCHASE </div>
                         </Carousel.Item>
                     </Carousel>
 

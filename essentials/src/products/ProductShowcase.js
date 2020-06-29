@@ -3,6 +3,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap'
 import './ProductShowcase.css'
 import tees from './images/tees.png'
 import tees2 from './images/tees2.PNG'
+import { withRouter } from 'react-router-dom'
 
 
 
@@ -18,6 +19,13 @@ class ProductShowcase extends Component {
         if (this.state.onHover == true) {
 
         }
+
+    }
+
+    handleImgClick = () => {
+        let id = this.props.id
+        let type = this.props.type
+        this.props.history.push('/collections/' + type + '/' + id)
 
     }
 
@@ -62,9 +70,10 @@ class ProductShowcase extends Component {
                             onMouseEnter={() => this.setState({ onHover: true })}
                             onMouseLeave={() => this.setState({ onHover: false })}
                             className='columntest'
+                            onClick={this.handleImgClick}
 
                         >
-                            <div className="testy"> SOLD OUT </div>
+                            {this.props.discount ? <div className="testy"> {this.props.discount}% Off  </div> : null}
 
 
                             {this.state.onHover ? this.itemSizing() : null}
@@ -96,5 +105,5 @@ class ProductShowcase extends Component {
     }
 }
 
-export default ProductShowcase
+export default withRouter(ProductShowcase)
 
