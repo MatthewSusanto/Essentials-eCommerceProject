@@ -14,7 +14,7 @@
 //     }
 //   });
 
-export const addToCart = (orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity) => (
+export const addToCart = (orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity, productImage) => (
 
 
     {
@@ -27,7 +27,8 @@ export const addToCart = (orderNumber, itemId, itemName, previousPrice, discount
         finalPrice: finalPrice,
         chosenColour: chosenColour,
         chosenSize: chosenSize,
-        chosenQuantity: chosenQuantity
+        chosenQuantity: chosenQuantity,
+        productImage: productImage
     }
 )
 
@@ -63,3 +64,13 @@ export const removeQuantity = (orderNumber, chosenQuantity, finalPrice) => (
         finalPrice: finalPrice
     }
 )
+
+
+export const searchSomething = (keyword) => (
+
+    {
+        type: 'SEARCH',
+        keyword: keyword
+    }
+)
+

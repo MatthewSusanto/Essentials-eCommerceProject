@@ -6,6 +6,7 @@ import boomer from '../products/images/tees2.PNG'
 import './SignIn.css'
 import OrderHistory from './OrderHistory'
 import { connect } from 'react-redux'
+import { persistor } from '../redux/store'
 
 
 
@@ -14,14 +15,46 @@ import { connect } from 'react-redux'
 class Account extends Component {
 
     state = {
-
+        purged: false,
+        previousState: []
     }
 
 
+    componentDidMount() {
 
+        let prevState = this.props.items
+
+        this.setState({
+            previousState: prevState
+        })
+
+        console.log(this.state)
+
+
+        persistor.purge()
+    }
+
+    // componentDidUpdate(prevProps, prevState) {
+
+    //     if (this.state.previousState == null) {
+    //         this.setState({
+    //             previousState: prevState.previousState
+    //         })
+    //     }
+    //     console.log(this.state)
+
+    // }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.state.previousState !== nextState.previousState) {
+            return true
+        }
+    }
 
 
     render() {
+
+        console.log(this.state)
 
 
         return (
@@ -53,7 +86,7 @@ class Account extends Component {
                             </Col>
                         </Row>
 
-                        {this.props.items.map((e) =>
+                        {this.state.previousState.map((e) =>
                             <OrderHistory itemDetails={e} />
                         )}
 
@@ -86,10 +119,13 @@ class Account extends Component {
     }
 }
 
+
+
 const mapStateToProps = (state) => {
     return {
         items: state.cart.items,
-        subTotal: state.cart.subTotal
+        subTotal: state.cart.subTotal,
+        theCart: state.cart
     }
 }
 

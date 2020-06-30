@@ -103,7 +103,7 @@ class CartModalItem extends Component {
 
 
                         <Col>
-                            <img src={boomer} className="productpic" />
+                            <img src={this.props.itemDetails.productImage} className="productpic" />
                         </Col>
                         <Col className="text-left">
                             <Row className='h4' >{this.props.itemDetails.itemName}</Row>

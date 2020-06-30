@@ -5,9 +5,10 @@ const initialState = {
 
 
     totalAmount: 0,
-    subTotal: 0
-};
+    subTotal: 0,
+    search: null
 
+};
 
 const cartReducer = (state = initialState, action) => {
 
@@ -26,7 +27,8 @@ const cartReducer = (state = initialState, action) => {
                 finalPrice: action.finalPrice,
                 chosenColour: action.chosenColour,
                 chosenSize: action.chosenSize,
-                chosenQuantity: action.chosenQuantity
+                chosenQuantity: action.chosenQuantity,
+                productImage: action.productImage
 
             }]
 
@@ -65,6 +67,7 @@ const cartReducer = (state = initialState, action) => {
                 ...state, items: newItems2, totalAmount: newTotalAmountadd, subTotal: newSubtotaladd
             }
 
+
         case 'REMOVE_QUANTITY':
 
             let newTotalAmountremove = state.totalAmount - 1
@@ -85,6 +88,18 @@ const cartReducer = (state = initialState, action) => {
             return {
                 ...state, items: newItems3, totalAmount: newTotalAmountremove, subTotal: newSubtotalremove
             }
+
+
+        case 'SEARCH':
+
+            let search = action.keyword
+            console.log(search)
+
+            return {
+                ...state, search: search
+            }
+
+
 
         // case 'ADD_ITEM':
 
@@ -109,6 +124,8 @@ const cartReducer = (state = initialState, action) => {
 
 
     }
+
+
 
 
 

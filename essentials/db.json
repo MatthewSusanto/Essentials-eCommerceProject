@@ -7,14 +7,14 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 30,
       "discount": 20,
-      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/Capture1.PNG",
-      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/Capture2.PNG",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/1.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/10.PNG",
+      "extra_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/6.PNG",
       "color_img": {
-        "navy": "",
-        "black": "",
-        "red": "",
-        "white": ""
+        "navy": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/7.PNG",
+        "black": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/18.PNG",
+        "red": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/14.PNG",
+        "white": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/5.PNG"
       },
       "colour": {
         "red": {
@@ -102,14 +102,14 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 30,
       "discount": 0,
-      "primary_img": "",
-      "secondary_img": "",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/11.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/12.PNG",
+      "extra_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/2.PNG",
       "color_img": {
-        "navy": "",
-        "black": "",
-        "red": "",
-        "white": ""
+        "navy": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/13.PNG",
+        "black": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/1.PNG",
+        "red": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/3.PNG",
+        "white": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/5.PNG"
       },
       "colour": {
         "red": {
@@ -197,67 +197,47 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 50,
       "discount": 15,
-      "primary_img": "",
-      "secondary_img": "",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/13.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/14.PNG",
+      "extra_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/21.PNG",
       "color_img": {
-        "navy": "",
-        "black": "",
-        "red": "",
-        "white": ""
+        "black": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/2.PNG",
+        "grey": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/4.PNG",
+        "white": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/18.PNG"
       },
       "colour": {
-        "red": {
-          "size": {
-            "xs": {
-              "quantity": 0
-            },
-            "s": {
-              "quantity": 0
-            },
-            "m": {
-              "quantity": 0
-            },
-            "l": {
-              "quantity": 0
-            },
-            "xl": {
-              "quantity": 0
-            }
-          }
-        },
-        "navy": {
-          "size": {
-            "xs": {
-              "quantity": 0
-            },
-            "s": {
-              "quantity": 0
-            },
-            "m": {
-              "quantity": 0
-            },
-            "l": {
-              "quantity": 0
-            },
-            "xl": {
-              "quantity": 0
-            }
-          }
-        },
         "black": {
           "size": {
             "xs": {
-              "quantity": 2
+              "quantity": 0
             },
             "s": {
-              "quantity": 4
+              "quantity": 0
             },
             "m": {
               "quantity": 0
             },
             "l": {
-              "quantity": 9
+              "quantity": 0
+            },
+            "xl": {
+              "quantity": 0
+            }
+          }
+        },
+        "grey": {
+          "size": {
+            "xs": {
+              "quantity": 0
+            },
+            "s": {
+              "quantity": 0
+            },
+            "m": {
+              "quantity": 0
+            },
+            "l": {
+              "quantity": 0
             },
             "xl": {
               "quantity": 0
@@ -292,36 +272,16 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 100,
       "discount": 15,
-      "primary_img": "",
-      "secondary_img": "",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/15.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/16.PNG",
+      "extra_img": "https://picsum.photos/500/650",
       "color_img": {
-        "navy": "",
-        "black": "",
-        "red": "",
-        "white": ""
+        "black": "https://picsum.photos/500/650",
+        "tan": "https://picsum.photos/500/650",
+        "grey": "https://picsum.photos/500/650"
       },
       "colour": {
-        "red": {
-          "size": {
-            "xs": {
-              "quantity": 0
-            },
-            "s": {
-              "quantity": 0
-            },
-            "m": {
-              "quantity": 0
-            },
-            "l": {
-              "quantity": 0
-            },
-            "xl": {
-              "quantity": 0
-            }
-          }
-        },
-        "navy": {
+        "tan": {
           "size": {
             "xs": {
               "quantity": 0
@@ -359,7 +319,7 @@
             }
           }
         },
-        "white": {
+        "grey": {
           "size": {
             "xs": {
               "quantity": 0
@@ -387,13 +347,13 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 60,
       "discount": 50,
-      "primary_img": "",
-      "secondary_img": "",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/17.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/18.PNG",
+      "extra_img": "https://picsum.photos/500/650",
       "color_img": {
-        "olive": "",
-        "black": "",
-        "tan": ""
+        "olive": "https://picsum.photos/500/650",
+        "black": "https://picsum.photos/500/650",
+        "tan": "https://picsum.photos/500/650"
       },
       "colour": {
         "olive": {
@@ -462,13 +422,13 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 60,
       "discount": 0,
-      "primary_img": "",
-      "secondary_img": "",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/19.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/2.PNG",
+      "extra_img": "https://picsum.photos/500/650",
       "color_img": {
-        "navy": "",
-        "black": "",
-        "grey": ""
+        "navy": "https://picsum.photos/500/650",
+        "black": "https://picsum.photos/500/650",
+        "grey": "https://picsum.photos/500/650"
       },
       "colour": {
         "navy": {
@@ -537,13 +497,13 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 60,
       "discount": 0,
-      "primary_img": "",
-      "secondary_img": "",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/20.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/21.PNG",
+      "extra_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/9.PNG",
       "color_img": {
-        "khaki": "",
-        "black": "",
-        "navy": ""
+        "khaki": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/3.PNG",
+        "black": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/4.PNG",
+        "navy": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/5.PNG"
       },
       "colour": {
         "khaki": {
@@ -612,13 +572,13 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perspiciatis quibusdam sit totam dolorem vitae cum enim fuga. Consequatur eius commodi quidem voluptatem magnam cum voluptatibus nobis praesentium incidunt laudantium!",
       "price": 25,
       "discount": 0,
-      "primary_img": "",
-      "secondary_img": "",
-      "extra_img": "",
+      "primary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/3.PNG",
+      "secondary_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/4.PNG",
+      "extra_img": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/5.PNG",
       "color_img": {
-        "olive": "",
-        "black": "",
-        "navy": ""
+        "olive": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/6.PNG",
+        "black": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/7.PNG",
+        "navy": "https://raw.githubusercontent.com/MatthewSusanto/dbJson8/master/8.PNG"
       },
       "colour": {
         "olive": {

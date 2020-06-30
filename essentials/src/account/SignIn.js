@@ -39,10 +39,7 @@ class SignIn extends Component {
         if (this.state.signedUp == true) {
             this.props.history.push('/account')
         }
-        this.setState({
-            show: false,
 
-        })
     }
 
 
@@ -122,7 +119,7 @@ class SignIn extends Component {
                                         {/* <Link to="/account"> */}
                                         <Button variant="primary" type="submit" block size="lg" onClick={this.handleSignin}>
                                             Sign In
-                            </Button>
+                                        </Button>
                                         {/* </Link> */}
 
                                     </Form>

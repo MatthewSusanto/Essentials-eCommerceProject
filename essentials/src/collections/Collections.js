@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
+import { connect } from 'react-redux'
 
 
 
@@ -13,7 +14,19 @@ class Collections extends Component {
     state = {
         items: [],
         islLoaded: false,
-        productType: null
+        productType: null,
+        searchInput: null
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+
+        if (this.props.theSearchInput !== prevProps.theSearchInput) {
+            this.setState({
+                searchInput: this.props.theSearchInput
+            })
+        }
+        console.log(this.state)
+
     }
 
     componentDidMount() {
@@ -28,8 +41,13 @@ class Collections extends Component {
 
         let productType = this.props.match.params.product_type;
         this.setState({
-            productType: productType
+            productType: productType,
+            searchInput: this.props.theSearchInput
         })
+
+        console.log(this.state)
+
+
 
     }
 
@@ -50,7 +68,7 @@ class Collections extends Component {
             return (
                 item.map(item => (
                     <Col key={item.id} lg={4} className="showcasePadding">
-                        <ProductShowcase type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                        <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                     </Col>))
             )
 
@@ -77,7 +95,7 @@ class Collections extends Component {
             return (
                 item.slice(0, 5).map(item => (
                     <Col key={item.id} lg={4} className="showcasePadding">
-                        <ProductShowcase type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                        <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                     </Col>))
             )
 
@@ -90,9 +108,37 @@ class Collections extends Component {
             return (
                 this.state.items.map(item => (
                     <Col key={item.id} lg={4} className="showcasePadding">
-                        <ProductShowcase type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                        <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                     </Col>)))
-        } else {
+        }
+
+
+        else if ((this.state.productType == 'search') && (this.state.searchInput !== null)) {
+
+            let searchInput = this.state.searchInput
+
+
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].id.includes(searchInput)) {
+                    item.push(items[i])
+                }
+
+            }
+
+
+            // }
+            return (
+                item.map(item => (
+                    <Col key={item.id} lg={4} className="showcasePadding">
+                        <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                    </Col>
+                )))
+
+        }
+
+
+
+        else {
 
 
             for (let i = 0; i < items.length; i++) {
@@ -105,7 +151,7 @@ class Collections extends Component {
             return (
                 item.map(item => (
                     <Col key={item.id} lg={4} className="showcasePadding">
-                        <ProductShowcase type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                        <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                     </Col>
                 )))
         }
@@ -126,6 +172,7 @@ class Collections extends Component {
             </div>
         }
         else {
+
 
             // const items = this.state.items
             // let item = []
@@ -152,7 +199,7 @@ class Collections extends Component {
 
                         <Row>
                             <Col lg={12}>
-                                <h2 className="display-3 h1">{this.state.productType ? (this.state.productType.toUpperCase()) : 'COLLECTIONS'}</h2>
+                                <h2 className="display-3 h1">{(this.state.productType !== (null || "search")) ? (this.state.productType.toUpperCase()) : 'COLLECTIONS'}</h2>
                             </Col>
                         </Row>
 
@@ -194,5 +241,12 @@ class Collections extends Component {
     }
 }
 
-export default Collections
+const mapStateToProps = (state) => {
+    return {
+        theSearchInput: state.cart.search
+
+    }
+}
+
+export default connect(mapStateToProps)(Collections)
 

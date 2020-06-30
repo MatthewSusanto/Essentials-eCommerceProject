@@ -29,8 +29,45 @@ class ProductShowcase extends Component {
 
     }
 
+    activeColor = (colour) => {
+        if (this.state.activeColor === colour) {
+            return (`colourBox colourBox${colour} activecolor`)
+        } else if (colour == "white") { return "colourBox colourBoxwhite" }
+        else if (colour == "black") { return "colourBox colourBoxblack" }
+        else if (colour == "red") { return "colourBox colourBoxred" }
+        else if (colour == "navy") { return "colourBox colourBoxnavy" }
+        else if (colour == "olive") { return "colourBox colourBoxolive" }
+        else if (colour == "tan") { return "colourBox colourBoxtan" }
+        else if (colour == "grey") { return "colourBox colourBoxgrey" }
+        else if (colour == "khaki") { return "colourBox colourBoxkhaki" }
+    }
+
+
+    colourList = () => {
+        let list = this.props.colour
+        let colourList = Object.keys(list)
+        let colourListMap = colourList.map((e) =>
+            <Col className="d-flex align-items-center justify-content-center" lg>
+                <div className={this.activeColor(e)} >  </div>
+            </Col>
+        )
+        return (
+
+            <Row className="d-flex align-items-center justify-content-center">
+                {colourListMap}
+            </Row>
+
+
+        )
+
+
+    }
+
+
+
+
     itemSizing = () => {
-        return (<Container fluid className="testy1">
+        return (
             <Row>
 
                 <Col lg>
@@ -50,7 +87,7 @@ class ProductShowcase extends Component {
                 </Col>
 
             </Row>
-        </Container>)
+        )
     }
 
 
@@ -58,6 +95,8 @@ class ProductShowcase extends Component {
 
 
     render() {
+
+
 
 
         return (
@@ -74,10 +113,10 @@ class ProductShowcase extends Component {
 
                         >
                             {this.props.discount ? <div className="testy"> {this.props.discount}% Off  </div> : null}
-
-
-                            {this.state.onHover ? this.itemSizing() : null}
-
+                            <Container fluid className="testy1">
+                                {this.state.onHover ? this.colourList() : null}
+                                {/* {this.state.onHover ? this.itemSizing() : null} */}
+                            </Container>
 
 
                             <a href=""><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} className="tees" /></a>

@@ -87,7 +87,7 @@ class ProductDetail extends Component {
                     <Container fluid >
                         <Row className="marginy">
                             <Col lg={8}>
-                                <DetailImg />
+                                <DetailImg item={item} />
 
                             </Col>
 

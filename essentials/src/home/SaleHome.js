@@ -42,7 +42,7 @@ class SalerHome extends Component {
         return (
             item.slice(0, 3).map(item => (
                 <Col key={item.id} lg={4} className="showcasePadding">
-                    <ProductShowcase type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                    <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                 </Col>))
         )
 

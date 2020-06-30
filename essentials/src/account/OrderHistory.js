@@ -27,7 +27,7 @@ class OrderHistory extends Component {
                 <Row className="justify-content-center order-history-item align-items-center">
 
                     <Col lg={2}>
-                        <img src={boomer} className="productpic" />
+                        <img src={this.props.itemDetails.productImage} className="productpic" />
                     </Col>
                     <Col lg={4} className="h3">
                         {`${this.props.itemDetails.itemName} ${this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}`}

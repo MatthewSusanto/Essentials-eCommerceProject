@@ -40,7 +40,8 @@ class DetailDescription extends Component {
         e.preventDefault();
         let randomizer = (Math.floor((Math.random() * 9999999) + 1))
         let parsefloat = parseFloat(this.state.selectedQuantity)
-        this.props.addToCart(randomizer, this.state.id, this.state.productName, this.state.previousPrice, this.state.discount, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, parsefloat)
+        this.props.addToCart(randomizer, this.state.id, this.state.productName, this.state.previousPrice, this.state.discount, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, parsefloat, this.props.item.primary_img)
+        // this.props.purchased(this.props.theCart)
 
         let blaha = this.state.quantity - this.state.selectedQuantity
         let blaha1 = 0
@@ -207,7 +208,7 @@ class DetailDescription extends Component {
         }
         else {
 
-            console.log(this.props.theCart)
+            console.log(this.props.theHistory)
 
             return (
                 <div>
@@ -334,13 +335,15 @@ class DetailDescription extends Component {
 // }
 const mapStateToProps = (state) => {
     return {
-        theCart: state.cart
+        theCart: state.cart,
+        theHistory: state.purchased
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToCart: (orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity) => dispatch(addToCart(orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity))
+        addToCart: (orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity, productImage) => dispatch(addToCart(orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity, productImage))
+
     }
 }
 

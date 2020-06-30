@@ -55,7 +55,7 @@ class ProductRecommendation extends Component {
         return (
             item.slice(0, 3).map(item => (
                 <Col lg={4} className="px-5">
-                    <ProductShowcase type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                    <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                 </Col>))
         )
 

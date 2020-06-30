@@ -9,6 +9,8 @@ import SignIn from '../account/SignIn'
 import { Link, withRouter } from 'react-router-dom'
 import CartModal from '../cart/CartModal'
 import { persistor } from '../redux/store'
+import { connect } from 'react-redux'
+import { searchSomething } from '../redux/cartActions'
 
 
 
@@ -17,9 +19,13 @@ class NavbarComponent extends Component {
     state = {
         showBottoms: false,
         showTops: false,
-        searchShowing: false
+        searchShowing: false,
+        searchKeyword: null
+
 
     }
+
+
 
     searchButton = () => {
 
@@ -31,18 +37,27 @@ class NavbarComponent extends Component {
     searchBar = () => {
         return (
             <Form inline>
-                <FormControl type="text" placeholder="Search" />
+                <FormControl autoFocus type="text" placeholder="Enter 'pants'" onChange={this.handleChange} />
+
             </Form>)
     }
 
-    purge = () => {
-        persistor.purge()
-        console.log("Factory reset performed.")
+    handleChange = (e) => {
+        this.state.searchKeyword = e.target.value
+        this.props.searchSomething(this.state.searchKeyword)
+        this.handleSearch('search')
     }
 
     handleLink = (input) => {
         this.props.history.push('/collections/' + input)
         this.props.history.go();
+    }
+
+    handleSearch = (input) => {
+
+        this.props.history.push('/collections/' + input)
+
+
     }
 
 
@@ -53,13 +68,16 @@ class NavbarComponent extends Component {
 
     render() {
 
+        console.log(this.props.theCart)
+        console.log(this.state)
+
 
         return (
             <div>
 
                 <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" fixed="top" >
 
-                    <Link to='/'><Navbar.Brand>ESSENTIALS</Navbar.Brand> </Link>
+                    <Navbar.Brand href="/">ESSENTIALS</Navbar.Brand>
 
 
 
@@ -101,7 +119,7 @@ class NavbarComponent extends Component {
 
                             <Nav.Link href="/collections/underwear">UNDERWEAR</Nav.Link>
                             <Nav.Link href="/collections/sale">SALE</Nav.Link>
-                            <Nav.Link href="#pricing" onClick={() => this.purge()}>Purge</Nav.Link>
+
 
 
                         </Nav>
@@ -160,5 +178,19 @@ class NavbarComponent extends Component {
     }
 }
 
-export default withRouter(NavbarComponent)
+const mapStateToProps = (state) => {
+    return {
+        theCart: state.cart
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        searchSomething: (keyword) => dispatch(searchSomething(keyword))
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(NavbarComponent))
 

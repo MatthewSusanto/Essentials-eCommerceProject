@@ -7,6 +7,10 @@ import OrderHistory from '../account/OrderHistory'
 import CartItem from './CartItem'
 import CartModal from './CartModal'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { persistor } from '../redux/store'
+
+
 
 
 
@@ -44,6 +48,8 @@ class Cart extends Component {
         }
     }
 
+
+
     componentDidUpdate(prevProps, prevState, snapshot) {
 
         if (this.state.subTotal !== prevState.subTotal) {
@@ -70,8 +76,9 @@ class Cart extends Component {
 
 
 
-
     render() {
+
+        console.log(this.props.purchaseHistory)
 
 
         return (
@@ -137,8 +144,9 @@ class Cart extends Component {
 
                                 </Col>
                                 <Col lg={6} className="text-right">
-
-                                    <Button variant="success" size="lg" block >Proceed to checkout</Button>
+                                    <Link to="/account">
+                                        <Button variant="success" size="lg" block  >Proceed to checkout</Button>
+                                    </Link>
                                 </Col>
                             </Row>
 
@@ -165,9 +173,13 @@ class Cart extends Component {
 const mapStateToProps = (state) => {
     return {
         items: state.cart.items,
-        subTotal: state.cart.subTotal
+        subTotal: state.cart.subTotal,
+
+        theCart: state.cart
     }
 }
+
+
 
 export default connect(mapStateToProps)(Cart)
 
