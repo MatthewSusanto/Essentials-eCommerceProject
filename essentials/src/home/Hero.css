@@ -93,11 +93,34 @@
 
 }
 
-.timelineImg{
+.timelineImgAnimate{
     width: 100%;
     height: 400px;
     object-fit: cover;
+    animation: showImg 3s;
+    
 }
+
+.timelineImgHidden{
+    display: none;
+    opacity: 0
+
+}
+
+
+
+
+@keyframes showImg{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes showBorder{
+    0%{border-bottom: solid 2px white;}
+    100%{border-bottom: solid 2px black;}
+}
+
+
 
 
 
@@ -122,21 +145,17 @@
  
 }
 
- .radio2{
-    padding: 1rem 0 1rem 0;
-}
+
 
 .radioActive{
     padding: 1rem 0 1rem 0;
-    background-color: lightgoldenrodyellow;
+    border-bottom: solid 2px;
     cursor: pointer;
+    animation: showBorder 1s;
 }
 
 
 
-.radio3{
-    padding: 1rem 0 1rem 0;
-}
 
 
 .radio1:hover{

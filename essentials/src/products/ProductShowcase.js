@@ -4,6 +4,7 @@ import './ProductShowcase.css'
 import tees from './images/tees.png'
 import tees2 from './images/tees2.PNG'
 import { withRouter } from 'react-router-dom'
+import { Spring, config, Transition } from 'react-spring/renderprops'
 
 
 
@@ -99,12 +100,16 @@ class ProductShowcase extends Component {
 
 
 
+
+
+
         return (
             <div >
 
 
                 <Container className="show-case">
                     <Row >
+
                         <Col
                             onMouseEnter={() => this.setState({ onHover: true })}
                             onMouseLeave={() => this.setState({ onHover: false })}
@@ -113,10 +118,29 @@ class ProductShowcase extends Component {
 
                         >
                             {this.props.discount ? <div className="testy"> {this.props.discount}% Off  </div> : null}
-                            <Container fluid className="testy1">
-                                {this.state.onHover ? this.colourList() : null}
-                                {/* {this.state.onHover ? this.itemSizing() : null} */}
-                            </Container>
+
+
+
+
+                            {/* <Container fluid className="testy1"> */}
+
+
+                            <Transition
+                                items={this.state.onHover}
+                                from={{ opacity: 0 }}
+                                enter={{ opacity: 1 }}
+                                leave={{ opacity: 0 }}>
+                                {toggle =>
+                                    toggle
+                                        ? props => <div style={props}><Container fluid className="testy1">{this.colourList()}</Container></div>
+                                        : props => <div style={props}></div>
+                                }
+
+
+                            </Transition>
+
+                            {/* </Container> */}
+
 
 
                             <a href=""><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} className="tees" /></a>
@@ -127,7 +151,24 @@ class ProductShowcase extends Component {
                     <Row className="showcase-details">
                         <Col>
                             <p className="h3"> {this.props.name} </p>
-                            <p className="h5 text-secondary"> ${this.props.price} </p>
+
+
+                            <Transition
+                                items={this.state.onHover}
+                                from={{ opacity: 0 }}
+                                enter={{ opacity: 1 }}
+                                leave={{ opacity: 0 }}>
+                                {toggle =>
+                                    toggle
+                                        ? props => <div style={props}><p className="h5 text-primary"> ${this.props.price} </p></div>
+                                        : props => null
+                                }
+
+
+                            </Transition>
+
+
+
                         </Col>
                     </Row>
                 </Container>
