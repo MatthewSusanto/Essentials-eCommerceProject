@@ -3,7 +3,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import { Link } from 'react-router-dom'
 
-
+import './css/Hero.css'
 
 
 

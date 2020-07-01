@@ -7,7 +7,7 @@ import Newsletter from './Newsletter'
 import Timeline from './Timeline'
 import BestsellerHome from './BestsellerHome'
 import SaleHome from './SaleHome'
-
+import './css/Hero.css'
 
 
 class Home extends Component {

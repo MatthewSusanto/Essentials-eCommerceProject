@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Container, Row, Col, Form } from 'react-bootstrap'
-import './Footer.css'
+import './css/Footer.css'
 import { Link } from 'react-router-dom'
 import facebook from './images/facebook.png'
 import instagram from './images/instagram.png'

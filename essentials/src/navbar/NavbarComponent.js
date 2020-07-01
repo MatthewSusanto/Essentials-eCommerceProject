@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, FormControl, Button, Form, NavDropdown } from 'react-bootstrap'
-import './NavbarComponent.css'
+import './css/NavbarComponent.css'
 import bag from './images/bag.png'
 import account from './images/account.png'
 import search from './images/search.png'

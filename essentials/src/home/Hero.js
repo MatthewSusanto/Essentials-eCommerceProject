@@ -3,7 +3,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { Spring, config } from 'react-spring/renderprops'
 
-import './Hero.css'
+import './css/Hero.css'
 
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Modal, Form, Container, Row, Col, Nav } from 'react-bootstrap'
-import './SignIn.css'
+import './css/SignIn.css'
 import account from '../navbar/images/account.png'
 import { Link, BrowserRouter, withRouter, Route } from 'react-router-dom'
 import SignUp from './SignUp'

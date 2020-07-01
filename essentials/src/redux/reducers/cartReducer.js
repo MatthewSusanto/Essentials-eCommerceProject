@@ -13,6 +13,7 @@ const initialState = {
 const cartReducer = (state = initialState, action) => {
 
     switch (action.type) {
+
         case 'ADD_ITEM':
 
             let total = (parseFloat(action.finalPrice) * action.chosenQuantity) + state.subTotal
@@ -36,6 +37,7 @@ const cartReducer = (state = initialState, action) => {
                 ...state, totalAmount: newTotalAmount, items: newItems, subTotal: total
 
             }
+
         case 'REMOVE_ITEM':
 
             let filteredItems = state.items.filter((e) => e.orderNumber !== action.orderNumber)
@@ -99,39 +101,11 @@ const cartReducer = (state = initialState, action) => {
                 ...state, search: search
             }
 
-
-
-        // case 'ADD_ITEM':
-
-
-        //     console.log('added item');
-        //     state.totalAmount += parseInt(action.chosenQuantity)
-        //     state.items = [...state.items,
-        //     {
-        //         itemId: action.itemId,
-        //         finalPrice: action.finalPrice,
-        //         chosenColour: action.chosenColour,
-        //         chosenSize: action.chosenSize,
-        //         chosenQuantity: action.chosenQuantity
-        //     }]
-        //     console.log(state)
-        //     return state;
         default:
             return state
 
-
-
-
-
     }
 
-
-
-
-
-
-
 }
-
 
 export default cartReducer

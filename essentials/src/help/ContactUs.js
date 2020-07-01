@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button, Container, Row, Col, Form } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
-import './help.css'
+import './css/help.css'
 
 
 

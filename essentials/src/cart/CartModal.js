@@ -3,8 +3,8 @@ import { Button, Modal, Form, Container, Row, Col, Nav } from 'react-bootstrap'
 
 import account from '../navbar/images/account.png'
 import { Link, BrowserRouter } from 'react-router-dom'
-import './CartModal.css'
-import CartModalItem from './CartModalItem'
+import './css/CartModal.css'
+import CartModalItem from './css/CartModal.css'
 import bag from '../navbar/images/bag.png'
 import { connect } from 'react-redux'
 

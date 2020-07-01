@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
-import './ProductShowcase.css'
+import './css/ProductShowcase.css'
 import tees from './images/tees.png'
 import tees2 from './images/tees2.PNG'
 import { withRouter } from 'react-router-dom'

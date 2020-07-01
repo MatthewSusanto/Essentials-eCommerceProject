@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import { Spring, config } from 'react-spring/renderprops'
-
+import './css/Hero.css'
 
 
 

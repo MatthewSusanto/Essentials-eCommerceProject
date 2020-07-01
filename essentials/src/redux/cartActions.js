@@ -1,19 +1,3 @@
-// import {ADD_ITEM} from './actionTypes';
-
-// // let nextTodoId = 0;
-
-// export const addItem = content => ({
-//     type: ADD_ITEM,
-//     payload: {
-//       itemId: ,
-//       finalPrice: ,
-//       chosenColour: ,
-//       chosenSize: ,
-//       chosenQuantity: 
-
-//     }
-//   });
-
 export const addToCart = (orderNumber, itemId, itemName, previousPrice, discount, finalPrice, chosenColour, chosenSize, chosenQuantity, productImage) => (
 
 

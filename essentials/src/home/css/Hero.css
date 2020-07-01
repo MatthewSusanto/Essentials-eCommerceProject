@@ -22,7 +22,7 @@
 
 
 .hero-img{
-    background-image: url(./images/hero.PNG);
+    background-image: url(../images/hero.PNG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +37,7 @@
 }
 
 .ourstory-img{
-    background-image: url(./images/ourstory.PNG);
+    background-image: url(../images/ourstory.PNG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,7 +65,7 @@
 }
 
 .newsletter-img{
-    background-image: url(./images/newsletter.PNG);
+    background-image: url(../images/newsletter.PNG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

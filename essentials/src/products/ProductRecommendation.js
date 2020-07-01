@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
-import './ProductRecommendation'
+import './css/ProductRecommendation.css'
 
 
 

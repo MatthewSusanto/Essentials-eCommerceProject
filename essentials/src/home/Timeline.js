@@ -5,7 +5,7 @@ import timeline2 from './images/timeline2.PNG'
 import timeline3 from './images/timeline3.PNG'
 import { Spring, Transition } from 'react-spring/renderprops'
 import { useSpring, animated } from 'react-spring'
-
+import './css/Hero.css'
 
 
 

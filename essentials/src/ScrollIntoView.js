@@ -1,3 +1,5 @@
+//Scroll to the top
+
 import { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Carousel } from 'react-bootstrap'
-import './NewsBanner.css'
+import './css/NewsBanner.css'
 
 class NewsBanner extends Component {
 

@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import ProductShowcase from '../products/ProductShowcase'
 import Pagination from '../pagination/PaginationComp'
 import boomer from '../products/images/tees2.PNG'
-import './CartModal.css'
+import './css/CartModal.css'
 import { connect } from 'react-redux'
 import { removeFromCart, addQuantity, removeQuantity } from '../redux/cartActions'
 

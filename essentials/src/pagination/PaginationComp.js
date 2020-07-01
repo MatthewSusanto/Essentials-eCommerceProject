@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Pagination, Container, Row, Col } from 'react-bootstrap'
-import './PaginationComp.css'
+import './css/PaginationComp.css'
 
 
 
