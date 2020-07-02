@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import timeline1 from './images/timeline1.PNG'
-import timeline2 from './images/timeline2.PNG'
-import timeline3 from './images/timeline3.PNG'
+import timeline1 from './images/timeline1.png'
+import timeline2 from './images/timeline2.png'
+import timeline3 from './images/timeline3.png'
 import { Spring } from 'react-spring/renderprops'
 import './css/Hero.css'
 
