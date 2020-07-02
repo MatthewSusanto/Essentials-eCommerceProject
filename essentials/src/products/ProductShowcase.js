@@ -94,7 +94,7 @@ class ProductShowcase extends Component {
 
                             </Transition>
 
-                            <a><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} alt="images" className="tees" /></a>
+                            <a href=""><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} alt="images" className="tees" /></a>
                         </Col>
 
                     </Row>
