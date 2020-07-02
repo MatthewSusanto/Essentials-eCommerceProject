@@ -23,7 +23,7 @@ class OrderHistory extends Component {
 
                 <Row className="justify-content-center order-history-item align-items-center">
                     <Col lg={2}>
-                        <img src={this.props.itemDetails.productImage} className="productpic" />
+                        <img src={this.props.itemDetails.productImage} className="productpic" alt="timelineImg" />
                     </Col>
 
                     <Col lg={4} className="h3">

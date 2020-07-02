@@ -19,7 +19,7 @@ class NewsBanner extends Component {
     render() {
 
 
-        if (this.state.showing == true) {
+        if (this.state.showing === true) {
 
             return (
 

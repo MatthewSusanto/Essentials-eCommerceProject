@@ -31,18 +31,18 @@ class DetailImg extends Component {
                     <Container fluid>
                         <Row>
                             <Col xl={6}>
-                                <img src={this.props.item.primary_img} className="imgtest" />
+                                <img src={this.props.item.primary_img} className="imgtest" alt="timelineImg" />
                             </Col>
                             <Col xl={6}>
-                                <img src={this.props.item.secondary_img} className="imgtest" />
+                                <img src={this.props.item.secondary_img} className="imgtest" alt="timelineImg" />
                             </Col>
                             <Col xl={6}>
-                                <img src={this.props.item.extra_img} className="imgtest" />
+                                <img src={this.props.item.extra_img} className="imgtest" alt="timelineImg" />
                             </Col>
 
                             {colorImages.map(n => (
                                 <Col xl={6}>
-                                    <img src={n} className="imgtest" />
+                                    <img src={n} className="imgtest" alt="timelineImg" />
                                 </Col>))}
 
                         </Row>

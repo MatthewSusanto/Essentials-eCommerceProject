@@ -43,7 +43,7 @@ class CartModal extends Component {
             <div>
 
                 <div className="bagDiv" onClick={this.handleShow}>
-                    <img src={bag} className="bagImg" />
+                    <img src={bag} className="bagImg" alt="timelineImg" />
                     <p className="bagItems">{totalAmount}</p>
                 </div>
 

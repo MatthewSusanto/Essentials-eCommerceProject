@@ -54,10 +54,10 @@ function Footer() {
 
                 <Row className="footer-2">
                     <Col xs>
-                        <a href="/"><img src={twitter} className="footerImg" /></a>
-                        <a href="/"><img src={facebook} className="footerImg" /></a>
-                        <a href="/"><img src={youtube} className="footerImg" /></a>
-                        <a href="/"><img src={instagram} className="footerImg" /></a>
+                        <a href="/"><img src={twitter} className="footerImg" alt="timelineImg" /></a>
+                        <a href="/"><img src={facebook} className="footerImg" alt="timelineImg" /></a>
+                        <a href="/"><img src={youtube} className="footerImg" alt="timelineImg" /></a>
+                        <a href="/"><img src={instagram} className="footerImg" alt="timelineImg" /></a>
                     </Col>
                 </Row>
 

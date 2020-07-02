@@ -33,7 +33,7 @@ class SignIn extends Component {
     }
 
     handleSignin = () => {
-        if (this.state.signedUp == true) {
+        if (this.state.signedUp === true) {
             this.props.history.push('/account')
         }
     }
@@ -49,7 +49,7 @@ class SignIn extends Component {
             <div>
 
                 <Nav.Link onClick={this.handleShow}>
-                    <img src={account} className="accountImg" />
+                    <img src={account} className="accountImg" alt="timelineImg" />
                 </Nav.Link>
 
 
@@ -92,7 +92,7 @@ class SignIn extends Component {
                                         <Button block size="lg" variant="success" onClick={this.handleSignup} > Create My Account </Button>
                                     </Link>
                                     <br />
-                                    <a href="#"> Forgot your password? </a>
+                                    <a href="/"> Forgot your password? </a>
 
                                 </Col>
 

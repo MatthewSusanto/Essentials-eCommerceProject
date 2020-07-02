@@ -52,7 +52,7 @@ class SalerHome extends Component {
 
     render() {
 
-        if (this.state.islLoaded == false) {
+        if (this.state.islLoaded === false) {
             return <div>
             </div>
         } else

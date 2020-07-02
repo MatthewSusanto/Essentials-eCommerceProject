@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import DetailImg from './DetailImg'
 import DetailDescription from './DetailDescription'
 import ProductRecommendation from './ProductRecommendation'
-import { Transition } from 'react-spring/renderprops'
 
 
 
@@ -43,7 +42,7 @@ class ProductDetail extends Component {
     render() {
 
 
-        if (this.state.islLoaded != true) {
+        if (this.state.islLoaded !== true) {
             return (<div></div>)
         }
 
@@ -52,7 +51,7 @@ class ProductDetail extends Component {
             const items = this.state.items
             let item = {}
             for (let i = 0; i < items.length; i++) {
-                if (items[i].id == this.state.productName) {
+                if (items[i].id === this.state.productName) {
                     item = items[i]
                 }
             }

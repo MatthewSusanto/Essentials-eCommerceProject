@@ -55,7 +55,7 @@ class SignUp extends Component {
                                 <br />
 
                                 <Link to="/account">
-                                    <Button variant="primary" type="submit" block size="lg" variant="success" onClick={this.handleSignup}>
+                                    <Button type="submit" block size="lg" variant="success" onClick={this.handleSignup}>
                                         Create My Account
                                         </Button>
                                 </Link>

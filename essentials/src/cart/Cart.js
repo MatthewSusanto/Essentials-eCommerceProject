@@ -29,7 +29,7 @@ class Cart extends Component {
 
     handlePromoCodeSubmit = (e) => {
 
-        if (this.state.promoCodeInput == this.state.promoCode) {
+        if (this.state.promoCodeInput === this.state.promoCode) {
 
             let promoCodeDiscountPrice = (this.state.promoCodeDiscount / 100) * this.state.subTotal
             let afterDiscountPrice = this.state.subTotal - promoCodeDiscountPrice

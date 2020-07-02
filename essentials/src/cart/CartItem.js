@@ -47,11 +47,11 @@ class CartItem extends Component {
         let prevstateplus1 = (prevState.quantity + 1)
         let prevstateremove1 = (prevState.quantity - 1)
 
-        if (this.state.quantity == prevstateplus1) {
+        if (this.state.quantity === prevstateplus1) {
             this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
         }
 
-        if (this.state.quantity == prevstateremove1) {
+        if (this.state.quantity === prevstateremove1) {
             this.props.removeQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
         }
     }
@@ -66,14 +66,14 @@ class CartItem extends Component {
 
     render() {
 
-        if (this.state.show == true) {
+        if (this.state.show === true) {
 
             return (
                 <div className="itemlist">
                     <Row className="justify-content-center order-history-item align-items-center">
 
                         <Col lg={2}>
-                            <img src={this.props.itemDetails.productImage} className="productpic" />
+                            <img src={this.props.itemDetails.productImage} className="productpic" alt="images" />
                         </Col>
 
                         <Col lg={3} className='h3'>
@@ -89,7 +89,7 @@ class CartItem extends Component {
                         </Col>
 
                         <Col lg={2} className="d-flex justify-content-center align-items-center h5">
-                            <Button size="sm" disabled={(this.state.quantity == 1) ? true : false} variant="dark" className="mx-3" onClick={this.removeButton}>-</Button> {` ${this.state.quantity}x`} <Button className="mx-3" variant='dark' size="sm" onClick={this.addButton}>+</Button>
+                            <Button size="sm" disabled={(this.state.quantity === 1) ? true : false} variant="dark" className="mx-3" onClick={this.removeButton}>-</Button> {` ${this.state.quantity}x`} <Button className="mx-3" variant='dark' size="sm" onClick={this.addButton}>+</Button>
                         </Col>
 
                         <Col lg={2} className='h4'>

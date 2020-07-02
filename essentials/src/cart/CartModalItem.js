@@ -22,11 +22,11 @@ class CartModalItem extends Component {
         let prevstateplus1 = (prevState.quantity + 1)
         let prevstateremove1 = (prevState.quantity - 1)
 
-        if (this.state.quantity == prevstateplus1) {
+        if (this.state.quantity === prevstateplus1) {
             this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
         }
 
-        if (this.state.quantity == prevstateremove1) {
+        if (this.state.quantity === prevstateremove1) {
             this.props.removeQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
         }
     }
@@ -72,14 +72,14 @@ class CartModalItem extends Component {
 
     render() {
 
-        if (this.state.show == true) {
+        if (this.state.show === true) {
 
             return (
                 <div className="itemlist">
 
                     <Row className="justify-content-center order-history-modal-item align-items-center">
                         <Col>
-                            <img src={this.props.itemDetails.productImage} className="productpic" />
+                            <img src={this.props.itemDetails.productImage} alt="Images" className="productpic" />
                         </Col>
 
 
@@ -87,11 +87,11 @@ class CartModalItem extends Component {
 
                             <Row className='h4' >{this.props.itemDetails.itemName}</Row>
                             <Row className='h4 text-danger'> ${this.props.itemDetails.finalPrice} </Row>
-                            <Row><strike className="text-muted">{(this.props.itemDetails.discount == 0) ? ' ' : `$${this.state.previousPrice} `} </strike> &nbsp; <span className="text-success"> {(this.props.itemDetails.discount == 0) ? ' ' : `(${this.props.itemDetails.discount} % Off)`}</span> </Row>
+                            <Row><strike className="text-muted">{(this.props.itemDetails.discount === 0) ? ' ' : `$${this.state.previousPrice} `} </strike> &nbsp; <span className="text-success"> {(this.props.itemDetails.discount === 0) ? ' ' : `(${this.props.itemDetails.discount} % Off)`}</span> </Row>
                             <hr />
                             <Row><strong>Colour: </strong> &nbsp; {this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}</Row>
                             <Row><strong>Size: </strong> &nbsp; {this.props.itemDetails.chosenSize.toUpperCase()}</Row>
-                            <Row className='d-flex align-items-center'><strong>Quantity: </strong> &nbsp;  <Button size="sm" disabled={(this.state.quantity == 1) ? true : false} variant="dark" className="mx-1" onClick={this.removeButton}>-</Button> <strong>{`${this.props.itemDetails.chosenQuantity}X `}</strong> <Button className="mx-1" variant='dark' size="sm" onClick={this.addButton}>+</Button></Row>
+                            <Row className='d-flex align-items-center'><strong>Quantity: </strong> &nbsp;  <Button size="sm" disabled={(this.state.quantity === 1) ? true : false} variant="dark" className="mx-1" onClick={this.removeButton}>-</Button> <strong>{`${this.props.itemDetails.chosenQuantity}X `}</strong> <Button className="mx-1" variant='dark' size="sm" onClick={this.addButton}>+</Button></Row>
                             <Row><strong>Total: </strong> &nbsp; {`$${this.state.subTotal.toFixed(2)}`}</Row>
 
                         </Col>

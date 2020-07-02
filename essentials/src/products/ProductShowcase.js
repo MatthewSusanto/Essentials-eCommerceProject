@@ -25,14 +25,14 @@ class ProductShowcase extends Component {
     activeColor = (colour) => {
         if (this.state.activeColor === colour) {
             return (`colourBox colourBox${colour} activecolor`)
-        } else if (colour == "white") { return "colourBox colourBoxwhite" }
-        else if (colour == "black") { return "colourBox colourBoxblack" }
-        else if (colour == "red") { return "colourBox colourBoxred" }
-        else if (colour == "navy") { return "colourBox colourBoxnavy" }
-        else if (colour == "olive") { return "colourBox colourBoxolive" }
-        else if (colour == "tan") { return "colourBox colourBoxtan" }
-        else if (colour == "grey") { return "colourBox colourBoxgrey" }
-        else if (colour == "khaki") { return "colourBox colourBoxkhaki" }
+        } else if (colour === "white") { return "colourBox colourBoxwhite" }
+        else if (colour === "black") { return "colourBox colourBoxblack" }
+        else if (colour === "red") { return "colourBox colourBoxred" }
+        else if (colour === "navy") { return "colourBox colourBoxnavy" }
+        else if (colour === "olive") { return "colourBox colourBoxolive" }
+        else if (colour === "tan") { return "colourBox colourBoxtan" }
+        else if (colour === "grey") { return "colourBox colourBoxgrey" }
+        else if (colour === "khaki") { return "colourBox colourBoxkhaki" }
     }
 
 
@@ -54,29 +54,7 @@ class ProductShowcase extends Component {
     }
 
 
-    itemSizing = () => {
-        return (
-            <Row>
 
-                <Col lg>
-                    <a href="" >XS</a>
-                </Col>
-                <Col lg>
-                    <a href="" >S</a>
-                </Col>
-                <Col lg>
-                    <a href="" >M</a>
-                </Col>
-                <Col lg>
-                    <a href="" >L</a>
-                </Col>
-                <Col lg>
-                    <a href="" >XL</a>
-                </Col>
-
-            </Row>
-        )
-    }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -116,7 +94,7 @@ class ProductShowcase extends Component {
 
                             </Transition>
 
-                            <a href=""><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} className="tees" /></a>
+                            <a><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} alt="images" className="tees" /></a>
                         </Col>
 
                     </Row>

@@ -56,7 +56,7 @@ const cartReducer = (state = initialState, action) => {
             let itemprice1 = 0
             let newItems2 = [...state.items]
             for (let index = 0; index < newItems2.length; index++) {
-                if (newItems2[index].orderNumber == action.orderNumber) {
+                if (newItems2[index].orderNumber === action.orderNumber) {
                     newItems2[index].chosenQuantity = (newItems2[index].chosenQuantity + 1)
                     itemprice1 = parseFloat(newItems2[index].finalPrice)
                 }
@@ -76,7 +76,7 @@ const cartReducer = (state = initialState, action) => {
             let itemprice2 = 0
             let newItems3 = [...state.items]
             for (let index = 0; index < newItems3.length; index++) {
-                if (newItems3[index].orderNumber == action.orderNumber) {
+                if (newItems3[index].orderNumber === action.orderNumber) {
                     newItems3[index].chosenQuantity = (newItems3[index].chosenQuantity - 1)
                     itemprice2 = parseFloat(newItems3[index].finalPrice)
                 }

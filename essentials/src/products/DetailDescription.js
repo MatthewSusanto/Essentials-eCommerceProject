@@ -67,14 +67,14 @@ class DetailDescription extends Component {
     activeColor = (colour) => {
         if (this.state.activeColor === colour) {
             return (`colourBox colourBox${colour} activecolor`)
-        } else if (colour == "white") { return "colourBox colourBoxwhite" }
-        else if (colour == "black") { return "colourBox colourBoxblack" }
-        else if (colour == "red") { return "colourBox colourBoxred" }
-        else if (colour == "navy") { return "colourBox colourBoxnavy" }
-        else if (colour == "olive") { return "colourBox colourBoxolive" }
-        else if (colour == "tan") { return "colourBox colourBoxtan" }
-        else if (colour == "grey") { return "colourBox colourBoxgrey" }
-        else if (colour == "khaki") { return "colourBox colourBoxkhaki" }
+        } else if (colour === "white") { return "colourBox colourBoxwhite" }
+        else if (colour === "black") { return "colourBox colourBoxblack" }
+        else if (colour === "red") { return "colourBox colourBoxred" }
+        else if (colour === "navy") { return "colourBox colourBoxnavy" }
+        else if (colour === "olive") { return "colourBox colourBoxolive" }
+        else if (colour === "tan") { return "colourBox colourBoxtan" }
+        else if (colour === "grey") { return "colourBox colourBoxgrey" }
+        else if (colour === "khaki") { return "colourBox colourBoxkhaki" }
     }
 
     rowColor = () => {
@@ -99,22 +99,22 @@ class DetailDescription extends Component {
     }
 
     sizeActive = (size) => {
-        if ((this.state.sizeActive == size) && (this.state[size] !== 0)) {
+        if ((this.state.sizeActive === size) && (this.state[size] !== 0)) {
             return ("warning")
         } else if (this.state[size] !== 0) {
             return ("outline-dark")
-        } else if (this.state[size] == 0) {
+        } else if (this.state[size] === 0) {
             return ("secondary")
         }
     }
 
     showQuantity = () => {
-        if (this.state.quantity == null) {
+        if (this.state.quantity === null) {
             return (null)
         } else if (this.state.quantity > 10) {
             return (<p className="text-success">More than 10 available</p>)
         } else if (this.state.quantity < 10) {
-            return (<p className="text-danger">{this.state.quantity == 0 ? 'Out of Stock' : 'Only ' + this.state.quantity + ' left'}</p>)
+            return (<p className="text-danger">{this.state.quantity === 0 ? 'Out of Stock' : 'Only ' + this.state.quantity + ' left'}</p>)
         }
     }
 
@@ -161,7 +161,7 @@ class DetailDescription extends Component {
 
     render() {
 
-        if (this.state.islLoaded == false) {
+        if (this.state.islLoaded === false) {
             return <div>
                 Loading...
             </div>

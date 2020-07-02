@@ -14,17 +14,17 @@ class Timeline extends Component {
     }
 
     textRadio = () => {
-        if (this.state.radio == 1) {
+        if (this.state.radio === 1) {
             return (<p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, eaque? Culpa omnis voluptatum eligendi quas nisi mollitia corporis! Earum tenetur animi autem aspernatur aut sequi tempora nihil dolorem itaque molestiae?
             </p>)
         }
-        else if (this.state.radio == 2) {
+        else if (this.state.radio === 2) {
             return (<p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, necessitatibus explicabo tenetur fugiat animi rem.
             </p>)
         }
-        else if (this.state.radio == 3) {
+        else if (this.state.radio === 3) {
             return (<p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dolorem quae quasi consequatur soluta cumque excepturi numquam vero quidem!
             </p>)
@@ -32,31 +32,31 @@ class Timeline extends Component {
     }
 
     imgRadio = () => {
-        if (this.state.radio == 1) {
-            return [<img src={timeline1} className='timelineImgAnimate' />,
-            <img src={timeline2} className='timelineImgHidden' />,
-            <img src={timeline3} className='timelineImgHidden' />]
+        if (this.state.radio === 1) {
+            return [<img src={timeline1} className='timelineImgAnimate' alt="timelineImg" />,
+            <img src={timeline2} className='timelineImgHidden' alt="timelineImg" />,
+            <img src={timeline3} className='timelineImgHidden' alt="timelineImg" />]
         }
-        else if (this.state.radio == 2) {
-            return [<img src={timeline1} className='timelineImgHidden' />,
-            <img src={timeline2} className='timelineImgAnimate' />,
-            <img src={timeline3} className='timelineImgHidden' />]
+        else if (this.state.radio === 2) {
+            return [<img src={timeline1} className='timelineImgHidden' alt="timelineImg" />,
+            <img src={timeline2} className='timelineImgAnimate' alt="timelineImg" />,
+            <img src={timeline3} className='timelineImgHidden' alt="timelineImg" />]
         }
-        else if (this.state.radio == 3) {
-            return [<img src={timeline1} className='timelineImgHidden' />,
-            <img src={timeline2} className='timelineImgHidden' />,
-            <img src={timeline3} className='timelineImgAnimate' />]
+        else if (this.state.radio === 3) {
+            return [<img src={timeline1} className='timelineImgHidden' alt="timelineImg" />,
+            <img src={timeline2} className='timelineImgHidden' alt="timelineImg" />,
+            <img src={timeline3} className='timelineImgAnimate' alt="timelineImg" />]
         }
     }
 
     radioActive = (number) => {
-        if (number == 1) {
+        if (number === 1) {
             this.setState({ radio: 1 })
         }
-        else if (number == 2) {
+        else if (number === 2) {
             this.setState({ radio: 2 })
         }
-        else if (number == 3) {
+        else if (number === 3) {
             this.setState({ radio: 3 })
         }
     }
@@ -91,9 +91,9 @@ class Timeline extends Component {
                         </Row>
 
                         <Row >
-                            <Col><div className={(this.state.radio == 1) ? (this.cssActive()) : 'radio1'} onClick={() => this.radioActive(1)}>2018</div></Col>
-                            <Col><div className={(this.state.radio == 2) ? (this.cssActive()) : 'radio1'} onClick={() => this.radioActive(2)}>2019</div></Col>
-                            <Col> <div className={(this.state.radio == 3) ? (this.cssActive()) : 'radio1'} onClick={() => this.radioActive(3)}>2020</div></Col>
+                            <Col><div className={(this.state.radio === 1) ? (this.cssActive()) : 'radio1'} onClick={() => this.radioActive(1)}>2018</div></Col>
+                            <Col><div className={(this.state.radio === 2) ? (this.cssActive()) : 'radio1'} onClick={() => this.radioActive(2)}>2019</div></Col>
+                            <Col> <div className={(this.state.radio === 3) ? (this.cssActive()) : 'radio1'} onClick={() => this.radioActive(3)}>2020</div></Col>
                         </Row>
                     </Container>
 

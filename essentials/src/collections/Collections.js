@@ -116,7 +116,7 @@ class Collections extends Component {
                     )))
 
             default: for (let i = 0; i < items.length; i++) {
-                if (items[i].type == this.state.productType) {
+                if (items[i].type === this.state.productType) {
                     item.push(items[i])
                 }
 
@@ -224,7 +224,7 @@ class Collections extends Component {
 
     render() {
 
-        if (this.state.islLoaded == false) {
+        if (this.state.islLoaded === false) {
             return <div> </div>
         }
 

@@ -34,7 +34,9 @@ class NavbarComponent extends Component {
     }
 
     handleChange = (e) => {
-        this.state.searchKeyword = e.target.value
+        this.setState({
+            searchKeyword: e.target.value
+        })
         this.props.searchSomething(this.state.searchKeyword)
         this.handleSearch('search')
     }
@@ -98,7 +100,7 @@ class NavbarComponent extends Component {
                         <Nav className="ml-auto"  >
 
                             {this.state.searchShowing ? this.searchBar() : null}
-                            <Nav.Link onClick={this.searchButton} variant="link" > <img src={search} className="searchImg" /></Nav.Link>
+                            <Nav.Link onClick={this.searchButton} variant="link" > <img src={search} className="searchImg" alt="timelineImg" /></Nav.Link>
 
                             <SignIn />
 
