@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Button, Container, Row, Col } from 'react-bootstrap'
-import ProductShowcase from '../products/ProductShowcase'
-import Pagination from '../pagination/PaginationComp'
-import boomer from '../products/images/tees2.PNG'
+import { Button, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { removeFromCart, addQuantity, removeQuantity } from '../redux/cartActions'
 
@@ -16,8 +13,6 @@ class CartItem extends Component {
         quantity: this.props.itemDetails.chosenQuantity,
         show: true,
         subTotal: this.props.itemDetails.chosenQuantity * parseFloat(this.props.itemDetails.finalPrice)
-
-
     }
 
 
@@ -26,16 +21,10 @@ class CartItem extends Component {
         let quantity = parseInt(this.state.quantity) + 1
         let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
 
-        // let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
-
         this.setState({
             quantity: quantity,
             subTotal: subTotal
-            // subTotal: subTotal
         })
-
-        // this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
-        console.log(this.props.theCart)
 
     }
 
@@ -44,64 +33,59 @@ class CartItem extends Component {
         if (this.state.quantity > 1) {
             let quantity = parseInt(this.state.quantity) - 1
             let subTotal = (this.state.subTotal) - parseFloat(this.props.itemDetails.finalPrice)
-            // let subTotal = (this.state.subTotal) + parseFloat(this.props.itemDetails.finalPrice)
 
             this.setState({
                 quantity: quantity,
                 subTotal: subTotal
-                // subTotal: subTotal
             })
 
-            // this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
-            console.log(this.props.theCart)
         }
 
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         let prevstateplus1 = (prevState.quantity + 1)
+        let prevstateremove1 = (prevState.quantity - 1)
+
         if (this.state.quantity == prevstateplus1) {
             this.props.addQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
         }
 
-        let prevstateremove1 = (prevState.quantity - 1)
         if (this.state.quantity == prevstateremove1) {
             this.props.removeQuantity(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
         }
-
-        console.log(this.props.theCart)
     }
-
 
 
     xButton = () => {
         this.props.removeFromCart(this.props.itemDetails.orderNumber, this.props.itemDetails.chosenQuantity, this.props.itemDetails.finalPrice)
     }
 
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
     render() {
 
         if (this.state.show == true) {
 
-
             return (
                 <div className="itemlist">
-
                     <Row className="justify-content-center order-history-item align-items-center">
 
                         <Col lg={2}>
                             <img src={this.props.itemDetails.productImage} className="productpic" />
                         </Col>
+
                         <Col lg={3} className='h3'>
                             {`${this.props.itemDetails.itemName} ${this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}`}
                         </Col>
+
                         <Col lg={1} className='h5'>
                             {this.props.itemDetails.chosenSize.toUpperCase()}
                         </Col>
 
                         <Col lg={2} >
                             {`$${this.props.itemDetails.finalPrice}`}
-
                         </Col>
 
                         <Col lg={2} className="d-flex justify-content-center align-items-center h5">
@@ -110,19 +94,23 @@ class CartItem extends Component {
 
                         <Col lg={2} className='h4'>
                             {`Total: $${this.state.subTotal.toFixed(2)}`}
-
                         </Col>
+
                     </Row>
 
-
                     <span><button className="xButton" onClick={this.xButton}>&times;</button></span>
+
                 </div>
+
             )
         }
         else return null
     }
 
 }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 const mapStateToProps = (state) => {
     return {

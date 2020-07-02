@@ -4,25 +4,22 @@ import './css/NewsBanner.css'
 
 class NewsBanner extends Component {
 
-
     state = {
         showing: true
     }
 
-
     xButton = () => {
-
         this.setState({
             showing: false
         })
     }
 
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     render() {
 
-        const { showing } = this.state;
 
-        if (showing == true) {
+        if (this.state.showing == true) {
 
             return (
 

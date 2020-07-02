@@ -12,7 +12,6 @@ class BestsellerHome extends Component {
     state = {
         items: [],
         islLoaded: false,
-
     }
 
     componentDidMount() {
@@ -24,24 +23,19 @@ class BestsellerHome extends Component {
                     items: json
                 })
             })
-
-
     }
 
 
     showItemsRandom = () => {
-
         const items = this.state.items
         let item = []
+        let counter = item.length
+
         for (let i = 0; i < items.length; i++) {
-
             item.push(items[i])
-
         }
 
-        let counter = item.length
         while (counter > 0) {
-
             let index = Math.floor(Math.random() * counter);
             counter--;
             let temp = item[counter];
@@ -49,18 +43,17 @@ class BestsellerHome extends Component {
             item[index] = temp;
         }
 
-
         return (
             item.slice(0, 3).map(item => (
                 <Col key={item.id} lg={4} className="showcasePadding">
-                    <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                    <ProductShowcase colour={item.colour} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                 </Col>))
         )
-
-
     }
 
 
+
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -69,12 +62,9 @@ class BestsellerHome extends Component {
 
         return (
             <div >
-
-
-
-
                 <Container fluid className="product-home-row">
                     <Row >
+
                         <Col lg={12}>
                             <p className="display-4">Best Sellers</p>
                         </Col>
@@ -87,17 +77,8 @@ class BestsellerHome extends Component {
                             </Link>
                         </Col>
 
-
                     </Row>
-
                 </Container>
-
-
-
-
-
-
-
             </div>
         )
     }

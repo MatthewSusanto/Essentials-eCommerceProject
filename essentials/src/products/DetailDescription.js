@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { Form, Button, Container, Row, Col, Card, Accordion } from 'react-bootstrap'
-import ProductShowcase from '../products/ProductShowcase'
-import Pagination from '../pagination/PaginationComp'
-import boomer from '../products/images/tees2.PNG'
 import { connect } from 'react-redux'
 import { addToCart } from '../redux/cartActions'
-
+import { Spring } from 'react-spring/renderprops'
 
 
 
@@ -13,7 +10,6 @@ import { addToCart } from '../redux/cartActions'
 class DetailDescription extends Component {
 
     state = {
-
         id: this.props.item.id,
         colours: Object.keys(this.props.colours),
         quantity: null,
@@ -22,37 +18,32 @@ class DetailDescription extends Component {
         m: 0,
         l: 0,
         xl: 0,
-
         discount: this.props.item.discount,
-
         afterDiscountPrice: ((this.props.item.price) - ((this.props.item.discount / 100) * (this.props.item.price))).toFixed(2),
         productName: this.props.item.name,
         activeColor: null,
         sizeActive: null,
         selectedQuantity: 1,
         previousPrice: this.props.item.price
-
-
     }
 
 
     handleSubmit = (e) => {
         e.preventDefault();
+
         let randomizer = (Math.floor((Math.random() * 9999999) + 1))
         let parsefloat = parseFloat(this.state.selectedQuantity)
         this.props.addToCart(randomizer, this.state.id, this.state.productName, this.state.previousPrice, this.state.discount, this.state.afterDiscountPrice, this.state.activeColor, this.state.sizeActive, parsefloat, this.props.item.primary_img)
-        // this.props.purchased(this.props.theCart)
+        let reducedQuantity = this.state.quantity - this.state.selectedQuantity
 
-        let blaha = this.state.quantity - this.state.selectedQuantity
-        let blaha1 = 0
-        if (blaha <= 0) {
-            blaha1 = 0
+        let newReducedQuantity = 0
+        if (reducedQuantity <= 0) {
+            newReducedQuantity = 0
         } else {
-            blaha1 = blaha
+            newReducedQuantity = reducedQuantity
         }
-
         this.setState({
-            quantity: blaha1
+            quantity: newReducedQuantity
         })
     }
 
@@ -91,13 +82,12 @@ class DetailDescription extends Component {
         const colorList = this.state.colours.map((e) =>
             <div className={this.activeColor(e)} onClick={() => this.selectColor(e)}>  </div>
         )
+
         return (
             <Row className="colourSelection">
                 {colorList}
             </Row>
-
         )
-
     }
 
     chooseSize = (size) => {
@@ -119,7 +109,6 @@ class DetailDescription extends Component {
     }
 
     showQuantity = () => {
-
         if (this.state.quantity == null) {
             return (null)
         } else if (this.state.quantity > 10) {
@@ -127,11 +116,9 @@ class DetailDescription extends Component {
         } else if (this.state.quantity < 10) {
             return (<p className="text-danger">{this.state.quantity == 0 ? 'Out of Stock' : 'Only ' + this.state.quantity + ' left'}</p>)
         }
-        console.log(this.state.quantity)
     }
 
     handleQuantitySelect = (e) => {
-
         this.setState({
             selectedQuantity: e.target.value
         })
@@ -163,38 +150,11 @@ class DetailDescription extends Component {
     toUppercase = () => {
 
         if (this.state.activeColor !== null) {
-
             return this.state.activeColor.charAt(0).toUpperCase() + this.state.activeColor.slice(1);
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -206,133 +166,122 @@ class DetailDescription extends Component {
                 Loading...
             </div>
         }
+
         else {
 
-            console.log(this.props.theHistory)
-
             return (
-                <div>
-
-                    <Container fluid className="detail-description-container">
-
-                        <Row>
-                            <Col>
-                                <h2 className="display-3 h1"> {this.state.productName} {this.toUppercase()} </h2>
-                            </Col>
-                        </Row>
-
-
-                        <Row>
-                            <Col>
-                                <h4><span className="h1">Price: </span>  <span className="text-danger h1"> ${this.state.afterDiscountPrice}</span> <strike className="text-muted"> {this.state.discount ? `$${(this.props.price).toFixed(2)}` : ""}</strike><span className="text-success"> {this.state.discount ? `(${this.state.discount}% off)` : ""}</span> </h4>
-                            </Col>
-                        </Row>
 
 
 
-                        {this.rowColor()}
+                <Spring
+                    from={{ opacity: 0 }}
+                    to={{ opacity: 1 }}
+                    config={{ duration: 1000 }}>
+                    {props => <div style={props}>
+
+                        <Container fluid className="detail-description-container">
+
+                            <Row>
+                                <Col>
+                                    <h2 className="display-3 h1"> {this.state.productName} {this.toUppercase()} </h2>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <h4><span className="h1">Price: </span>  <span className="text-danger h1"> ${this.state.afterDiscountPrice}</span> <strike className="text-muted"> {this.state.discount ? `$${(this.props.price).toFixed(2)}` : ""}</strike><span className="text-success"> {this.state.discount ? `(${this.state.discount}% off)` : ""}</span> </h4>
+                                </Col>
+                            </Row>
+
+                            {this.rowColor()}
+
+                            <Row className="sizingButtons">
+                                <Button variant={this.sizeActive('xs')} disabled={this.state.xs ? false : true} onClick={() => this.chooseSize('xs')} > XS  </Button>
+                                <Button variant={this.sizeActive('s')} disabled={this.state.s ? false : true} onClick={() => this.chooseSize('s')}> S </Button>
+                                <Button variant={this.sizeActive('m')} disabled={this.state.m ? false : true} onClick={() => this.chooseSize('m')}> M </Button>
+                                <Button variant={this.sizeActive('l')} disabled={this.state.l ? false : true} onClick={() => this.chooseSize('l')}> L </Button>
+                                <Button variant={this.sizeActive('xl')} disabled={this.state.xl ? false : true} onClick={() => this.chooseSize('xl')}> XL </Button>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <h4>Quantity: </h4>{this.showQuantity()}
+
+                                    <Form>
+                                        <Form.Group controlId="exampleForm.SelectCustom">
+                                            <Form.Control as="select" onChange={this.handleQuantitySelect}>
+                                                {this.quantitySelect()}
+                                            </Form.Control>
+                                        </Form.Group>
+                                    </Form>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <Button variant="success" disabled={this.state.sizeActive ? false : true} block size="lg" onClick={this.handleSubmit}> ADD TO CART</Button>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <p className=""> {this.props.description} </p>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <ul className="productList">
+                                        <li> 62% lorems </li>
+                                        <li> 13% lorema </li>
+                                        <li> 89% lorem </li>
+                                        <li> 520 grams </li>
+                                    </ul>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <Accordion>
+
+                                        <Card>
+                                            <Accordion.Toggle as={Card.Header} eventKey="0">
+                                                DELIVERY <span>&#x25BC;</span>
+                                            </Accordion.Toggle>
+
+                                            <Accordion.Collapse eventKey="0">
+                                                <Card.Body>We offer free shipping in the US and Canada. </Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+
+                                        <Card>
+                                            <Accordion.Toggle as={Card.Header} eventKey="1">
+                                                FIT <span>&#x25BC;</span>
+                                            </Accordion.Toggle>
+
+                                            <Accordion.Collapse eventKey="1">
+                                                <Card.Body>We've fixed all the headaches of finding the right fitting essentials. Our essentials fit so well that you will replace your entire wardrobe with our products!</Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+
+                                    </Accordion>
+                                </Col>
+                            </Row>
+
+                        </Container>
+                    </div>
+                    }
+                </Spring>
 
 
 
-                        <Row className="sizingButtons">
-
-                            <Button variant={this.sizeActive('xs')} disabled={this.state.xs ? false : true} onClick={() => this.chooseSize('xs')} > XS  </Button>
-                            <Button variant={this.sizeActive('s')} disabled={this.state.s ? false : true} onClick={() => this.chooseSize('s')}> S </Button>
-                            <Button variant={this.sizeActive('m')} disabled={this.state.m ? false : true} onClick={() => this.chooseSize('m')}> M </Button>
-                            <Button variant={this.sizeActive('l')} disabled={this.state.l ? false : true} onClick={() => this.chooseSize('l')}> L </Button>
-                            <Button variant={this.sizeActive('xl')} disabled={this.state.xl ? false : true} onClick={() => this.chooseSize('xl')}> XL </Button>
-
-
-                        </Row>
-
-
-
-                        <Row>
-                            <Col>
-                                <h4>Quantity: </h4>{this.showQuantity()}
-
-                                <Form>
-                                    <Form.Group controlId="exampleForm.SelectCustom">
-                                        <Form.Control as="select" onChange={this.handleQuantitySelect}>
-                                            {this.quantitySelect()}
-
-                                        </Form.Control>
-                                    </Form.Group>
-                                </Form>
-                            </Col>
-
-
-
-                        </Row>
-
-                        <Row>
-                            <Col>
-                                <Button variant="success" disabled={this.state.sizeActive ? false : true} block size="lg" onClick={this.handleSubmit}> ADD TO CART</Button>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col>
-                                <p className=""> {this.props.description} </p>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col>
-                                <ul className="productList">
-                                    <li> 62% lorems </li>
-                                    <li> 13% lorema </li>
-                                    <li> 89% lorem </li>
-                                    <li> 520 grams </li>
-                                </ul>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col>
-                                <Accordion>
-                                    <Card>
-
-                                        <Accordion.Toggle as={Card.Header} eventKey="0">
-                                            DELIVERY <span>&#x25BC;</span>
-                                        </Accordion.Toggle>
-
-                                        <Accordion.Collapse eventKey="0">
-                                            <Card.Body>We offer free shipping in the US and Canada. </Card.Body>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                    <Card>
-
-                                        <Accordion.Toggle as={Card.Header} eventKey="1">
-                                            FIT <span>&#x25BC;</span>
-                                        </Accordion.Toggle>
-
-                                        <Accordion.Collapse eventKey="1">
-                                            <Card.Body>We've fixed all the headaches of finding the right fitting essentials. Our essentials fit so well that you will replace your entire wardrobe with our products!</Card.Body>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                </Accordion>
-                            </Col>
-                        </Row>
-
-
-
-
-                    </Container>
-
-
-
-                </div>
             )
         }
     }
 }
 
-// const mapStateToProps = (state) =>{
-//     return{
-//         cart: state.cart.
-//     }
-// }
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 const mapStateToProps = (state) => {
     return {
         theCart: state.cart,

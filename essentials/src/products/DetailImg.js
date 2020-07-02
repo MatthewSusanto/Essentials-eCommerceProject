@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import { Form, Button, Container, Row, Col } from 'react-bootstrap'
-import ProductShowcase from '../products/ProductShowcase'
-import Pagination from '../pagination/PaginationComp'
-import boomer from '../products/images/tees2.PNG'
+import { Container, Row, Col } from 'react-bootstrap'
 import './css/DetailImg.css'
+import { Spring } from 'react-spring/renderprops'
 
 
 
@@ -13,46 +11,51 @@ class DetailImg extends Component {
 
     state = {
         color_img: this.props.item.color_img
-
     }
-
-
 
 
 
     render() {
 
         let colorImages = Object.values(this.state.color_img)
-        console.log(colorImages)
-
 
         return (
-            <div>
 
-                <Container fluid>
-                    <Row>
-                        <Col xl={6}>
-                            <img src={this.props.item.primary_img} className="imgtest" />
-                        </Col>
-                        <Col xl={6}>
-                            <img src={this.props.item.secondary_img} className="imgtest" />
+            <Spring
+                from={{ opacity: 0, marginLeft: -800 }}
+                to={{ opacity: 1, marginLeft: 0 }}
+                config={{ duration: 500 }}>
 
-                        </Col>
-                        <Col xl={6}>
-                            <img src={this.props.item.extra_img} className="imgtest" />
-                        </Col>
+                {props => <div style={props}>
 
-                        {colorImages.map(n => (
+                    <Container fluid>
+                        <Row>
                             <Col xl={6}>
-                                <img src={n} className="imgtest" />
-                            </Col>))}
+                                <img src={this.props.item.primary_img} className="imgtest" />
+                            </Col>
+                            <Col xl={6}>
+                                <img src={this.props.item.secondary_img} className="imgtest" />
+                            </Col>
+                            <Col xl={6}>
+                                <img src={this.props.item.extra_img} className="imgtest" />
+                            </Col>
 
-                    </Row>
-                </Container>
+                            {colorImages.map(n => (
+                                <Col xl={6}>
+                                    <img src={n} className="imgtest" />
+                                </Col>))}
+
+                        </Row>
+                    </Container>
 
 
 
-            </div>
+
+                </div>}
+            </Spring>
+
+
+
         )
     }
 }

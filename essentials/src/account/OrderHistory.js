@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Form, Button, Container, Row, Col } from 'react-bootstrap'
-import ProductShowcase from '../products/ProductShowcase'
-import Pagination from '../pagination/PaginationComp'
-import boomer from '../products/images/tees2.PNG'
+import { Row, Col } from 'react-bootstrap'
+
 import './css/SignIn.css'
 
 
@@ -24,13 +22,14 @@ class OrderHistory extends Component {
             <div className="itemlist">
 
                 <Row className="justify-content-center order-history-item align-items-center">
-
                     <Col lg={2}>
                         <img src={this.props.itemDetails.productImage} className="productpic" />
                     </Col>
+
                     <Col lg={4} className="h3">
                         {`${this.props.itemDetails.itemName} ${this.props.itemDetails.chosenColour.charAt(0).toUpperCase() + this.props.itemDetails.chosenColour.slice(1)}`}
                     </Col>
+
                     <Col lg={1} className="h3">
                         {this.props.itemDetails.chosenSize.toUpperCase()}
                     </Col>
@@ -39,6 +38,7 @@ class OrderHistory extends Component {
                         {`$${this.props.itemDetails.finalPrice}`}
 
                     </Col>
+
                     <Col lg={1} className="h5">
                         {` ${this.props.itemDetails.chosenQuantity}x`}
                     </Col>
@@ -48,7 +48,6 @@ class OrderHistory extends Component {
 
                     </Col>
                 </Row>
-
 
             </div>
         )

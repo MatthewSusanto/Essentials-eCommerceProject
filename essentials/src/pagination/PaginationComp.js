@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Pagination, Container, Row, Col } from 'react-bootstrap'
+import { Pagination } from 'react-bootstrap'
 import './css/PaginationComp.css'
 
 
@@ -10,16 +10,8 @@ import './css/PaginationComp.css'
 class PaginationComp extends Component {
 
     state = {
-        active: 1,
-
-
-
-
+        active: 1
     }
-
-
-
-
 
 
     render() {
@@ -34,18 +26,11 @@ class PaginationComp extends Component {
             );
         }
 
-
-
-
-
-
         return (<div>
 
             <Pagination size="lg">{items}</Pagination>
 
-
         </div>
-
 
         )
     }

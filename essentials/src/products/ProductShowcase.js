@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Button, Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import './css/ProductShowcase.css'
-import tees from './images/tees.png'
-import tees2 from './images/tees2.PNG'
 import { withRouter } from 'react-router-dom'
-import { Spring, config, Transition } from 'react-spring/renderprops'
+import { Transition } from 'react-spring/renderprops'
+
 
 
 
@@ -16,18 +15,11 @@ class ProductShowcase extends Component {
         onHover: false
     }
 
-    onHoverImg = () => {
-        if (this.state.onHover == true) {
-
-        }
-
-    }
 
     handleImgClick = () => {
         let id = this.props.id
         let type = this.props.type
         this.props.history.push('/collections/' + type + '/' + id)
-
     }
 
     activeColor = (colour) => {
@@ -47,24 +39,19 @@ class ProductShowcase extends Component {
     colourList = () => {
         let list = this.props.colour
         let colourList = Object.keys(list)
+
         let colourListMap = colourList.map((e) =>
             <Col className="d-flex align-items-center justify-content-center" lg>
                 <div className={this.activeColor(e)} >  </div>
             </Col>
         )
-        return (
 
+        return (
             <Row className="d-flex align-items-center justify-content-center">
                 {colourListMap}
             </Row>
-
-
         )
-
-
     }
-
-
 
 
     itemSizing = () => {
@@ -91,22 +78,20 @@ class ProductShowcase extends Component {
         )
     }
 
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
     render() {
 
-
-
-
-
-
-
         return (
+
+
+
+
+
             <div >
-
-
                 <Container className="show-case">
                     <Row >
 
@@ -114,16 +99,9 @@ class ProductShowcase extends Component {
                             onMouseEnter={() => this.setState({ onHover: true })}
                             onMouseLeave={() => this.setState({ onHover: false })}
                             className='columntest'
-                            onClick={this.handleImgClick}
+                            onClick={this.handleImgClick} >
 
-                        >
                             {this.props.discount ? <div className="testy"> {this.props.discount}% Off  </div> : null}
-
-
-
-
-                            {/* <Container fluid className="testy1"> */}
-
 
                             <Transition
                                 items={this.state.onHover}
@@ -136,22 +114,17 @@ class ProductShowcase extends Component {
                                         : props => <div style={props}></div>
                                 }
 
-
                             </Transition>
 
-                            {/* </Container> */}
-
-
-
                             <a href=""><img src={this.state.onHover ? this.props.secondaryImg : this.props.primaryImg} className="tees" /></a>
-
                         </Col>
+
                     </Row>
 
                     <Row className="showcase-details">
+
                         <Col>
                             <p className="h3"> {this.props.name} </p>
-
 
                             <Transition
                                 items={this.state.onHover}
@@ -164,22 +137,11 @@ class ProductShowcase extends Component {
                                         : props => null
                                 }
 
-
                             </Transition>
-
-
-
                         </Col>
+
                     </Row>
                 </Container>
-
-
-
-
-
-
-
-
             </div>
         )
     }

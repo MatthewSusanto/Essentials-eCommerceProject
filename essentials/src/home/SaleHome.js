@@ -12,7 +12,6 @@ class SalerHome extends Component {
     state = {
         items: [],
         islLoaded: false,
-
     }
 
     componentDidMount() {
@@ -24,8 +23,6 @@ class SalerHome extends Component {
                     items: json
                 })
             })
-
-
     }
 
 
@@ -42,13 +39,13 @@ class SalerHome extends Component {
         return (
             item.slice(0, 3).map(item => (
                 <Col key={item.id} lg={4} className="showcasePadding">
-                    <ProductShowcase colour={item.colour} type={item.type} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
+                    <ProductShowcase colour={item.colour} discount={item.discount} name={item.name} price={item.price} primaryImg={item.primary_img} secondaryImg={item.secondary_img} id={item.id} />
                 </Col>))
         )
 
-
     }
 
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -57,17 +54,11 @@ class SalerHome extends Component {
 
         if (this.state.islLoaded == false) {
             return <div>
-
-
             </div>
         } else
 
-
             return (
                 <div >
-
-
-
 
                     <Container fluid className="product-home-row">
                         <Row >
@@ -82,17 +73,8 @@ class SalerHome extends Component {
                                     <Button variant="dark" size="lg"> VIEW SALE ITEMS </Button>
                                 </Link>
                             </Col>
-
-
                         </Row>
-
                     </Container>
-
-
-
-
-
-
 
                 </div>
             )

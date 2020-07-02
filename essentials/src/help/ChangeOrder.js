@@ -1,56 +1,34 @@
-import React, { Component } from 'react'
-import { Button, Container, Row, Col } from 'react-bootstrap'
-import ProductShowcase from '../products/ProductShowcase'
-import Pagination from '../pagination/PaginationComp'
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
+
 import './css/help.css'
 
 
 
 
 
-class ChangeOrder extends Component {
-
-    state = {
-
-    }
+function ChangeOrder() {
 
 
+    return (
+        <div className="help-div">
 
-
-
-    render() {
-
-
-        return (
-            <div className="help-div">
-
-
-
-
-                <Container className=" d-flex align-items-center">
-                    <Row>
-                        <h5>
-                            CHANGING/MODIFYING AN ORDER
+            <Container className=" d-flex align-items-center">
+                <Row>
+                    <h5>
+                        CHANGING/MODIFYING AN ORDER
                         </h5>
-                        <h5>
-                            We are unable to change/modify orders once they have already been placed. You will have to cancel the entire order for you to re-order. If you would like to do so you have 15 minutes after you place your order to cancel. Please cancel your order through your email confirmation, account or the confirmation page after placing order. DO NOT email us about canceling your order.
-                            </h5>
-                    </Row>
+                    <h5>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum vero quisquam nulla fugit eaque beatae nemo deserunt dolor ex natus, obcaecati labore quaerat officiis dicta in iste aperiam reiciendis sint asperiores. Delectus omnis laboriosam tenetur, debitis, sequi aspernatur perferendis in ipsam ipsum officiis nesciunt. Nobis aliquid deserunt adipisci fugiat cupiditate iste nostrum enim. Reiciendis accusamus debitis, doloremque deserunt nemo illum ex numquam mollitia ipsum quisquam in perspiciatis quidem ab laboriosam esse at, tenetur dolores hic consequatur voluptatem tempora aut est labore ad? Tempora laboriosam ipsum veniam nostrum hic aspernatur adipisci.
+                        </h5>
+                </Row>
 
+            </Container>
 
-
-                </Container>
-
-
-
-
-
-
-
-            </div>
-        )
-    }
+        </div>
+    )
 }
+
 
 export default ChangeOrder
 

@@ -5,66 +5,38 @@ import './css/Hero.css'
 
 
 
-class Newsletter extends Component {
-
-    state = {
-
-    }
+function Newsletter() {
 
 
 
 
+    return (
+        <div >
+            <Container fluid className="newsletter-img">
+                <Row >
 
-    render() {
+                    <Col className="newsletter-content">
+                        <h5>Keep Updated</h5>
+                        <h1>Newsletter</h1>
+                        <p>Subscribe to our newsletter to get instant notifications when we restock or launch! </p>
 
+                        <Form>
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Control type="email" placeholder="Enter your email" />
+                            </Form.Group>
 
-        return (
-            <div >
-
-
-
-
-                <Container fluid className="newsletter-img">
-                    <Row >
-                        <Col className="newsletter-content">
-
-
-                            <h5>Keep Updated</h5>
-                            <h1>Newsletter</h1>
-
-
-
-                            <p>Subscribe to our newsletter to get instant notifications when we restock or launch! </p>
-
-                            <Form>
-                                <Form.Group controlId="formBasicEmail">
-
-                                    <Form.Control type="email" placeholder="Enter your email" />
-
-                                </Form.Group>
-
-
-                                <Button variant="outline-light" type="submit" size="lg">
-                                    SUBSCRIBE
+                            <Button variant="outline-light" type="submit" size="lg">
+                                SUBSCRIBE
                                 </Button>
-                            </Form>
+                        </Form>
+                    </Col>
 
-
-
-                        </Col>
-                    </Row>
-                </Container>
-
-
-
-
-
-
-
-            </div>
-        )
-    }
+                </Row>
+            </Container>
+        </div>
+    )
 }
+
 
 export default Newsletter
 
