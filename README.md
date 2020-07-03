@@ -24,21 +24,21 @@ This might take a while to load up
 ___
 ## ``Preview of the application``
 - **Homepage, sign in, sign up, and shopping bag**  <br />
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)  <br />
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)  <br />  <br />
 ___
-- **Showcase of the on-sale and most popular items, about, newsletter, FAQ links, and footer**  <br />
+- **Showcase of the on-sale and most popular items, about, newsletter, FAQ links, and footer**  <br />  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HomeFooter.gif?)
 ___
-- **Product search feature, collection list, and promo code pop-ups**  <br />
+- **Product search feature, collection list, and promo code pop-ups**  <br />  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/SearchCollection.gif?)
 ___
-- **Product details and product recommendations**  <br />
+- **Product details and product recommendations**  <br />  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/ProductDetail.gif?)
 ___
-- **Select colour/size/quantity of the product, add to the shopping bag, and removing/adding quantity from the shopping bag**  <br />
+- **Select colour/size/quantity of the product, add to the shopping bag, and removing/adding quantity from the shopping bag**  <br />  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartModal.gif?)
 ___
-- **Shopping bag summary, adding/removing items from the shopping bag, applying promo code, and order history**  <br />
+- **Shopping bag summary, adding/removing items from the shopping bag, applying promo code, and order history**  <br />  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartPromoCode.gif?)
 ___
 ## ``What did I learn?``
