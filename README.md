@@ -23,7 +23,7 @@ Please make sure that you are in the right directory
 This might take a while to load up
 ___
 ## ``Preview of the application``
-- **Homepage, sign in, sign up, and shopping bag**  <br />
+- **Homepage, sign in, sign up, and shopping bag**  <br />  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)  <br />  <br />
 ___
 - **Showcase of the on-sale and most popular items, about, newsletter, FAQ links, and footer**  <br />  <br />
