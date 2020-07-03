@@ -1,4 +1,4 @@
-# ``**ESSENTIALS CLOTHING STORE**``
+# ``ESSENTIALS CLOTHING STORE``
 **This is a front-end eCommerce clothing store project I built using React.**
 ___
 **I will be showing:**
