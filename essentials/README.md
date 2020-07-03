@@ -1,4 +1,4 @@
-# **ESSENTIALS CLOTHING STORE**
+#`` **ESSENTIALS CLOTHING STORE**``
 **This is a front end eCommerce clothing store project I built using React.**
 ___
 I will be showing:
@@ -10,7 +10,7 @@ I will be showing:
 + **Difficulties I encountered along with the solution**
 
 ___
-## How to install and run the application?
+## ``How to install and run the application?``
 
 You need to make sure that you have your package manager installed
 
@@ -22,7 +22,7 @@ Please make sure that you are in the right directory
 
 This might take a while to load up
 ___
-## Preview of the application
+## ``Preview of the application``
 - **Homepage, sign in, sign up, and shopping bag**  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)  <br />
 ___
@@ -41,7 +41,7 @@ ___
 - **Shopping bag summary, adding/removing items from the shopping bag, applying promo code, and order history**  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartPromoCode.gif?)
 ___
-## What did I learn?
+## ``What did I learn?``
 
 - I am capable to solve problems that seem to be impossible if I stay positive, work hard, and keep trying with different solutions
 - A better understanding of fetch API
@@ -59,7 +59,7 @@ ___
 
 
 ___
-## Technologies Used
+## ``Technologies Used``
 
 - ReactJs
 - Javascript (ES6+)
@@ -71,7 +71,7 @@ ___
 - Spring (React-Spring)
 
 ___
-## Difficulties I encountered along with the solution
+## ``Difficulties I encountered along with the solution``
 
 - **Difficulty** Finding a public API to use as a mock data for my app, as well as copyright for product images  <br />
 **Solution:** I had to spend time creating and designing my mock data with an online JSON server; I also had to replace the pictures with random image placeholders.
