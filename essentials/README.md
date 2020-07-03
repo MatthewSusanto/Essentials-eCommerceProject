@@ -1,13 +1,13 @@
-#`` **ESSENTIALS CLOTHING STORE**``
-**This is a front end eCommerce clothing store project I built using React.**
+# ``**ESSENTIALS CLOTHING STORE**``
+**This is a front-end eCommerce clothing store project I built using React.**
 ___
-I will be showing:
+**I will be showing:**
 
 + **How to install and run the application**
-+ **Preview and showcase of the features**
-+ **What did I learn**
++ **Preview of the application**
++ **What did I learn?**
 + **Technologies used**
-+ **Difficulties I encountered along with the solution**
++ **Difficulties I encountered, along with the solutions**
 
 ___
 ## ``How to install and run the application?``
@@ -54,10 +54,6 @@ ___
 - Fundamental design principles
 - Implement search features
 
-
-
-
-
 ___
 ## ``Technologies Used``
 
@@ -71,7 +67,7 @@ ___
 - Spring (React-Spring)
 
 ___
-## ``Difficulties I encountered along with the solution``
+## ``Difficulties I encountered, along with the solutions``
 
 - **Difficulty** Finding a public API to use as a mock data for my app, as well as copyright for product images  <br />
 **Solution:** I had to spend time creating and designing my mock data with an online JSON server; I also had to replace the pictures with random image placeholders.
