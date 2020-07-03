@@ -68,16 +68,15 @@ ___
 ___
 ## ``Difficulties I encountered, along with the solutions``
 
-- **Difficulty:** Finding a public API to use as a mock data for my app, as well as copyright for product images  <br />
+- **Difficulty:** Finding a public API to use as a mock data for my app, as well as finding non-copyrighted product images  <br />
 **Solution:** I had to spend time creating and designing my mock data with an online JSON server; I also had to replace the pictures with random image placeholders.
 
-- **Difficulty** Problem dealing with the dynamic data of my components  <br />
+- **Difficulty:** Problem dealing with the dynamic data of my components  <br />
 **Solution:** Solve it using React Redux
 
-- **Difficulty** I don't have an online database to handle dynamic data  <br />
+- **Difficulty:** I don't have an online database to handle dynamic data  <br />
  **Solution:** Solve it using Persist Redux and save the data locally
 
-- **Difficulty** The component would take too long to load and bad laggy experience  <br />
+- **Difficulty:** The component would take too long to load and bad laggy experience  <br />
  **Solution:** Learned how to optimize the performance of the application
-
 
