@@ -52,7 +52,7 @@ ___
 - A better understanding of animations using CSS and Spring
 - Fundamental design principles
 - Implement search features
-- **I am capable to solve problems that seem to be impossible if I stay positive, work hard, and keep trying with different solutions**
+- _**I am capable to solve problems that seem to be impossible if I stay positive, work hard, and keep trying with different solutions**_
 ___
 ## ``Technologies Used``
 
@@ -68,7 +68,7 @@ ___
 ___
 ## ``Difficulties I encountered, along with the solutions``
 
-- **Difficulty** Finding a public API to use as a mock data for my app, as well as copyright for product images  <br />
+- **Difficulty:** Finding a public API to use as a mock data for my app, as well as copyright for product images  <br />
 **Solution:** I had to spend time creating and designing my mock data with an online JSON server; I also had to replace the pictures with random image placeholders.
 
 - **Difficulty** Problem dealing with the dynamic data of my components  <br />
