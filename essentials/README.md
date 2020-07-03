@@ -16,7 +16,7 @@ You need to make sure that you have your package manager installed
 
 1. **`cd essentials`** cd to the essentials directory and make sure that you are not in the previous "ecommerce-project1-master" directory
 2. **`npm install`** once you are in essentials directory, install the dependencies
-3. **`npm start`** start the application using local server (this is in development mode)
+3. **`npm start`** start the application by using local a server (this is in development mode)
 
 This might take a while to load up
 ___
