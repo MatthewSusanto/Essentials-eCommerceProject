@@ -20,8 +20,8 @@ You need to make sure that you have your package manager installed
 
 This might take a while to load up
 ___
-## Preview of the appliaction
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/Hero.gif?)
+## Preview of the application
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)
 ___
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HomeFooter.gif?)
 ___
