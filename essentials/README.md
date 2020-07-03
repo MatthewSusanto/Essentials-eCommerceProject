@@ -21,17 +21,17 @@ You need to make sure that you have your package manager installed
 This might take a while to load up
 ___
 ## Preview of the appliaction
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/Hero.gif?raw=true)
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/Hero.gif?)
 ___
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HomeFooter.gif?raw=true)
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HomeFooter.gif?)
 ___
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/SearchCollection.gif?raw=true)
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/SearchCollection.gif?)
 ___
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/ProductDetail.gif?raw=true)
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/ProductDetail.gif?)
 ___
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartModal.gif?raw=true)
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartModal.gif?)
 ___
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartPromoCode.gif?raw=true)
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartPromoCode.gif?)
 ___
 ## What did I learn?
 
