@@ -14,14 +14,16 @@ ___
 
 You need to make sure that you have your package manager installed
 
+Please make sure that you are in the right directory
+
 1. **`cd essentials`** cd to the essentials directory
 2. **`npm install`** once you are in essentials directory, install the dependencies
 3. **`npm start`** start the application by using local a server (this is in development mode)
 
 This might take a while to load up
 ___
-## Preview of the appliaction
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/Hero.gif?)
+## Preview of the application
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)
 ___
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HomeFooter.gif?)
 ___
