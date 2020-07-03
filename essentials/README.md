@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **ESSENTIALS CLOTHING STORE**
+**This is an eCommerce clothing store project I built using React.**
+___
+I will be showing:
 
-## Available Scripts
++ **How to install and run the application**
++ **Preview and showcase of the features**
++ **What did I learn**
++ **Technologies used**
++ **Difficulties I encountered along with the solution**
 
-In the project directory, you can run:
+___
+## How to install and run the application?
 
-### `npm start`
+You need to make sure that you have your package manager installed
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **`cd essentials`** cd to the essentials directory and make sure that you are not in the previous directory
+2. **`npm install`** once you are in essentials directory, install the dependencies
+3. **`npm start`** start the application using local server (this is in development mode)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This might take a while to load up
+___
+## Preview of the appliaction
 
-### `npm test`
+___
+## What did I learn?
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- I am capable to solve problems that seem to be impossible if I stay positive, work hard, and keep trying with different solutions
+- A better understanding of fetch API
+- Create and access JSON objects online
+- Optimize the performance of applications
+- The importance of clean code and organized components
+- The importance of planning and structuring the project
+- Component reusability for efficiency
+- A better understanding of animations using CSS and Spring
+- Fundamental design principles
+- Implement search features
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+___
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- ReactJs
+- Javascript (ES6+)
+- HTML5
+- CSS3
+- Redux
+- Reactstrap (React-Bootstrap) 
+- Persist (Redux)
+- Spring (React-Spring)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+___
+## Difficulties I encountered along with the solution
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Difficulty** Finding a public API to use as a mock data for my app, as well as copyright for product images  <br />
+**Solution:** I had to spend time creating and designing my mock data with an online JSON server; I also had to replace the pictures with random image placeholders.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Difficulty** Problem dealing with the dynamic data of my components  <br />
+**Solution:** Solve it using React Redux
 
-## Learn More
+- **Difficulty** I don't have an online database to handle dynamic data  <br />
+ **Solution:** Solve it using Persist Redux and save the data locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Difficulty** The component would take too long to load and bad laggy experience  <br />
+ **Solution:** Learned how to optimize the performance of the application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
