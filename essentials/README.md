@@ -1,5 +1,5 @@
 # **ESSENTIALS CLOTHING STORE**
-**This is an eCommerce clothing store project I built using React.**
+**This is a front end eCommerce clothing store project I built using React.**
 ___
 I will be showing:
 
@@ -23,16 +23,22 @@ Please make sure that you are in the right directory
 This might take a while to load up
 ___
 ## Preview of the application
-![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)
+- **Homepage, sign in, sign up, and shopping bag**  <br />
+![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HeroSignin.gif?)  <br />
 ___
+- **Showcase of the on-sale and most popular items, about, newsletter, FAQ links, and footer**  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/HomeFooter.gif?)
 ___
+- **Product search feature, collection list, and promo code pop-ups**  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/SearchCollection.gif?)
 ___
+- **Product details and product recommendations**  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/ProductDetail.gif?)
 ___
+- **Select colour/size/quantity of the product, add to the shopping bag, and removing/adding quantity from the shopping bag**  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartModal.gif?)
 ___
+- **Shopping bag summary, adding/removing items from the shopping bag, applying promo code, and order history**  <br />
 ![](https://github.com/MatthewSusanto/resource/blob/master/videoGif/CartPromoCode.gif?)
 ___
 ## What did I learn?
