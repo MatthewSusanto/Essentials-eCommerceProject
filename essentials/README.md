@@ -43,9 +43,8 @@ ___
 ___
 ## ``What did I learn?``
 
-- I am capable to solve problems that seem to be impossible if I stay positive, work hard, and keep trying with different solutions
-- A better understanding of fetch API
-- Create and access JSON objects online
+- A better understanding of Fetch API and REST API
+- Create and access JSON objects from an online server
 - Optimize the performance of applications
 - The importance of clean code and organized components
 - The importance of planning and structuring the project
@@ -53,7 +52,7 @@ ___
 - A better understanding of animations using CSS and Spring
 - Fundamental design principles
 - Implement search features
-
+- **I am capable to solve problems that seem to be impossible if I stay positive, work hard, and keep trying with different solutions**
 ___
 ## ``Technologies Used``
 
